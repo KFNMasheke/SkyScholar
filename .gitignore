@@ -1,0 +1,14 @@
+/build/
+/dist/
+/vendor/
+/runtime/
+/moodledata/
+config.php
+!deployment/config.example.php
+.env
+.env.*
+!.env.example
+*.sql
+*.mbz
+*.log
+__pycache__/

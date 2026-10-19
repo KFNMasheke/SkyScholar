@@ -1,0 +1,6 @@
+# Moodle recommends one-minute CLI cron. DO NOT install a scheduler that your host disallows.
+# Xneelo's standard control-panel cron currently has a two-hour minimum interval.
+# Ask support for an approved scheduler/hosting arrangement before launching timed exams.
+# On a server explicitly permitting one-minute cron, replace the paths:
+# * * * * * /usr/bin/php-wrapper /usr/www/users/FTP_USER/admin/cli/cron.php >> /usr/home/FTP_USER/skyscholar-cron.log 2>&1
+# Do not use a looping two-hour task or public HTTP cron endpoint to evade provider limits.

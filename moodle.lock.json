@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/moodle/moodle.git",
+  "tag": "v4.5.15",
+  "commit": "215f44380bdc3ccf852a3a22e34f8423ff64033a",
+  "release": "4.5.15",
+  "release_date": "2026-10-05",
+  "security_support_until": "2027-10-04",
+  "php_deployment": ["8.2", "8.3"],
+  "mariadb_minimum": "10.6.7",
+  "note": "Security-maintained LTS; general bug-fix support has ended. Plan migration before security support ends."
+}

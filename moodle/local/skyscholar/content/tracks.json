@@ -1,0 +1,28 @@
+{
+  "demo": {
+    "name": "SkyScholar platform demonstration",
+    "jurisdiction": "Demonstration only. Not aviation exam preparation.",
+    "topics": {"platform": "Using practice exams"},
+    "practice_questions": 4,
+    "mock_questions": 6,
+    "mock_minutes": 10,
+    "practice_target": 75
+  },
+  "za-remote": {
+    "name": "South Africa remote-pilot preparation",
+    "jurisdiction": "South Africa. Draft course structure pending mapping to the current SACAA syllabus and instructor review.",
+    "topics": {
+      "air-law": "Air law and operating rules",
+      "aircraft": "Aircraft general knowledge",
+      "principles": "Principles of flight",
+      "meteorology": "Meteorology",
+      "navigation": "Navigation and flight planning",
+      "human-factors": "Human factors",
+      "communications": "Communications"
+    },
+    "practice_questions": 10,
+    "mock_questions": 20,
+    "mock_minutes": 30,
+    "practice_target": 75
+  }
+}

@@ -1,0 +1,58 @@
+name: Moodle foundation checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-24.04
+    services:
+      mariadb:
+        image: mariadb:10.11
+        env:
+          MARIADB_ROOT_PASSWORD: disposable-ci-password
+          MARIADB_DATABASE: skyscholar_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=10s --health-timeout=5s --health-retries=10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: PHP runtime
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y php8.3-cli php8.3-mysql php8.3-xml php8.3-curl php8.3-mbstring php8.3-intl php8.3-zip php8.3-gd php8.3-soap
+      - name: Syntax and question validation
+        run: |
+          find moodle scripts tests deployment -name '*.php' -print0 | xargs -0 -n 1 php8.3 -l
+          php8.3 tests/validator_test.php
+      - name: Obtain exact upstream Moodle
+        run: |
+          git clone --depth 1 --branch v4.5.15 https://github.com/moodle/moodle.git "$RUNNER_TEMP/moodle-core"
+          python3 -c 'import json,subprocess,os; assert subprocess.check_output(["git","-C",os.environ["RUNNER_TEMP"]+"/moodle-core","rev-parse","HEAD"],text=True).strip()==json.load(open("moodle.lock.json"))["commit"]'
+          cp -a "$RUNNER_TEMP/moodle-core" "$RUNNER_TEMP/moodle-test"
+          cp -a moodle/local/skyscholar "$RUNNER_TEMP/moodle-test/local/"
+      - name: Install disposable Moodle and exercise real quizzes
+        env:
+          SKYSCHOLAR_TEST_MOODLE: ${{ runner.temp }}/moodle-test
+        run: |
+          php8.3 -d max_input_vars=5000 "$SKYSCHOLAR_TEST_MOODLE/admin/cli/install.php" \
+            --non-interactive --agree-license --wwwroot=http://127.0.0.1:8080 \
+            --dataroot="$RUNNER_TEMP/moodledata" --dbtype=mariadb --dbhost=127.0.0.1 \
+            --dbname=skyscholar_test --dbuser=root --dbpass=disposable-ci-password \
+            --fullname=SkyScholar-Test --shortname=SS-Test --adminpass=DisposableTestAdmin!2026 \
+            --adminemail=admin@example.test --chmod=0770
+          php8.3 -d max_input_vars=5000 tests/moodle_integration.php
+      - name: HTTP login, reporting and access controls
+        run: |
+          php8.3 -d max_input_vars=5000 -S 127.0.0.1:8080 -t "$RUNNER_TEMP/moodle-test" > "$RUNNER_TEMP/http.log" 2>&1 &
+          http_pid=$!
+          trap 'kill "$http_pid" 2>/dev/null || true' EXIT
+          for n in $(seq 1 30); do curl -fsS http://127.0.0.1:8080/login/index.php >/dev/null && break || sleep 1; done
+          python3 tests/http_acceptance.py
+      - name: Build and validate deployment package
+        run: |
+          python3 scripts/build_package.py --core="$RUNNER_TEMP/moodle-core"
+          python3 tests/package_test.py dist/SkyScholar-Xneelo-v0.1.0.zip
