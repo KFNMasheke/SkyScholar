@@ -20,6 +20,10 @@ jobs:
           --health-interval=10s --health-timeout=5s --health-retries=10
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Validate original course drafts and review export
+        run: |
+          python3 -m unittest discover -s tests -p 'test_authoring.py' -v
+          python3 scripts/review_content.py
       - name: PHP runtime
         run: |
           sudo apt-get update

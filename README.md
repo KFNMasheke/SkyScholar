@@ -59,6 +59,8 @@ Moodle recommends one-minute cron. Xneelo's standard control-panel scheduler doc
 
 ## Content and scope
 
+Course authoring has started separately from Moodle setup. See [authoring workspace](authoring/README.md) for 14 core course blueprints and opening lessons, seven subject lessons and 35 original draft questions. These are incomplete, unreviewed drafts. They do not constitute an approved bank or a recovered complete 36-course catalogue. Validate locally with `python scripts/review_content.py`.
+
 Questions must be original or explicitly licensed for redistribution. Do not scrape commercial question banks, reconstruct recalled live examination questions or claim regulator endorsement. Each aviation question needs a syllabus objective, reference and instructor review before publication. Study targets/durations in the initial configuration are not official examination specifications.
 
 Future work: instructor-reviewed aviation banks, a custom theme, saved cross-attempt revision sets, a dedicated offline study experience and additional jurisdictions. The bundled default practice mode uses immediate feedback and is online; Moodle offline quizzes require a separately configured untimed deferred-feedback activity.

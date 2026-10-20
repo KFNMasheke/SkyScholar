@@ -1,0 +1,282 @@
+[
+  {
+    "id": "draft-introduction-to-drone-technology",
+    "name": "Introduction to Drone Technology",
+    "category": "Technical Tools & Software Training",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/introduction-to-drone-technology/README.md",
+    "lesson": "courses/introduction-to-drone-technology/lesson-01.md",
+    "modules": [
+      "The aircraft as a system",
+      "Multirotor, fixed wing and hybrid tradeoffs",
+      "Sensors, batteries and positioning",
+      "Mission selection and system limitations"
+    ],
+    "objectives": [
+      "Identify the aircraft, control station, command link and payload",
+      "Choose an aircraft type for a stated deliverable",
+      "Separate automation from operational responsibility"
+    ]
+  },
+  {
+    "id": "draft-drone-flight-fundamentals",
+    "name": "Drone Flight Fundamentals",
+    "category": "Drone Licensing & Regulatory Training",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/drone-flight-fundamentals/README.md",
+    "lesson": "courses/drone-flight-fundamentals/lesson-01.md",
+    "modules": [
+      "Forces and aircraft axes",
+      "Control modes and orientation",
+      "Normal procedures in simulation",
+      "Abnormal events and structured debrief"
+    ],
+    "objectives": [
+      "Describe aircraft axes and basic motion",
+      "Explain why a tilted multirotor needs vertical thrust margin",
+      "Build a simulator briefing with clear stop criteria"
+    ]
+  },
+  {
+    "id": "draft-aerial-photography-and-videography",
+    "name": "Aerial Photography and Videography",
+    "category": "Industry Applications & Case Studies",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/aerial-photography-and-videography/README.md",
+    "lesson": "courses/aerial-photography-and-videography/lesson-01.md",
+    "modules": [
+      "Brief, story and shot planning",
+      "Exposure, lens and motion",
+      "Capture continuity and safe staging",
+      "Editing, colour and delivery"
+    ],
+    "objectives": [
+      "Translate a client brief into a shot list",
+      "Explain exposure and motion tradeoffs",
+      "Plan a repeatable file and delivery workflow"
+    ]
+  },
+  {
+    "id": "draft-drone-mapping-and-surveying",
+    "name": "Drone Mapping and Surveying",
+    "category": "Drone Mapping, Surveying & GIS",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/drone-mapping-and-surveying/README.md",
+    "lesson": "courses/drone-mapping-and-surveying/lesson-01.md",
+    "modules": [
+      "Client question and accuracy specification",
+      "Capture geometry and image quality",
+      "Control, checkpoints and reference systems",
+      "Processing, validation and reporting"
+    ],
+    "objectives": [
+      "Distinguish a visual model from a validated measurement product",
+      "Define GSD, control and independent checkpoints",
+      "Write a capture-to-delivery quality plan"
+    ]
+  },
+  {
+    "id": "draft-commercial-drone-operations",
+    "name": "Commercial Drone Operations",
+    "category": "Drone Business & Entrepreneurship",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/commercial-drone-operations/README.md",
+    "lesson": "courses/commercial-drone-operations/lesson-01.md",
+    "modules": [
+      "Discovery and scope boundaries",
+      "Permissions, crew and operational planning",
+      "Pricing, delivery risk and change control",
+      "Client handover and retention"
+    ],
+    "objectives": [
+      "Convert a client request into a scoped work order",
+      "Identify operational dependencies before quoting",
+      "Define evidence-based acceptance and handover"
+    ]
+  },
+  {
+    "id": "draft-advanced-flight-techniques",
+    "name": "Advanced Flight Techniques",
+    "category": "Technical Tools & Software Training",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/advanced-flight-techniques/README.md",
+    "lesson": "courses/advanced-flight-techniques/lesson-01.md",
+    "modules": [
+      "Prerequisites and performance margins",
+      "Orientation and coordinated simulation",
+      "Complex mission rehearsal",
+      "Abnormal scenarios and readiness review"
+    ],
+    "objectives": [
+      "Build a simulator progression from simple to complex tasks",
+      "Identify coupled demands and lost performance margin",
+      "Use an objective debrief to decide readiness"
+    ]
+  },
+  {
+    "id": "draft-weather-and-airspace-management",
+    "name": "Weather and Airspace Management",
+    "category": "Drone Licensing & Regulatory Training",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/weather-and-airspace-management/README.md",
+    "lesson": "courses/weather-and-airspace-management/lesson-01.md",
+    "modules": [
+      "Weather sources and local effects",
+      "Airspace information and temporal validity",
+      "Mission feasibility and decision points",
+      "Reassessment, diversion and debrief"
+    ],
+    "objectives": [
+      "Distinguish forecast, observation and site evidence",
+      "Build a time- and location-specific information check",
+      "Explain a no-go decision using recorded uncertainty"
+    ]
+  },
+  {
+    "id": "draft-drone-maintenance-and-troubleshooting",
+    "name": "Drone Maintenance and Troubleshooting",
+    "category": "Technical Tools & Software Training",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/drone-maintenance-and-troubleshooting/README.md",
+    "lesson": "courses/drone-maintenance-and-troubleshooting/lesson-01.md",
+    "modules": [
+      "Inspection records and approved limits",
+      "Power, propulsion and sensor symptoms",
+      "Controlled troubleshooting and escalation",
+      "Return-to-service evidence and reliability"
+    ],
+    "objectives": [
+      "Separate a symptom from a diagnosis",
+      "Record configuration and maintenance evidence",
+      "Choose a safe isolation and escalation path"
+    ]
+  },
+  {
+    "id": "draft-faa-part-107-exam-preparation",
+    "name": "FAA Part 107 Exam Preparation",
+    "category": "Drone Licensing & Regulatory Training",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/faa-part-107-exam-preparation/README.md",
+    "lesson": "courses/faa-part-107-exam-preparation/lesson-01.md",
+    "modules": [
+      "US pathway and official source register",
+      "Airspace, weather and operational knowledge",
+      "Scenario reasoning and original practice items",
+      "Mock review and targeted revision"
+    ],
+    "objectives": [
+      "Locate official US study and certification references",
+      "Map learning objectives to the current ACS",
+      "Explain why a practice result is not certification"
+    ]
+  },
+  {
+    "id": "draft-sacaa-drone-pilot-license-preparation",
+    "name": "SACAA Drone Pilot License Preparation",
+    "category": "Drone Licensing & Regulatory Training",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/sacaa-drone-pilot-license-preparation/README.md",
+    "lesson": "courses/sacaa-drone-pilot-license-preparation/lesson-01.md",
+    "modules": [
+      "South African pathway and source verification",
+      "Aircraft, flight and human performance foundations",
+      "Weather, navigation and communications",
+      "Original practice, mock review and instructor sign-off"
+    ],
+    "objectives": [
+      "Identify the current South African authority and training references",
+      "Separate pilot, aircraft and operator requirements",
+      "Create a provisional subject-to-source mapping"
+    ]
+  },
+  {
+    "id": "draft-bvlos-operations",
+    "name": "BVLOS Operations",
+    "category": "Drone Licensing & Regulatory Training",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/bvlos-operations/README.md",
+    "lesson": "courses/bvlos-operations/lesson-01.md",
+    "modules": [
+      "Operating concept and approval dependencies",
+      "Command links, containment and air risk",
+      "Contingency evidence and assurance",
+      "Independent review and simulation"
+    ],
+    "objectives": [
+      "Explain how losing direct visual observation changes safety assumptions",
+      "Identify assurance questions for an advanced operation",
+      "Draft a desk-based concept of operations"
+    ]
+  },
+  {
+    "id": "draft-specialized-applications",
+    "name": "Specialized Applications",
+    "category": "Industry Applications & Case Studies",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/specialized-applications/README.md",
+    "lesson": "courses/specialized-applications/lesson-01.md",
+    "modules": [
+      "Industry problem and deliverable selection",
+      "Thermal, agriculture and infrastructure evidence",
+      "Quality checks and specialist interpretation",
+      "Case study reporting and limitations"
+    ],
+    "objectives": [
+      "Select a payload based on a client decision",
+      "Separate observations from specialist conclusions",
+      "Define a validation and handover plan"
+    ]
+  },
+  {
+    "id": "draft-drone-ethics-and-professionalism",
+    "name": "Drone Ethics and Professionalism",
+    "category": "Certification & Career Development",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/drone-ethics-and-professionalism/README.md",
+    "lesson": "courses/drone-ethics-and-professionalism/lesson-01.md",
+    "modules": [
+      "Stakeholders, privacy and consent",
+      "Truthful evidence and professional boundaries",
+      "Data handling, publication and accountability",
+      "Difficult client requests and reflective practice"
+    ],
+    "objectives": [
+      "Identify affected stakeholders and information harms",
+      "Apply data minimisation to a capture brief",
+      "Write a transparent limitation and correction statement"
+    ]
+  },
+  {
+    "id": "draft-drone-pilot-career-development",
+    "name": "Drone Pilot Career Development",
+    "category": "Certification & Career Development",
+    "status": "draft",
+    "legacy_id": null,
+    "blueprint": "courses/drone-pilot-career-development/README.md",
+    "lesson": "courses/drone-pilot-career-development/lesson-01.md",
+    "modules": [
+      "Career pathways and role requirements",
+      "Evidence portfolio and credential hygiene",
+      "Applications, networking and professional visibility",
+      "Continuous development and review"
+    ],
+    "objectives": [
+      "Build a portfolio around verifiable deliverables",
+      "Distinguish training, qualification and demonstrated competence",
+      "Create a focused skill-gap and evidence plan"
+    ]
+  }
+]

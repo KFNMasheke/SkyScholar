@@ -13,6 +13,9 @@ function expect(bool $condition, string $message): void {
 }
 $valid = validator::decode(json_encode($fixture), $tracks);
 expect(count($valid['questions']) === 6, 'valid demonstration content');
+$authoring = validator::decode(file_get_contents(__DIR__ . '/../authoring/za-foundations.draft.json'), $tracks);
+expect(count($authoring['questions']) === 35, 'original aviation drafts match native importer format');
+expect(count(array_filter($authoring['questions'], fn($q) => $q['status'] === 'approved')) === 0, 'aviation authoring does not invent approvals');
 $mutations = [
     'duplicate IDs' => function (&$data) { $data['questions'][] = $data['questions'][0]; },
     'unknown track' => function (&$data) { $data['track'] = 'unknown'; },
