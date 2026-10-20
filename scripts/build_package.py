@@ -19,13 +19,15 @@ def build(core: Path, output: Path):
     output.parent.mkdir(parents=True, exist_ok=True)
     entries = {}
     tracked = subprocess.check_output(['git', '-C', str(core), 'ls-files', '-z']).decode().split('\0')
-    excluded_parts = {'tests', '.github', '.git', 'node_modules', 'vendor', 'fixtures'}
+    excluded_parts = {'tests', '.github', '.git', 'node_modules', 'fixtures'}
     for relative in tracked:
         if not relative:
             continue
         path = Path(relative)
-        if excluded_parts.intersection(path.parts) or path.name in {
-                'config.php', '.gitignore', '.gitattributes', 'phpunit.xml.dist', 'behat.yml.dist',
+        # Only the site-level config contains deployment secrets. Nested config.php
+        # files and tracked vendor libraries are required upstream application code.
+        if relative == 'config.php' or excluded_parts.intersection(path.parts) or path.name in {
+                '.gitignore', '.gitattributes', 'phpunit.xml.dist', 'behat.yml.dist',
                 'package-lock.json', 'npm-shrinkwrap.json'}:
             continue
         entries['application/' + relative] = core / path

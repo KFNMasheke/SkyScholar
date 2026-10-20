@@ -11,6 +11,14 @@ with zipfile.ZipFile(sys.argv[1]) as archive:
     names = set(archive.namelist())
     for required in ('application/index.php', 'application/admin/cli/install.php',
                      'application/lib/setup.php', 'application/local/skyscholar/version.php',
+                     'application/cache/classes/config.php',
+                     'application/theme/boost/config.php', 'application/theme/classic/config.php',
+                     'application/mod/bigbluebuttonbn/classes/local/config.php',
+                     'application/mod/chat/gui_ajax/theme/bubble/config.php',
+                     'application/mod/chat/gui_ajax/theme/compact/config.php',
+                     'application/mod/chat/gui_ajax/theme/course_theme/config.php',
+                     'application/mod/quiz/accessrule/seb/config.php',
+                     'application/auth/cas/CAS/vendor/apereo/phpcas/CAS.php',
                      'application/local/skyscholar/cli/manage.php',
                      'application/local/skyscholar/content/demo.json',
                      'application/.htaccess', 'START-HERE.md', 'LICENSE', 'SHA256-MANIFEST.json'):
@@ -19,7 +27,8 @@ with zipfile.ZipFile(sys.argv[1]) as archive:
         path = PurePosixPath(name)
         assert not path.is_absolute() and '..' not in path.parts, name
         assert '.git' not in path.parts and 'moodledata' not in path.parts, name
-        assert path.name not in ('config.php', '.env'), name
+        assert name != 'application/config.php', name
+        assert path.name != '.env', name
         assert not name.endswith(('.log', '.mbz')), name
     manifest = json.loads(archive.read('SHA256-MANIFEST.json'))
     assert set(manifest) == names - {'SHA256-MANIFEST.json'}
