@@ -1,0 +1,775 @@
+{
+  "track": "za-remote",
+  "questions": [
+    {
+      "id": "za-foundation-air-law-001",
+      "topic": "air-law",
+      "objective": "Separate sources, permissions and responsibilities",
+      "stem": "A South African operation has a landowner agreement. Which question remains unresolved?",
+      "options": [
+        "Whether the applicable aviation requirements are also satisfied",
+        "No other permissions can be relevant",
+        "The aircraft is automatically registered"
+      ],
+      "correct": 0,
+      "feedback": [
+        "A site agreement does not establish aviation compliance.",
+        "Land access does not remove other applicable requirements.",
+        "A site agreement does not establish aircraft registration."
+      ],
+      "explanation": "A site agreement does not establish aviation compliance.",
+      "source": "SkyScholar original draft: authoring/subjects/air-law.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-air-law-002",
+      "topic": "air-law",
+      "objective": "Separate sources, permissions and responsibilities",
+      "stem": "An instructor asks you to verify a regulatory claim. Which record is most useful?",
+      "options": [
+        "An undated social media comment",
+        "A screenshot with its title removed",
+        "Current authority document, edition and exact section"
+      ],
+      "correct": 2,
+      "feedback": [
+        "An undated comment does not establish current authority.",
+        "Removing source identity prevents reliable verification.",
+        "A traceable source supports review of the specific claim."
+      ],
+      "explanation": "A traceable source supports review of the specific claim.",
+      "source": "SkyScholar original draft: authoring/subjects/air-law.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-air-law-003",
+      "topic": "air-law",
+      "objective": "Separate sources, permissions and responsibilities",
+      "stem": "A pilot qualification has been verified. What can you conclude from that fact alone?",
+      "options": [
+        "Every aircraft in the team is compliant",
+        "That the stated pilot qualification has been verified",
+        "Every proposed operation is authorised"
+      ],
+      "correct": 1,
+      "feedback": [
+        "Aircraft status needs its own evidence.",
+        "The evidence supports its narrow claim; other dependencies need separate checks.",
+        "Pilot evidence alone does not establish operational approval."
+      ],
+      "explanation": "The evidence supports its narrow claim; other dependencies need separate checks.",
+      "source": "SkyScholar original draft: authoring/subjects/air-law.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-air-law-004",
+      "topic": "air-law",
+      "objective": "Separate sources, permissions and responsibilities",
+      "stem": "Two sources give different versions of an operating rule. What should the author do?",
+      "options": [
+        "Resolve currency and applicability before approving the lesson",
+        "Choose whichever rule allows the mission",
+        "Average the two limits"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Conflicting sources require explicit review rather than a favourable assumption.",
+        "Convenience does not establish applicability.",
+        "Regulatory limits cannot be resolved by averaging them."
+      ],
+      "explanation": "Conflicting sources require explicit review rather than a favourable assumption.",
+      "source": "SkyScholar original draft: authoring/subjects/air-law.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-air-law-005",
+      "topic": "air-law",
+      "objective": "Separate sources, permissions and responsibilities",
+      "stem": "What does a SkyScholar practice target represent in this draft?",
+      "options": [
+        "An official licensing decision",
+        "Proof of complete syllabus coverage",
+        "An internal study setting"
+      ],
+      "correct": 2,
+      "feedback": [
+        "The learning platform does not make licensing decisions.",
+        "Coverage needs a reviewed objective map.",
+        "A study setting does not establish an official examination rule."
+      ],
+      "explanation": "A study setting does not establish an official examination rule.",
+      "source": "SkyScholar original draft: authoring/subjects/air-law.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-aircraft-001",
+      "topic": "aircraft",
+      "objective": "Use configuration evidence and manufacturer instructions",
+      "stem": "Which information best identifies the instructions applicable to an aircraft?",
+      "options": [
+        "Its actual configuration and the matching current manual",
+        "Only the colour of the aircraft",
+        "A manual for any drone from the same brand"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Instructions need to match the equipment and configuration in use.",
+        "Appearance is not a reliable configuration record.",
+        "Brand identity alone does not establish procedure compatibility."
+      ],
+      "explanation": "Instructions need to match the equipment and configuration in use.",
+      "source": "SkyScholar original draft: authoring/subjects/aircraft.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-aircraft-002",
+      "topic": "aircraft",
+      "objective": "Use configuration evidence and manufacturer instructions",
+      "stem": "A positioning indicator is normal. What does that establish by itself?",
+      "options": [
+        "That the command link cannot fail",
+        "That all mission permissions are complete",
+        "Only the reported status of that positioning function"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Positioning and command-link health are separate questions.",
+        "A technical indicator does not verify permissions.",
+        "One indicator cannot establish readiness of every subsystem."
+      ],
+      "explanation": "One indicator cannot establish readiness of every subsystem.",
+      "source": "SkyScholar original draft: authoring/subjects/aircraft.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-aircraft-003",
+      "topic": "aircraft",
+      "objective": "Use configuration evidence and manufacturer instructions",
+      "stem": "Vibration appeared after a component change. What is the most accurate initial statement?",
+      "options": [
+        "The aircraft is safe because the cause seems obvious",
+        "The timing is relevant evidence; the cause still needs investigation",
+        "The new component is conclusively the cause"
+      ],
+      "correct": 1,
+      "feedback": [
+        "An unexplained symptom cannot be resolved by assumption.",
+        "Temporal association supports a hypothesis, not confirmed causation.",
+        "The cause needs evidence and an appropriate technical investigation."
+      ],
+      "explanation": "Temporal association supports a hypothesis, not confirmed causation.",
+      "source": "SkyScholar original draft: authoring/subjects/aircraft.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-aircraft-004",
+      "topic": "aircraft",
+      "objective": "Use configuration evidence and manufacturer instructions",
+      "stem": "What should be recorded before a software change during troubleshooting?",
+      "options": [
+        "The current version, symptom and relevant permitted diagnostics",
+        "Only the final version if the change seems to work",
+        "Another team's private passwords"
+      ],
+      "correct": 0,
+      "feedback": [
+        "A baseline makes the effect of the change interpretable.",
+        "Omitting the baseline loses useful evidence.",
+        "Passwords are neither appropriate nor necessary diagnostic records."
+      ],
+      "explanation": "A baseline makes the effect of the change interpretable.",
+      "source": "SkyScholar original draft: authoring/subjects/aircraft.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-aircraft-005",
+      "topic": "aircraft",
+      "objective": "Use configuration evidence and manufacturer instructions",
+      "stem": "A battery has visible damage. Which response fits this lesson?",
+      "options": [
+        "Launch briefly to check whether power remains",
+        "Assume charge level establishes battery condition",
+        "Stop use and follow the applicable manufacturer and site process"
+      ],
+      "correct": 2,
+      "feedback": [
+        "A live test does not safely resolve damage concerns.",
+        "Charge level alone does not establish physical condition.",
+        "Damage requires a defined safe handling and technical review process."
+      ],
+      "explanation": "Damage requires a defined safe handling and technical review process.",
+      "source": "SkyScholar original draft: authoring/subjects/aircraft.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-principles-001",
+      "topic": "principles",
+      "objective": "Reason about forces with stated assumptions",
+      "stem": "In the simplified stationary level-hover model, what balances weight?",
+      "options": [
+        "The upward component of thrust",
+        "The camera resolution",
+        "The flight path drawn on a map"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Vertical force balance is the stated assumption of this model.",
+        "Image resolution is not a force balancing weight.",
+        "A planned path does not supply physical force."
+      ],
+      "explanation": "Vertical force balance is the stated assumption of this model.",
+      "source": "SkyScholar original draft: authoring/subjects/principles.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-principles-002",
+      "topic": "principles",
+      "objective": "Reason about forces with stated assumptions",
+      "stem": "Thrust magnitude stays constant while its vector tilts away from vertical. What happens to its vertical component?",
+      "options": [
+        "It must become larger",
+        "It becomes identical to image overlap",
+        "It becomes smaller"
+      ],
+      "correct": 2,
+      "feedback": [
+        "The vertical projection cannot increase under the stated tilt.",
+        "Image overlap is unrelated to the force component.",
+        "Tilting a fixed-magnitude vector reduces its vertical projection."
+      ],
+      "explanation": "Tilting a fixed-magnitude vector reduces its vertical projection.",
+      "source": "SkyScholar original draft: authoring/subjects/principles.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-principles-003",
+      "topic": "principles",
+      "objective": "Reason about forces with stated assumptions",
+      "stem": "Which term describes an aircraft's orientation?",
+      "options": [
+        "File size",
+        "Attitude",
+        "Ground sampling distance"
+      ],
+      "correct": 1,
+      "feedback": [
+        "A file size does not describe orientation.",
+        "Attitude describes orientation rather than position.",
+        "GSD describes approximate ground pixel spacing."
+      ],
+      "explanation": "Attitude describes orientation rather than position.",
+      "source": "SkyScholar original draft: authoring/subjects/principles.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-principles-004",
+      "topic": "principles",
+      "objective": "Reason about forces with stated assumptions",
+      "stem": "Why should a force calculation state its assumptions?",
+      "options": [
+        "They define when its conclusion applies",
+        "They make every real aircraft behave identically",
+        "They replace aircraft-specific limitations"
+      ],
+      "correct": 0,
+      "feedback": [
+        "A simplified model has a bounded scope of applicability.",
+        "Different designs and conditions still matter.",
+        "A classroom model cannot override a manual."
+      ],
+      "explanation": "A simplified model has a bounded scope of applicability.",
+      "source": "SkyScholar original draft: authoring/subjects/principles.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-principles-005",
+      "topic": "principles",
+      "objective": "Reason about forces with stated assumptions",
+      "stem": "A multirotor needs horizontal acceleration while maintaining height. Which explanation is appropriate?",
+      "options": [
+        "The vertical component can always be ignored",
+        "A sharper camera removes the force requirement",
+        "Both horizontal and vertical force requirements must be considered"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Maintaining height still requires vertical force balance.",
+        "A payload specification does not remove physical requirements.",
+        "Tilting thrust affects both components of the force balance."
+      ],
+      "explanation": "Tilting thrust affects both components of the force balance.",
+      "source": "SkyScholar original draft: authoring/subjects/principles.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-meteorology-001",
+      "topic": "meteorology",
+      "objective": "Check the location and time represented by weather information",
+      "stem": "Which statement best describes a forecast?",
+      "options": [
+        "A prediction for a stated place and period",
+        "A guarantee of identical conditions everywhere",
+        "A record that automatically approves a flight"
+      ],
+      "correct": 0,
+      "feedback": [
+        "A forecast has spatial and temporal scope.",
+        "Local variation and forecast uncertainty remain.",
+        "Weather information is not an operational authorisation."
+      ],
+      "explanation": "A forecast has spatial and temporal scope.",
+      "source": "SkyScholar original draft: authoring/subjects/meteorology.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-meteorology-002",
+      "topic": "meteorology",
+      "objective": "Check the location and time represented by weather information",
+      "stem": "A file was downloaded today but issued last week. Which time identifies its issue?",
+      "options": [
+        "Today's download time",
+        "The creation time of a copy on another device",
+        "The issue time stated in the file"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Retrieval time is a different event.",
+        "A copy timestamp does not establish the original issue.",
+        "Download time does not change when information was issued."
+      ],
+      "explanation": "Download time does not change when information was issued.",
+      "source": "SkyScholar original draft: authoring/subjects/meteorology.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-meteorology-003",
+      "topic": "meteorology",
+      "objective": "Check the location and time represented by weather information",
+      "stem": "Why might regional wind information be insufficient beside a large building?",
+      "options": [
+        "Regional information removes the need for local assessment",
+        "Local airflow can differ around terrain and structures",
+        "Buildings guarantee that wind is absent"
+      ],
+      "correct": 1,
+      "feedback": [
+        "Regional coverage does not resolve every local effect.",
+        "The local environment can affect the conditions the aircraft encounters.",
+        "Structures do not guarantee calm conditions."
+      ],
+      "explanation": "The local environment can affect the conditions the aircraft encounters.",
+      "source": "SkyScholar original draft: authoring/subjects/meteorology.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-meteorology-004",
+      "topic": "meteorology",
+      "objective": "Check the location and time represented by weather information",
+      "stem": "A weather product is valid after the mission ends. What is the key problem?",
+      "options": [
+        "Its valid period does not match the proposed mission",
+        "It automatically describes earlier conditions",
+        "Its filename alone establishes suitability"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Temporal applicability must be checked against the mission time.",
+        "A future valid period does not establish earlier conditions.",
+        "A filename cannot replace checking metadata."
+      ],
+      "explanation": "Temporal applicability must be checked against the mission time.",
+      "source": "SkyScholar original draft: authoring/subjects/meteorology.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-meteorology-005",
+      "topic": "meteorology",
+      "objective": "Check the location and time represented by weather information",
+      "stem": "Which decision record is most useful when conditions may change?",
+      "options": [
+        "A fixed decision with no review conditions",
+        "Only a favourable screenshot without its source",
+        "Evidence, uncertainty and explicit reassessment points"
+      ],
+      "correct": 2,
+      "feedback": [
+        "A plan should account for changing evidence.",
+        "Missing provenance prevents meaningful reassessment.",
+        "The crew needs a reasoned basis for updating the decision."
+      ],
+      "explanation": "The crew needs a reasoned basis for updating the decision.",
+      "source": "SkyScholar original draft: authoring/subjects/meteorology.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-navigation-001",
+      "topic": "navigation",
+      "objective": "Keep time, distance and reference frames consistent",
+      "stem": "At a constant ground speed of 5 m/s, how long is a 2 km straight segment in this simplified example?",
+      "options": [
+        "400 seconds",
+        "10 seconds",
+        "10000 seconds"
+      ],
+      "correct": 0,
+      "feedback": [
+        "2000 metres divided by 5 metres per second equals 400 seconds.",
+        "The distance must first be converted to 2000 metres.",
+        "Multiplying distance by speed does not calculate travel time."
+      ],
+      "explanation": "2000 metres divided by 5 metres per second equals 400 seconds.",
+      "source": "SkyScholar original draft: authoring/subjects/navigation.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-navigation-002",
+      "topic": "navigation",
+      "objective": "Keep time, distance and reference frames consistent",
+      "stem": "Heading and ground track differ in a scenario. Which factor can explain this?",
+      "options": [
+        "The filename of the mission plan",
+        "The colour of the map background",
+        "Wind affecting movement over the ground"
+      ],
+      "correct": 2,
+      "feedback": [
+        "A filename does not explain physical motion.",
+        "Display colour does not determine ground track.",
+        "Aircraft orientation and ground movement need not be identical."
+      ],
+      "explanation": "Aircraft orientation and ground movement need not be identical.",
+      "source": "SkyScholar original draft: authoring/subjects/navigation.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-navigation-003",
+      "topic": "navigation",
+      "objective": "Keep time, distance and reference frames consistent",
+      "stem": "A dataset uses longitude and latitude in degrees. What should an analyst avoid?",
+      "options": [
+        "Checking the coordinate units",
+        "Treating those numeric differences directly as metres",
+        "Recording the coordinate reference system"
+      ],
+      "correct": 1,
+      "feedback": [
+        "Checking units helps prevent invalid measurements.",
+        "Angular coordinates need an appropriate measurement method and reference handling.",
+        "Recording the CRS is necessary provenance."
+      ],
+      "explanation": "Angular coordinates need an appropriate measurement method and reference handling.",
+      "source": "SkyScholar original draft: authoring/subjects/navigation.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-navigation-004",
+      "topic": "navigation",
+      "objective": "Keep time, distance and reference frames consistent",
+      "stem": "What makes a checkpoint independent in a mapping adjustment?",
+      "options": [
+        "It is withheld from fitting and used for assessment",
+        "It is used to fit the model twice",
+        "It has a memorable name"
+      ],
+      "correct": 0,
+      "feedback": [
+        "A check is independent only if it was not used to fit the result being tested.",
+        "Repeated fitting does not produce an independent check.",
+        "Naming does not establish methodological independence."
+      ],
+      "explanation": "A check is independent only if it was not used to fit the result being tested.",
+      "source": "SkyScholar original draft: authoring/subjects/navigation.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-navigation-005",
+      "topic": "navigation",
+      "objective": "Keep time, distance and reference frames consistent",
+      "stem": "A simple travel-time calculation omits turns and reserve. How should it be reported?",
+      "options": [
+        "As a complete battery endurance guarantee",
+        "As proof that the route is authorised",
+        "As a limited calculation with the omissions stated"
+      ],
+      "correct": 2,
+      "feedback": [
+        "The calculation does not model all energy or flight factors.",
+        "A calculation does not establish permissions.",
+        "The result is valid only under its stated assumptions."
+      ],
+      "explanation": "The result is valid only under its stated assumptions.",
+      "source": "SkyScholar original draft: authoring/subjects/navigation.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-human-factors-001",
+      "topic": "human-factors",
+      "objective": "Make pressure and uncertainty visible in decisions",
+      "stem": "A client deadline conflicts with an unresolved safety concern. What should drive the decision?",
+      "options": [
+        "Evidence and the applicable stop criteria",
+        "The amount already spent on travel",
+        "A desire to avoid disappointing the client"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Commercial pressure does not resolve an unresolved safety concern.",
+        "Sunk costs do not establish that the operation is acceptable.",
+        "A preference cannot replace the required evidence."
+      ],
+      "explanation": "Commercial pressure does not resolve an unresolved safety concern.",
+      "source": "SkyScholar original draft: authoring/subjects/human-factors.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-human-factors-002",
+      "topic": "human-factors",
+      "objective": "Make pressure and uncertainty visible in decisions",
+      "stem": "A checklist item was read aloud without checking the equipment. What is missing?",
+      "options": [
+        "A louder voice alone",
+        "A more attractive checklist layout alone",
+        "Verification of the actual condition"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Volume does not establish the equipment state.",
+        "Layout can help usability but does not perform the check.",
+        "The purpose is to verify a condition, not only recite text."
+      ],
+      "explanation": "The purpose is to verify a condition, not only recite text.",
+      "source": "SkyScholar original draft: authoring/subjects/human-factors.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-human-factors-003",
+      "topic": "human-factors",
+      "objective": "Make pressure and uncertainty visible in decisions",
+      "stem": "Which debrief statement is most useful?",
+      "options": [
+        "Nothing can be learned because no damage occurred",
+        "The team assumed a mode was active without confirming the indicator",
+        "The pilot is always careless"
+      ],
+      "correct": 1,
+      "feedback": [
+        "An uneventful outcome can still reveal a risky process.",
+        "It describes observable behaviour and an actionable assumption.",
+        "A global personal judgement does not identify a specific process failure."
+      ],
+      "explanation": "It describes observable behaviour and an actionable assumption.",
+      "source": "SkyScholar original draft: authoring/subjects/human-factors.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-human-factors-004",
+      "topic": "human-factors",
+      "objective": "Make pressure and uncertainty visible in decisions",
+      "stem": "A complex camera task occupies most of a crew member's attention. What should be assessed?",
+      "options": [
+        "The remaining capacity to monitor and manage other demands",
+        "Only whether the final image is attractive",
+        "Whether more tasks can always be added"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Task allocation should consider total workload.",
+        "Image appearance does not assess remaining operational capacity.",
+        "Attention is finite; extra tasks need assessment."
+      ],
+      "explanation": "Task allocation should consider total workload.",
+      "source": "SkyScholar original draft: authoring/subjects/human-factors.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-human-factors-005",
+      "topic": "human-factors",
+      "objective": "Make pressure and uncertainty visible in decisions",
+      "stem": "A team stops because required information remains unresolved. How can this be evaluated?",
+      "options": [
+        "As failure solely because the job was delayed",
+        "As proof that no future mission can succeed",
+        "As a potentially well-supported professional decision"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Delay alone does not show the decision was wrong.",
+        "One unresolved decision does not establish permanent inability.",
+        "Stopping can demonstrate appropriate judgement rather than failure."
+      ],
+      "explanation": "Stopping can demonstrate appropriate judgement rather than failure.",
+      "source": "SkyScholar original draft: authoring/subjects/human-factors.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-communications-001",
+      "topic": "communications",
+      "objective": "Resolve ambiguity before acting",
+      "stem": "A message does not identify its intended recipient. What is the best next step?",
+      "options": [
+        "Clarify the recipient before acting on an uncertain instruction",
+        "Assume it is intended for whoever responds first",
+        "Ignore every later message"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Resolving ambiguity avoids an unsupported assumption.",
+        "Speed does not establish the intended recipient.",
+        "A structured clarification is more useful than abandoning communication."
+      ],
+      "explanation": "Resolving ambiguity avoids an unsupported assumption.",
+      "source": "SkyScholar original draft: authoring/subjects/communications.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-communications-002",
+      "topic": "communications",
+      "objective": "Resolve ambiguity before acting",
+      "stem": "Which exchange best demonstrates a closed loop in this desk exercise?",
+      "options": [
+        "Message followed by an unrelated comment",
+        "Two people speaking over each other",
+        "Clear message, appropriate readback, and confirmation or correction"
+      ],
+      "correct": 2,
+      "feedback": [
+        "An unrelated response does not confirm meaning.",
+        "Overlapping speech can obscure meaning rather than confirm it.",
+        "The loop checks the shared understanding."
+      ],
+      "explanation": "The loop checks the shared understanding.",
+      "source": "SkyScholar original draft: authoring/subjects/communications.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-communications-003",
+      "topic": "communications",
+      "objective": "Resolve ambiguity before acting",
+      "stem": "A distance is communicated without units. What should the receiver do?",
+      "options": [
+        "Assume every distance in aviation uses one universal unit",
+        "Ask for the units and confirm the intended value",
+        "Choose the unit that makes the task easiest"
+      ],
+      "correct": 1,
+      "feedback": [
+        "Units depend on context and require verification.",
+        "The same number can have materially different meanings across units.",
+        "Convenience does not establish the intended measure."
+      ],
+      "explanation": "The same number can have materially different meanings across units.",
+      "source": "SkyScholar original draft: authoring/subjects/communications.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-communications-004",
+      "topic": "communications",
+      "objective": "Resolve ambiguity before acting",
+      "stem": "Does this draft lesson establish approved South African radio phraseology?",
+      "options": [
+        "No; local references and competent review are still required",
+        "Yes, any classroom phrase is automatically approved",
+        "Yes, because the lesson is available online"
+      ],
+      "correct": 0,
+      "feedback": [
+        "The general communication model is not an approved live-radio procedure.",
+        "Classroom wording does not establish regulatory or procedural approval.",
+        "Publication does not create operational approval."
+      ],
+      "explanation": "The general communication model is not an approved live-radio procedure.",
+      "source": "SkyScholar original draft: authoring/subjects/communications.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-communications-005",
+      "topic": "communications",
+      "objective": "Resolve ambiguity before acting",
+      "stem": "A communication log is prepared for a debrief. What belongs in it?",
+      "options": [
+        "Passwords for every crew account",
+        "Unverified personal accusations presented as fact",
+        "Relevant factual exchanges and decision changes"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Passwords are not appropriate debrief content.",
+        "A factual log should distinguish observations from unsupported claims.",
+        "A proportionate record supports review without unnecessary personal data."
+      ],
+      "explanation": "A proportionate record supports review without unnecessary personal data.",
+      "source": "SkyScholar original draft: authoring/subjects/communications.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    }
+  ]
+}
