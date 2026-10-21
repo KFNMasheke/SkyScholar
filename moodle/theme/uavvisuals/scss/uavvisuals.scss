@@ -185,7 +185,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .btn { border-radius: 6px; }
 .btn-primary { box-shadow: 0 8px 22px rgba(36, 61, 49, .12); }
 .pagelayout-frontpage #page.drawers { padding-inline: 0; }
-.pagelayout-frontpage #page.drawers .main-inner { max-width: none; border: 0; padding: 0; margin: 0 auto; background: #fff; }
+// Two IDs intentionally outrank Boost’s body.limitedwidth rule (830px).
+body.pagelayout-frontpage #page.drawers #topofscroll.main-inner { width: 100%; max-width: none; border-radius: 0; border: 0; padding: 0; margin: 0 auto; background: #fff; }
 .pagelayout-frontpage #page-header { padding: 1.3rem 2rem 0; margin-bottom: 0; }
 .pagelayout-frontpage #region-main { padding: 2rem; }
 .pagelayout-frontpage #page-content { margin: 0; }

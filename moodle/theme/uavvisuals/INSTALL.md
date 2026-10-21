@@ -2,7 +2,7 @@
 
 ## Visual direction
 
-Release 1.1.1 adapts the Edly learning-catalogue reference into UAV Visuals’ identity:
+Release 1.1.2 adapts the Edly learning-catalogue reference into UAV Visuals’ identity:
 a white header, pale botanical hero, bold Manrope headings, forest buttons, gold
 accents, soft feature panels and spacious image-led course cards. The supplied
 logo, aerial photograph and licensed local fonts remain UAV Visuals assets. No
@@ -10,7 +10,8 @@ Edly source code, commercial theme files, illustrations or promotional copy are
 bundled.
 
 The site-home hero spans the available screen width, with Boost’s outer gutters
-and the 1440px landing-page cap removed. Open drawers still reserve their native
+and the 1440px landing-page cap removed. The homepage selector explicitly outranks
+Boost’s `body.limitedwidth` rule, which otherwise caps content at 830px. Open drawers still reserve their native
 space. The hero uses fluid image heights, flexible grid columns and a single-column
 layout on portrait tablets and phones.
 
@@ -36,7 +37,7 @@ as the dashboard welcome panel.
 
 1. Keep Boost installed. Back up code, database and private data together.
 2. Go to **Site administration → Plugins → Install plugins**. Upload
-   `SkyScholar-UAV-Visuals-Theme-v1.1.1.zip` and follow the plugin checks and
+   `SkyScholar-UAV-Visuals-Theme-v1.1.2.zip` and follow the plugin checks and
    installation screens. The archive contains one `uavvisuals` theme directory.
 3. If Moodle cannot write to its theme directory, extract locally and upload the
    **uavvisuals folder** into `public_html/skyscholar/theme/` using konsoleH.
