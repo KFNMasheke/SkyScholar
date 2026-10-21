@@ -283,7 +283,7 @@ final class loader {
         $data->cmidnumber = $idnumber;
         $data->visible = 0;
         $data->completion = COMPLETION_TRACKING_NONE;
-        $data->introeditor = ['text' => 'Unreviewed draft. Opening content only; keep hidden for staff review.', 'format' => FORMAT_PLAIN, 'itemid' => 0];
+        $data->introeditor = ['text' => 'Authored self-study. Keep hidden until instructional and technical review is complete.', 'format' => FORMAT_PLAIN, 'itemid' => 0];
         $data->page = ['text' => $html, 'format' => FORMAT_HTML, 'itemid' => 0];
         // page_add_instance only copies the editor array when a form object is supplied.
         $data->content = $html;
