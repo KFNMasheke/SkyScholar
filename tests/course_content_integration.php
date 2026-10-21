@@ -73,10 +73,15 @@ try { loader::import_course($first['id']); } catch (RuntimeException $e) { $reje
 content_verify($rejected && $DB->get_field('course', 'visible', ['id' => $existing->id]) == 1, 'visible course refusal does not hide or rewrite it');
 update_course((object)['id' => $existing->id, 'visible' => 0]);
 $lock = \core\lock\lock_config::get_lock_factory('local_skyscholarcontent')->get_lock('content-import', 0);
-$rejected = false;
-try { loader::import_course($first['id']); } catch (RuntimeException $e) { $rejected = true; }
+// MariaDB named locks are reentrant on one connection: use a separate PHP process.
+$process = proc_open([PHP_BINARY, __DIR__ . '/course_content_lock_probe.php'], [1 => ['pipe', 'w'], 2 => ['pipe', 'w']], $pipes);
+if (!is_resource($process)) { throw new RuntimeException('Could not start lock probe.'); }
+$probeoutput = stream_get_contents($pipes[1]) . stream_get_contents($pipes[2]);
+fclose($pipes[1]);
+fclose($pipes[2]);
+$probeexit = proc_close($process);
 $lock->release();
-content_verify($rejected, 'concurrent importer refuses the second writer');
+content_verify($probeexit === 0 && str_contains($probeoutput, 'LOCK_REFUSED'), 'concurrent importer refuses a second process');
 $learner = $DB->get_record('user', ['username' => 'testlearner1'], '*', MUST_EXIST);
 \core\session\manager::set_user($learner);
 $rejected = false;

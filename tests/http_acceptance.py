@@ -10,13 +10,13 @@ import urllib.request
 BASE = 'http://127.0.0.1:8080'
 
 class Client:
-    def __init__(self, username):
+    def __init__(self, username, password="DisposableTest!2026"):
         self.opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
         _, page = self.request('/login/index.php')
         token = re.search(r'name="logintoken" value="([^"]+)"', page)
         assert token, 'Login CSRF token missing'
         _, page = self.request('/login/index.php', {
-            'username': username, 'password': 'DisposableTest!2026', 'logintoken': token.group(1),
+            'username': username, 'password': password, 'logintoken': token.group(1),
         })
         assert 'loginerrors' not in page, 'Test login failed'
 
@@ -75,4 +75,21 @@ assert 'id="ssc-start"' not in denied
 status, denied = first.request('/local/skyscholarcontent/run.php', {'course': 'draft-introduction-to-drone-technology'})
 assert '"success":true' not in denied
 passed('learner cannot open or POST to the course content importer')
+admin = Client('admin', 'DisposableTestAdmin!2026')
+status, screen = admin.request('/local/skyscholarcontent/admin.php')
+assert status == 200 and 'id="ssc-start"' in screen
+sesskey = re.search(r'"sesskey"\s*:\s*"([^" ]+)"', screen)
+assert sesskey, 'Admin session token missing'
+status, rejected = admin.request('/local/skyscholarcontent/run.php', {'course': 'draft-introduction-to-drone-technology'})
+assert '"success":true' not in rejected
+status, rejected = admin.request('/local/skyscholarcontent/run.php?sesskey=' + sesskey.group(1))
+assert status == 405
+status, repeated = admin.request('/local/skyscholarcontent/run.php', {'course': 'draft-introduction-to-drone-technology', 'sesskey': sesskey.group(1)})
+import json
+result = json.loads(repeated)
+assert status == 200 and result['success'] is True
+assert result['result']['courses'] + result['result']['pages'] + result['result']['questions'] == 0
+status, rejected = admin.request('/local/skyscholarcontent/run.php', {'course': 'draft-unknown', 'sesskey': sesskey.group(1)})
+assert status == 400 and json.loads(rejected)['success'] is False
+passed('admin importer screen, missing-CSRF denial, GET denial, safe POST retry and unknown-key refusal')
 print('ALL HTTP ACCEPTANCE CHECKS PASSED', flush=True)
