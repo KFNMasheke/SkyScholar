@@ -70,4 +70,9 @@ passed('learner cannot access staff report queue')
 status, denied = first.request('/local/skyscholar/report.php?attempt=' + attempt + '&slot=9999')
 assert 'What needs correcting?' not in denied
 passed('invalid question slot is rejected')
+status, denied = first.request('/local/skyscholarcontent/admin.php')
+assert 'id="ssc-start"' not in denied
+status, denied = first.request('/local/skyscholarcontent/run.php', {'course': 'draft-introduction-to-drone-technology'})
+assert '"success":true' not in denied
+passed('learner cannot open or POST to the course content importer')
 print('ALL HTTP ACCEPTANCE CHECKS PASSED', flush=True)

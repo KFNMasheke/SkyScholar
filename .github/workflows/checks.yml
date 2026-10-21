@@ -24,6 +24,7 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p 'test_authoring.py' -v
           python3 scripts/review_content.py
+          python3 scripts/build_course_content.py
       - name: PHP runtime
         run: |
           sudo apt-get update
@@ -32,12 +33,14 @@ jobs:
         run: |
           find moodle scripts tests deployment -name '*.php' -print0 | xargs -0 -n 1 php8.3 -l
           php8.3 tests/validator_test.php
+          php8.3 tests/course_content_validation.php
       - name: Obtain exact upstream Moodle
         run: |
           git clone --depth 1 --branch v4.5.15 https://github.com/moodle/moodle.git "$RUNNER_TEMP/moodle-core"
           python3 -c 'import json,subprocess,os; assert subprocess.check_output(["git","-C",os.environ["RUNNER_TEMP"]+"/moodle-core","rev-parse","HEAD"],text=True).strip()==json.load(open("moodle.lock.json"))["commit"]'
           cp -a "$RUNNER_TEMP/moodle-core" "$RUNNER_TEMP/moodle-test"
           cp -a moodle/local/skyscholar "$RUNNER_TEMP/moodle-test/local/"
+          cp -a moodle/local/skyscholarcontent "$RUNNER_TEMP/moodle-test/local/"
           cp -a moodle/theme/uavvisuals "$RUNNER_TEMP/moodle-test/theme/"
       - name: Compile UAV Visuals theme and render native templates
         env:
@@ -54,6 +57,7 @@ jobs:
             --fullname=SkyScholar-Test --shortname=SS-Test --adminpass=DisposableTestAdmin!2026 \
             --adminemail=admin@example.test --chmod=0770
           php8.3 -d max_input_vars=5000 tests/moodle_integration.php
+          php8.3 -d max_input_vars=5000 tests/course_content_integration.php
       - name: HTTP login, reporting and access controls
         run: |
           php8.3 -d max_input_vars=5000 -S 127.0.0.1:8080 -t "$RUNNER_TEMP/moodle-test" > "$RUNNER_TEMP/http.log" 2>&1 &

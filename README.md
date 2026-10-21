@@ -44,6 +44,15 @@ php local/skyscholar/cli/manage.php --action=readiness --track=za-remote
 
 `configure` is an explicit fresh-install bootstrap. It disables public registration pending SMTP/anti-abuse/privacy checks. Do not rerun it casually on a live customised site. Imports and publication are repeatable and do not reset attempts.
 
+## Load authored drafts without SSH
+
+Install the standalone `local_skyscholarcontent` plugin ZIP, then open
+**Site administration → Courses → SkyScholar course content**. One explicit admin
+import provisions 14 hidden draft starters, 35 native Pages and 35 draft bank
+questions. Existing CSV course identities are reused; staff edits are preserved.
+This does not finish the unwritten modules or publish aviation courses. See
+[course content installer](docs/COURSE-CONTENT-INSTALLER.md).
+
 ## Build the Xneelo ZIP
 
 ```bash

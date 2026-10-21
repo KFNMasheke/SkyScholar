@@ -1,0 +1,1025 @@
+{
+  "schema": 1,
+  "status": "draft-staff-review-only",
+  "courses": [
+    {
+      "id": "draft-introduction-to-drone-technology",
+      "name": "Introduction to Drone Technology",
+      "category": "Technical Tools & Software Training",
+      "status": "draft",
+      "modules": [
+        "The aircraft as a system",
+        "Multirotor, fixed wing and hybrid tradeoffs",
+        "Sensors, batteries and positioning",
+        "Mission selection and system limitations"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Identify the aircraft, control station, command link and payload</li><li>Choose an aircraft type for a stated deliverable</li><li>Separate automation from operational responsibility</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: The aircraft is only one part of the system</h2>\n<p>Course: Introduction to Drone Technology</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Identify the aircraft, control station, command link and payload.</p>\n<h3>Lesson</h3>\n<p>A client asks for a map of a small construction site. Before choosing a drone, write down the result the client needs: a dated visual record, a measurable surface, or an inspection finding. These are different products. A sharp photograph does not automatically provide reliable measurements, and a model that looks complete can still contain gaps.</p>\n<p>Think in four connected parts. The aircraft carries the equipment. The remote pilot station allows the crew to monitor and direct it. The command link carries instructions and status. The payload collects the useful information. The people, procedures and operating environment determine whether these parts can work together safely. A camera specification alone cannot describe mission capability.</p>\n<p>A multirotor can hold position and inspect a small area from different directions, but carrying more mass affects its performance. A fixed-wing aircraft generally suits sustained forward travel; its launch, recovery and turning needs must fit the site. A hybrid combines operating modes with additional system complexity. These are selection considerations, not promises about a particular model.</p>\n<p>Separate three questions in every equipment comparison: Can it collect the required information? Can the crew operate it within the relevant limitations and permissions? Can the team check and deliver usable results? Automation can help execute a planned path. It cannot establish that the path is safe, lawful, or suitable for the data product.</p>\n<p>For the construction request, produce a short equipment decision with assumptions. If the client has not defined accuracy, inspection criteria, or output format, record those as questions rather than selecting the most expensive aircraft.</p>\n<h3>Desk exercise</h3>\n<p>Create a four-part system diagram for a fictional construction survey. Add one failure consequence and one verification step for each part.</p>\n<h3>Marking guide</h3>\n<p>A strong answer links aircraft, control station, command link and payload to the client deliverable. It distinguishes capture capability from permission and validation, and identifies missing client requirements.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Introduction to Drone Technology</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Technical Tools &amp; Software Training</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Identify the aircraft, control station, command link and payload</li>\n<li>Choose an aircraft type for a stated deliverable</li>\n<li>Separate automation from operational responsibility</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. The aircraft as a system 2. Multirotor, fixed wing and hybrid tradeoffs 3. Sensors, batteries and positioning 4. Mission selection and system limitations</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-drone-flight-fundamentals",
+      "name": "Drone Flight Fundamentals",
+      "category": "Drone Licensing & Regulatory Training",
+      "status": "draft",
+      "modules": [
+        "Forces and aircraft axes",
+        "Control modes and orientation",
+        "Normal procedures in simulation",
+        "Abnormal events and structured debrief"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Describe aircraft axes and basic motion</li><li>Explain why a tilted multirotor needs vertical thrust margin</li><li>Build a simulator briefing with clear stop criteria</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Understand the motion before using the controls</h2>\n<p>Course: Drone Flight Fundamentals</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Describe aircraft axes and basic motion.</p>\n<h3>Lesson</h3>\n<p>Use a simulator for this lesson. Keep propellers removed from any aircraft used only for desk familiarisation. The purpose is to connect control input, aircraft attitude and movement, not to teach an unsupervised first flight.</p>\n<p>An aircraft has longitudinal, lateral and vertical axes. Roll, pitch and yaw describe rotation about those axes. Position describes where the aircraft is; attitude describes its orientation. They are related but different. A multirotor can change its attitude before a clear positional change becomes visible, so a pilot who reacts only to displacement may respond late.</p>\n<p>In a simplified stationary hover, the upward component of thrust balances weight. Tilting the thrust vector introduces a horizontal component. If total thrust does not increase, its vertical component becomes smaller. This explains why a demand for horizontal acceleration also needs performance margin to maintain height. It does not provide a universal control setting: flight controllers and aircraft designs implement control differently.</p>\n<p>Orientation changes the pilot&#x27;s visual interpretation. A simulated aircraft facing the pilot makes a leftward aircraft motion appear on the opposite side of the pilot&#x27;s viewpoint. Start by describing the aircraft&#x27;s own orientation aloud. Avoid guessing from the screen location alone. A camera view and a map are useful aids, but they are not interchangeable with direct aircraft attitude awareness.</p>\n<p>Before a simulator exercise, agree a starting state, exercise boundary, instructor intervention signal and stop condition. Afterwards compare intended movement with actual movement. Record one observation, its possible cause and the next controlled practice step. Better practice reduces uncertainty instead of rewarding a lucky recovery.</p>\n<h3>Desk exercise</h3>\n<p>In a simulator, annotate three screenshots showing roll, pitch and yaw. Explain one difference between aircraft-relative and pilot-relative directions.</p>\n<h3>Marking guide</h3>\n<p>Award credit for correct axes, separation of attitude and position, and a defined stop condition. Do not assess physical flight competence from screenshots.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Drone Flight Fundamentals</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Drone Licensing &amp; Regulatory Training</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Describe aircraft axes and basic motion</li>\n<li>Explain why a tilted multirotor needs vertical thrust margin</li>\n<li>Build a simulator briefing with clear stop criteria</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Forces and aircraft axes 2. Control modes and orientation 3. Normal procedures in simulation 4. Abnormal events and structured debrief</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-aerial-photography-and-videography",
+      "name": "Aerial Photography and Videography",
+      "category": "Industry Applications & Case Studies",
+      "status": "draft",
+      "modules": [
+        "Brief, story and shot planning",
+        "Exposure, lens and motion",
+        "Capture continuity and safe staging",
+        "Editing, colour and delivery"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Translate a client brief into a shot list</li><li>Explain exposure and motion tradeoffs</li><li>Plan a repeatable file and delivery workflow</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Start with the story and the delivery</h2>\n<p>Course: Aerial Photography and Videography</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Translate a client brief into a shot list.</p>\n<h3>Lesson</h3>\n<p>A property client requests a short video showing the entrance, the relationship between buildings and the surrounding landscape. The useful first deliverable is a shot list. Each shot should answer a viewer question. An entrance overview establishes access; a wider view establishes location; a detail provides texture. Repeating the same view at several heights does not necessarily add information.</p>\n<p>Specify the intended format before capture: orientation, duration, resolution, frame rate and delivery channel. These choices affect framing and editing. Keep a record of the client&#x27;s priorities and any privacy restrictions. A request for an attractive result does not supply permission to film every neighbouring property or person.</p>\n<p>Exposure decisions involve aperture where adjustable, shutter time and sensitivity. A longer exposure can introduce motion blur; a shorter one can make movement look more discrete. Increasing sensitivity may add visible noise. The appropriate compromise depends on the image and motion required. Avoid prescribing one setting for every aircraft, lens, light level and output.</p>\n<p>Continuity is a planning problem. Adjacent shots should relate in direction, subject position and light. Prepare a sequence that can be edited without needing risky extra passes to repair missing coverage. Keep the original files, work from copies and record any transformations used in post-production.</p>\n<p>For this lesson, plan with still images or a simulator. Evaluate whether every proposed shot advances the story and whether the finished edit can be delivered within the agreed scope. The grading criterion is deliberate communication, not the closeness of the aircraft to an obstacle.</p>\n<h3>Desk exercise</h3>\n<p>Produce a six-shot storyboard for a fictional property without flying. Include shot purpose, duration, framing, privacy consideration and delivery format.</p>\n<h3>Marking guide</h3>\n<p>Each shot should have a distinct purpose, a coherent sequence and a feasible delivery specification. Deduct for duplicated coverage presented as a complete story.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Aerial Photography and Videography</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Industry Applications &amp; Case Studies</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Translate a client brief into a shot list</li>\n<li>Explain exposure and motion tradeoffs</li>\n<li>Plan a repeatable file and delivery workflow</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Brief, story and shot planning 2. Exposure, lens and motion 3. Capture continuity and safe staging 4. Editing, colour and delivery</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-drone-mapping-and-surveying",
+      "name": "Drone Mapping and Surveying",
+      "category": "Drone Mapping, Surveying & GIS",
+      "status": "draft",
+      "modules": [
+        "Client question and accuracy specification",
+        "Capture geometry and image quality",
+        "Control, checkpoints and reference systems",
+        "Processing, validation and reporting"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Distinguish a visual model from a validated measurement product</li><li>Define GSD, control and independent checkpoints</li><li>Write a capture-to-delivery quality plan</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: A map needs a measurement claim that can be checked</h2>\n<p>Course: Drone Mapping and Surveying</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Distinguish a visual model from a validated measurement product.</p>\n<h3>Lesson</h3>\n<p>A project manager asks whether a stockpile has grown since last month. A visual model can show its shape, but a volume comparison requires a consistent boundary, reference surface, coordinate system and method. Begin with the decision the measurement will support and the tolerance needed. Do not select settings from the word mapping alone.</p>\n<p>Ground sampling distance describes the approximate ground size represented by a pixel under stated geometry. It is not the same as positional accuracy. Blur, weak geometry, calibration, control quality, surface texture and processing choices can all affect the delivered result. A fine-looking raster does not establish survey-grade performance.</p>\n<p>Control points help relate a model to a reference frame. Independent checkpoints are withheld from that adjustment and used to assess performance. If every surveyed point is used to fit the model, the residuals at those fitted points cannot serve as an independent test. Record point roles before processing and keep their measurement provenance.</p>\n<p>Horizontal and vertical references must be stated. A height may refer to an ellipsoid or to a local height system; mixing them can create a systematic offset. Record coordinate units and the transformation used, including any required grid files or assumptions. On-screen alignment is insufficient evidence of a correct transformation.</p>\n<p>For the stockpile scenario, define the same base surface and boundary rules for both dates, inspect coverage, and report uncertainty and exclusions alongside the change. A delivery note should let another analyst understand what was measured and what remains uncertain.</p>\n<h3>Desk exercise</h3>\n<p>Write a one-page quality plan for a fictional stockpile comparison, separating control and checkpoints and naming the information still required from the client.</p>\n<h3>Marking guide</h3>\n<p>Expect explicit units, reference frames, independent checks, comparable base surfaces and a stated acceptance tolerance. GSD alone must not be presented as accuracy.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Drone Mapping and Surveying</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Drone Mapping, Surveying &amp; GIS</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Distinguish a visual model from a validated measurement product</li>\n<li>Define GSD, control and independent checkpoints</li>\n<li>Write a capture-to-delivery quality plan</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Client question and accuracy specification 2. Capture geometry and image quality 3. Control, checkpoints and reference systems 4. Processing, validation and reporting</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-commercial-drone-operations",
+      "name": "Commercial Drone Operations",
+      "category": "Drone Business & Entrepreneurship",
+      "status": "draft",
+      "modules": [
+        "Discovery and scope boundaries",
+        "Permissions, crew and operational planning",
+        "Pricing, delivery risk and change control",
+        "Client handover and retention"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Convert a client request into a scoped work order</li><li>Identify operational dependencies before quoting</li><li>Define evidence-based acceptance and handover</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Sell a defined outcome with visible assumptions</h2>\n<p>Course: Commercial Drone Operations</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Convert a client request into a scoped work order.</p>\n<h3>Lesson</h3>\n<p>A client asks for a roof inspection tomorrow and requests a fixed price immediately. A useful commercial response starts with scope. Ask what decision the inspection must support, which structures are included, what defects matter, and whether a qualified specialist must interpret the imagery. Capturing images and certifying a roof condition are different responsibilities.</p>\n<p>Separate the work into preparation, capture, analysis and delivery. Preparation includes confirming access, operational feasibility, crew availability and required permissions. Capture depends on appropriate equipment and conditions. Analysis includes image review and traceable observations. Delivery includes agreed files, a reporting format and a review window. Omitting these stages from a quote does not remove their cost.</p>\n<p>List assumptions that can change the work: access restrictions, weather, incomplete site information, additional structures, repeat attendance or a new reporting requirement. State who can authorise a scope change. A low initial price with an undefined deliverable creates disputes even when the flying is technically successful.</p>\n<p>Define acceptance in terms the client can check. Examples include a complete agreed asset list, an image index, explicit limitations and the stated report format. Avoid promising that no defects exist merely because none were visible. Keep observed evidence separate from interpretation and from work outside the operator&#x27;s competence.</p>\n<p>Finish with a handover that explains naming, retention, permitted sharing and follow-up. Use fictional client information in the exercise. This course does not replace jurisdiction-specific operational approval, professional certification or a reviewed commercial contract.</p>\n<h3>Desk exercise</h3>\n<p>Draft a scope for a fictional three-building roof image survey, including exclusions, dependencies, acceptance criteria and a change request rule.</p>\n<h3>Marking guide</h3>\n<p>A complete response separates capture from specialist diagnosis, covers four work stages and includes clear acceptance criteria without unsupported safety claims.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Commercial Drone Operations</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Drone Business &amp; Entrepreneurship</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Convert a client request into a scoped work order</li>\n<li>Identify operational dependencies before quoting</li>\n<li>Define evidence-based acceptance and handover</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Discovery and scope boundaries 2. Permissions, crew and operational planning 3. Pricing, delivery risk and change control 4. Client handover and retention</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-advanced-flight-techniques",
+      "name": "Advanced Flight Techniques",
+      "category": "Technical Tools & Software Training",
+      "status": "draft",
+      "modules": [
+        "Prerequisites and performance margins",
+        "Orientation and coordinated simulation",
+        "Complex mission rehearsal",
+        "Abnormal scenarios and readiness review"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Build a simulator progression from simple to complex tasks</li><li>Identify coupled demands and lost performance margin</li><li>Use an objective debrief to decide readiness</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Increase complexity one variable at a time</h2>\n<p>Course: Advanced Flight Techniques</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Build a simulator progression from simple to complex tasks.</p>\n<h3>Lesson</h3>\n<p>Advanced performance is repeatable decision-making under a defined workload. It is not a collection of dramatic manoeuvres. Begin with a simulator baseline that the learner can complete consistently: stable orientation, a simple path and a deliberate stop. Document the conditions so the next exercise is comparable.</p>\n<p>Increase only one demand at a time. A route can become more complex, a camera task can be introduced, or a simulated wind condition can change. Changing everything together prevents the instructor from identifying why performance deteriorated. A successful outcome after an uncontrolled recovery is not evidence of a reliable method.</p>\n<p>Describe margins explicitly. Aircraft performance, attention, available space and time to respond are finite. A task that uses nearly all attention for framing may leave little capacity for monitoring warnings. More automation can change workload rather than simply reducing it. The crew still needs to understand what mode is active and what the aircraft will do when the plan changes.</p>\n<p>For each exercise, define a normal completion criterion and an interruption criterion. The learner should be able to explain when to stop without treating that decision as failure. Record errors by observable behaviour: delayed recognition, incorrect mode assumption or an incomplete cross-check. Avoid vague judgements such as bad flying.</p>\n<p>A progression plan should end with an instructor review of evidence, not a self-issued operational qualification. Real aircraft exercises require the appropriate training environment, instructor, permissions and aircraft-specific procedures. This opening lesson remains a desk and simulator activity.</p>\n<h3>Desk exercise</h3>\n<p>Design three simulator exercises that add one demand each. Include a stop condition and a measurable debrief question for every exercise.</p>\n<h3>Marking guide</h3>\n<p>Credit controlled progression and measurable behaviour. Reject plans that rely on unapproved real-world proximity flying or treat a simulator result as operational authorisation.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Advanced Flight Techniques</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Technical Tools &amp; Software Training</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Build a simulator progression from simple to complex tasks</li>\n<li>Identify coupled demands and lost performance margin</li>\n<li>Use an objective debrief to decide readiness</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Prerequisites and performance margins 2. Orientation and coordinated simulation 3. Complex mission rehearsal 4. Abnormal scenarios and readiness review</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-weather-and-airspace-management",
+      "name": "Weather and Airspace Management",
+      "category": "Drone Licensing & Regulatory Training",
+      "status": "draft",
+      "modules": [
+        "Weather sources and local effects",
+        "Airspace information and temporal validity",
+        "Mission feasibility and decision points",
+        "Reassessment, diversion and debrief"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Distinguish forecast, observation and site evidence</li><li>Build a time- and location-specific information check</li><li>Explain a no-go decision using recorded uncertainty</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Information is useful only within its place and time</h2>\n<p>Course: Weather and Airspace Management</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Distinguish forecast, observation and site evidence.</p>\n<h3>Lesson</h3>\n<p>A weather forecast is a prediction for a place and period. An observation describes conditions at its reporting point and time. A site observation describes what the crew can currently see or measure nearby. These sources complement each other, but none automatically describes every part of the operating area.</p>\n<p>Consider a site beside a ridge and large buildings. A regional wind forecast may not capture the local flow around those features. Note the source, issue time, valid period and location for each item. Then record where its applicability is uncertain. A gap in information should remain visible in the plan rather than being filled with a favourable assumption.</p>\n<p>Airspace information also has boundaries and validity periods. A screenshot copied from a previous job can look authoritative while being unsuitable for today&#x27;s place, time or activity. Establish a current information source, the applicable jurisdiction, the operating area and the relevant notices or restrictions. A map layer is a tool for interpretation, not permission by itself.</p>\n<p>Combine the evidence with aircraft limitations and the operation&#x27;s approved procedures. Define when the crew will reassess and what conditions require stopping. Avoid converting an illustrative classroom wind value or distance into a universal operating rule.</p>\n<p>For the exercise, write a decision record rather than a weather prediction. Include the evidence used, the unresolved questions, who can resolve them, and the point at which the mission must be postponed. An explicit no-go can be the best supported professional outcome.</p>\n<h3>Desk exercise</h3>\n<p>Compare three fictional information records with different issue times and coverage. Decide which questions remain unresolved before a mission can proceed.</p>\n<h3>Marking guide</h3>\n<p>The answer should distinguish issue time from valid time, identify location gaps and avoid treating a forecast or airspace screenshot as permission.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Weather and Airspace Management</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Drone Licensing &amp; Regulatory Training</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Distinguish forecast, observation and site evidence</li>\n<li>Build a time- and location-specific information check</li>\n<li>Explain a no-go decision using recorded uncertainty</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Weather sources and local effects 2. Airspace information and temporal validity 3. Mission feasibility and decision points 4. Reassessment, diversion and debrief</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-drone-maintenance-and-troubleshooting",
+      "name": "Drone Maintenance and Troubleshooting",
+      "category": "Technical Tools & Software Training",
+      "status": "draft",
+      "modules": [
+        "Inspection records and approved limits",
+        "Power, propulsion and sensor symptoms",
+        "Controlled troubleshooting and escalation",
+        "Return-to-service evidence and reliability"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Separate a symptom from a diagnosis</li><li>Record configuration and maintenance evidence</li><li>Choose a safe isolation and escalation path</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Preserve the evidence before changing the system</h2>\n<p>Course: Drone Maintenance and Troubleshooting</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Separate a symptom from a diagnosis.</p>\n<h3>Lesson</h3>\n<p>A team reports intermittent vibration after replacing a propeller. The symptom is vibration under particular conditions. The recent replacement is relevant evidence, but it is not yet proof of the cause. Begin by recording the aircraft identification, configuration, part details, time of the change and when the symptom first appeared.</p>\n<p>Follow the aircraft manufacturer&#x27;s inspection and maintenance instructions. Do not improvise a live flight to reproduce an unexplained fault. A damaged or suspect propulsion component requires a safe stop and an appropriate technical review. Power down and isolate equipment according to its instructions before handling it. Battery damage, heat or swelling must be managed using the applicable manufacturer and site procedures.</p>\n<p>Good troubleshooting changes one controlled variable at a time and states the expected observation. Record what was inspected, what was changed, who did it and what the result was. A software update, calibration or restart can alter the state and erase clues. Capture permitted diagnostic records first, without collecting unnecessary personal information.</p>\n<p>Use a fault log with separate columns for symptom, evidence, hypothesis, test and result. A hypothesis can be rejected; that is useful progress. Replacing several parts together may restore operation but leave the cause unknown. Record that uncertainty honestly.</p>\n<p>Return to service is a defined process with competent oversight, required checks and a record of release. This lesson teaches documentation and decision structure. It does not authorise repairs or override manufacturer limits.</p>\n<h3>Desk exercise</h3>\n<p>Complete a fictional fault log for vibration after a component change, identifying three useful records and two unsupported assumptions to avoid.</p>\n<h3>Marking guide</h3>\n<p>A good log preserves configuration, separates cause from timing, uses approved instructions and states who may release the aircraft back to service.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Drone Maintenance and Troubleshooting</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Technical Tools &amp; Software Training</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Separate a symptom from a diagnosis</li>\n<li>Record configuration and maintenance evidence</li>\n<li>Choose a safe isolation and escalation path</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Inspection records and approved limits 2. Power, propulsion and sensor symptoms 3. Controlled troubleshooting and escalation 4. Return-to-service evidence and reliability</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-faa-part-107-exam-preparation",
+      "name": "FAA Part 107 Exam Preparation",
+      "category": "Drone Licensing & Regulatory Training",
+      "status": "draft",
+      "modules": [
+        "US pathway and official source register",
+        "Airspace, weather and operational knowledge",
+        "Scenario reasoning and original practice items",
+        "Mock review and targeted revision"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Locate official US study and certification references</li><li>Map learning objectives to the current ACS</li><li>Explain why a practice result is not certification</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Build a source-controlled examination plan</h2>\n<p>Course: FAA Part 107 Exam Preparation</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Locate official US study and certification references.</p>\n<h3>Lesson</h3>\n<p>This course is a United States study pathway. Its rules and certificate terminology must remain separate from South African training. Before writing a learning plan, use the FAA&#x27;s current certification guidance and official study-material links to identify the applicable pathway and knowledge standard.</p>\n<p>Create a source register with document title, edition or identifier, the section used and the date checked. Use the current Airman Certification Standards to organise learning objectives. A study guide supports learning, but an older guide can require checking against newer rules and official notices. Do not assume that a PDF remains a complete statement of current requirements because it is hosted on an official website.</p>\n<p>Turn an objective into three kinds of evidence: an explanation in your own words, a worked scenario, and an original practice question with reasons for every option. A learner who remembers an answer letter may fail when the scenario changes. Practice should reveal the reasoning that needs attention.</p>\n<p>Keep a revision log with topic, attempted question, error type and next action. Distinguish a knowledge gap from a reading mistake or a calculation error. Use a timed mock only after the supporting concepts have been studied. A practice score is a learning indicator, not an examination pass or a remote pilot certificate.</p>\n<p>For this lesson, produce the source register and objective map only. Detailed numeric operating rules and examination settings require current-source checking and competent review before publication. SkyScholar does not issue the FAA certificate or guarantee an examination result.</p>\n<h3>Desk exercise</h3>\n<p>Build a source register using the official FAA study-material page and identify two objectives to map to the current ACS.</p>\n<h3>Marking guide</h3>\n<p>Expect US-only scope, document identity, date checked, section references and a clear distinction between practice and certification.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>FAA Part 107 Exam Preparation</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Drone Licensing &amp; Regulatory Training</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Locate official US study and certification references</li>\n<li>Map learning objectives to the current ACS</li>\n<li>Explain why a practice result is not certification</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. US pathway and official source register 2. Airspace, weather and operational knowledge 3. Scenario reasoning and original practice items 4. Mock review and targeted revision</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-sacaa-drone-pilot-license-preparation",
+      "name": "SACAA Drone Pilot License Preparation",
+      "category": "Drone Licensing & Regulatory Training",
+      "status": "draft",
+      "modules": [
+        "South African pathway and source verification",
+        "Aircraft, flight and human performance foundations",
+        "Weather, navigation and communications",
+        "Original practice, mock review and instructor sign-off"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Identify the current South African authority and training references</li><li>Separate pilot, aircraft and operator requirements</li><li>Create a provisional subject-to-source mapping</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Keep pilot preparation separate from permission to operate</h2>\n<p>Course: SACAA Drone Pilot License Preparation</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Identify the current South African authority and training references.</p>\n<h3>Lesson</h3>\n<p>This is a draft South African preparation pathway. Begin with current SACAA material and an appropriately authorised training provider. The course title is retained from the historical catalogue; terminology, syllabus coverage and licensing requirements must be reconciled with current official sources before release.</p>\n<p>Separate the person, the aircraft and the organisation operating it. A pilot qualification concerns the person. Aircraft registration or other applicable aircraft requirements concern the equipment. Operational authorisations concern the activity and operator. Meeting one requirement does not automatically satisfy the others. Landowner agreement, where relevant, also does not replace aviation requirements.</p>\n<p>The current SkyScholar software has seven provisional subjects: air law, aircraft knowledge, principles of flight, meteorology, navigation, human factors and communications. These are organisational starting points. They are not a declaration that the complete current SACAA syllabus has been mapped or that the software&#x27;s quiz duration and target match an official exam.</p>\n<p>Build a mapping table for each objective: official source, edition, section, author note, reviewer and status. Leave unverified cells visibly unresolved. An instructor should examine whether the lesson teaches the objective, whether scenarios are locally appropriate and whether distractors introduce ambiguity.</p>\n<p>For the exercise, work only with a fictional proposed operation. Identify which questions concern the pilot, aircraft, operator and site. The result should be a research and review plan, not a claim that the operation is approved. No aviation course becomes public merely because its files have been authored.</p>\n<h3>Desk exercise</h3>\n<p>Sort eight fictional compliance questions into pilot, aircraft, operator and site dependencies, then create an unresolved-source list.</p>\n<h3>Marking guide</h3>\n<p>Credit separation of responsibilities and explicit unknowns. Do not award regulatory completeness without a current syllabus map and reviewer evidence.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>SACAA Drone Pilot License Preparation</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Drone Licensing &amp; Regulatory Training</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Identify the current South African authority and training references</li>\n<li>Separate pilot, aircraft and operator requirements</li>\n<li>Create a provisional subject-to-source mapping</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. South African pathway and source verification 2. Aircraft, flight and human performance foundations 3. Weather, navigation and communications 4. Original practice, mock review and instructor sign-off</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-bvlos-operations",
+      "name": "BVLOS Operations",
+      "category": "Drone Licensing & Regulatory Training",
+      "status": "draft",
+      "modules": [
+        "Operating concept and approval dependencies",
+        "Command links, containment and air risk",
+        "Contingency evidence and assurance",
+        "Independent review and simulation"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Explain how losing direct visual observation changes safety assumptions</li><li>Identify assurance questions for an advanced operation</li><li>Draft a desk-based concept of operations</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: A longer route requires a different assurance argument</h2>\n<p>Course: BVLOS Operations</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Explain how losing direct visual observation changes safety assumptions.</p>\n<h3>Lesson</h3>\n<p>This is a conceptual, desk-based introduction. It does not authorise BVLOS operations or provide a flight procedure. Work with a fictional mission and keep all approval, aircraft capability and crew qualification questions unresolved until supported by the appropriate authority and competent specialists.</p>\n<p>In a basic visual operation, direct observation helps the crew understand aircraft position and surrounding hazards. A concept that removes or changes that observation must explain how its safety functions will be achieved and assured. Extending a route on a planning screen does not supply that assurance.</p>\n<p>Describe the intended operation before selecting technology. State the area, timing, aircraft, crew roles, population exposure and airspace context. Then identify the functions needed: command and control, position awareness, monitoring, containment, contingency management and coordination. For each function, ask what happens when it degrades and what evidence supports the proposed response.</p>\n<p>A redundancy claim needs careful scrutiny. Two components that depend on the same power source, network or environmental assumption may share a failure mode. Record independence assumptions and ask a competent reviewer to challenge them. Avoid presenting a consumer connectivity indicator as proof of an approved command-link performance level.</p>\n<p>The output of this lesson is a concept of operations with a list of unanswered assurance questions. It should make the evidence gap easier to review. Later modules require jurisdiction-specific approval references and expert instruction before any operational training is released.</p>\n<h3>Desk exercise</h3>\n<p>Write a fictional BVLOS concept with five safety functions, a failure question for each, and named evidence required before approval review.</p>\n<h3>Marking guide</h3>\n<p>Assess quality of questions and traceability, not operational readiness. A passing desk exercise must not be treated as authorisation to fly.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>BVLOS Operations</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Drone Licensing &amp; Regulatory Training</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Explain how losing direct visual observation changes safety assumptions</li>\n<li>Identify assurance questions for an advanced operation</li>\n<li>Draft a desk-based concept of operations</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Operating concept and approval dependencies 2. Command links, containment and air risk 3. Contingency evidence and assurance 4. Independent review and simulation</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-specialized-applications",
+      "name": "Specialized Applications",
+      "category": "Industry Applications & Case Studies",
+      "status": "draft",
+      "modules": [
+        "Industry problem and deliverable selection",
+        "Thermal, agriculture and infrastructure evidence",
+        "Quality checks and specialist interpretation",
+        "Case study reporting and limitations"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Select a payload based on a client decision</li><li>Separate observations from specialist conclusions</li><li>Define a validation and handover plan</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Choose the evidence before choosing the sensor</h2>\n<p>Course: Specialized Applications</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Select a payload based on a client decision.</p>\n<h3>Lesson</h3>\n<p>A facility manager sees a thermal image with a bright area on a roof and asks whether insulation has failed. The image is an observation under particular capture conditions. It does not by itself establish the material condition or the cause of the apparent temperature pattern.</p>\n<p>Start with the decision to support. Does the client need a screening survey, a maintenance priority list, a documented change, or a specialist diagnosis? Each needs different evidence and competence. Define the assets, the decision-maker and the acceptance criteria before selecting a payload.</p>\n<p>For any sensor, document acquisition conditions, settings, coverage and known limitations. A visually striking output may still be unsuitable for the question. Record plausible alternative explanations and the additional evidence needed to distinguish them. Where interpretation requires a specialist, identify that role in scope rather than allowing a polished report to imply expertise that has not been supplied.</p>\n<p>A useful report separates observation, interpretation, confidence and recommended next step. Link every observation to an asset and source file. State where no usable evidence was collected. Missing coverage should never be silently converted into a clean bill of health.</p>\n<p>Use fictional images or authorised sample data in this exercise. Build an evidence plan for one application, then explain why a different application would need a different validation method. The aim is a defensible workflow, not a promise that one sensor solves every industry problem.</p>\n<h3>Desk exercise</h3>\n<p>Create a four-column evidence table for a fictional thermal roof screening: observation, possible explanations, verification required and handover recipient.</p>\n<h3>Marking guide</h3>\n<p>Credit alternative explanations, traceable assets and appropriate specialist escalation. A temperature-looking colour must not become an unsupported defect diagnosis.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Specialized Applications</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Industry Applications &amp; Case Studies</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Select a payload based on a client decision</li>\n<li>Separate observations from specialist conclusions</li>\n<li>Define a validation and handover plan</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Industry problem and deliverable selection 2. Thermal, agriculture and infrastructure evidence 3. Quality checks and specialist interpretation 4. Case study reporting and limitations</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-drone-ethics-and-professionalism",
+      "name": "Drone Ethics and Professionalism",
+      "category": "Certification & Career Development",
+      "status": "draft",
+      "modules": [
+        "Stakeholders, privacy and consent",
+        "Truthful evidence and professional boundaries",
+        "Data handling, publication and accountability",
+        "Difficult client requests and reflective practice"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Identify affected stakeholders and information harms</li><li>Apply data minimisation to a capture brief</li><li>Write a transparent limitation and correction statement</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Professional judgement includes what you choose not to collect</h2>\n<p>Course: Drone Ethics and Professionalism</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Identify affected stakeholders and information harms.</p>\n<h3>Lesson</h3>\n<p>A construction update can unintentionally capture workers, neighbouring homes or vehicle registrations. The fact that a sensor can record detail does not mean every detail belongs in the client&#x27;s report or a public portfolio. Start by identifying who may be affected and why the information is needed.</p>\n<p>Define the minimum useful data for the agreed purpose. Consider framing, timing, output resolution, access controls and retention. These are practical design choices. Relevant legal requirements and contractual permissions must be checked for the jurisdiction and project; an ethics checklist does not replace that review.</p>\n<p>Truthful reporting is another part of professional conduct. State whether a finding is observed, inferred or unverified. Do not remove a limitation because a client prefers a more confident conclusion. A clear image can support a narrow observation while leaving the cause uncertain. If an error is discovered, retain a record of the correction and tell affected recipients which version supersedes the earlier one.</p>\n<p>Respect the boundary of your competence. A pilot or image analyst should not imply a professional certification or specialist opinion that has not been provided. Attribute contributions and preserve permitted source provenance. Obtain explicit approval before using client material in marketing.</p>\n<p>For this lesson, evaluate a fictional publication request. Explain the purpose, affected people, minimum data, permission gaps and a safe alternative. A professional response should preserve the legitimate client objective while making responsibilities and uncertainty clear.</p>\n<h3>Desk exercise</h3>\n<p>Draft a response to a fictional client asking to publish an unredacted site image. Include an alternative and a version-correction process.</p>\n<h3>Marking guide</h3>\n<p>The response should identify stakeholders, minimise data, avoid invented consent and propose a useful alternative with a clear approval boundary.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Drone Ethics and Professionalism</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Certification &amp; Career Development</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Identify affected stakeholders and information harms</li>\n<li>Apply data minimisation to a capture brief</li>\n<li>Write a transparent limitation and correction statement</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Stakeholders, privacy and consent 2. Truthful evidence and professional boundaries 3. Data handling, publication and accountability 4. Difficult client requests and reflective practice</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    },
+    {
+      "id": "draft-drone-pilot-career-development",
+      "name": "Drone Pilot Career Development",
+      "category": "Certification & Career Development",
+      "status": "draft",
+      "modules": [
+        "Career pathways and role requirements",
+        "Evidence portfolio and credential hygiene",
+        "Applications, networking and professional visibility",
+        "Continuous development and review"
+      ],
+      "summary": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><p>Opening lesson and course plan only; later module lessons and complete assessments remain outstanding.</p><h3>Learning outcomes</h3><ul><li>Build a portfolio around verifiable deliverables</li><li>Distinguish training, qualification and demonstrated competence</li><li>Create a focused skill-gap and evidence plan</li></ul>",
+      "lesson": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Lesson 1: Build a portfolio that another professional can verify</h2>\n<p>Course: Drone Pilot Career Development</p>\n<p>Status: DRAFT. Original SkyScholar authoring; technical and instructional review pending.</p>\n<p>Estimated study time: 20-30 minutes including the desk exercise (author estimate).</p>\n<h3>Learning focus</h3>\n<p>Build a portfolio around verifiable deliverables.</p>\n<h3>Lesson</h3>\n<p>A strong drone career portfolio shows how you solve a defined problem. A collection of attractive images may demonstrate visual taste, but it does not automatically demonstrate survey validation, inspection reasoning or safe operational planning. Select evidence that matches the role you want.</p>\n<p>Use a simple case-study structure: the client question, your role, the method, the checks, the deliverable and the limitation. State which work you completed personally and which work belonged to a team or specialist. Use only material you are entitled to share. A fictional training project should be labelled as such rather than described as paid client delivery.</p>\n<p>Keep credential language precise. Completing a short course, holding a pilot qualification, being current for a particular operation and demonstrating a software skill are different claims. Record the issuer, completion or expiry date where applicable, and verification route. Do not describe a planned qualification as completed.</p>\n<p>A development plan starts with role evidence. Read a small set of target job descriptions and identify recurring requirements. For each requirement, record existing evidence, a gap and the smallest credible project or recognised training that could close it. Avoid collecting unrelated certificates without improving your ability to perform the target work.</p>\n<p>For this lesson, create one honest case-study outline and one skill-gap plan. The goal is international credibility built on traceable work, clear writing and reliable professional behaviour, rather than an inflated list of tools.</p>\n<h3>Desk exercise</h3>\n<p>Prepare a case-study outline for a fictional mapping training project and a three-step plan for a target junior GIS or drone-support role.</p>\n<h3>Marking guide</h3>\n<p>Expect clear personal contribution, labelled training status, measurable checks and a specific evidence gap. Unsupported qualifications or commercial claims fail the exercise.</p>\n<h3>Reflection</h3>\n<p>Name one assumption you would verify before applying this lesson to a real project. Identify the source or competent person who could resolve it.</p>\n<h3>Sources and review</h3>\n<p>Consult the source register and the course review dependencies. The narrative and fictional scenarios are original instructional drafts. No source text or commercial examination item is reproduced. Regulatory and operational details require current-source mapping before approval.</p>",
+      "blueprint": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Drone Pilot Career Development</h2>\n<p>Status: DRAFT. Instructor review required. No licence, accreditation or operational authorisation is awarded.</p>\n<p>Category: Certification &amp; Career Development</p>\n<h3>Outcomes</h3>\n<ul>\n<li>Build a portfolio around verifiable deliverables</li>\n<li>Distinguish training, qualification and demonstrated competence</li>\n<li>Create a focused skill-gap and evidence plan</li>\n</ul>\n<h3>Module sequence</h3>\n<p>1. Career pathways and role requirements 2. Evidence portfolio and credential hygiene 3. Applications, networking and professional visibility 4. Continuous development and review</p>\n<h3>Assessment plan</h3>\n<p>Begin with the lesson 1 desk exercise. Later modules need original scenarios and topic checks. Finish with a reviewed capstone tied to the outcomes. Suggested internal rubric: evidence and accuracy 40%, method and reasoning 30%, limitations and professional judgement 20%, communication 10%. This is a draft learning rubric, not an official examination scheme.</p>\n<h3>Current authored material</h3>\n<p>[Opening lesson](lesson-01.md). Remaining modules are planned, not authored.</p>\n<h3>Prerequisites and delivery</h3>\n<p>Basic digital literacy; simulator or authorised sample data where specified. No unsupervised real aircraft exercise is required by this draft. Practical competency needs an appropriate training environment and instructor.</p>\n<h3>Review dependencies</h3>\n<p>Map objectives to current authoritative references; review jurisdiction and terminology; verify aircraft/software versions for later practical instructions; review accessibility and assessment ambiguity. See ../../SOURCES.md and ../../REVIEW.md.</p>"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "air-law",
+      "name": "Air law",
+      "html": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Air law and operating rules: opening lesson</h2>\n<p>Status: DRAFT. Provisional South African subject; current syllabus mapping and competent review pending.</p>\n<h3>Objective</h3>\n<p>Separate sources, permissions and responsibilities.</p>\n<h3>Lesson</h3>\n<p>A reliable compliance decision identifies the jurisdiction, the type of activity, the applicable requirements and the evidence that each requirement is met. Begin with a proposed operation described in ordinary language. Identify who will operate, what aircraft is involved, where and when it will occur, and what the intended work is.</p>\n<p>Separate pilot-related requirements from aircraft-related and operator-related requirements. A credential held by one person cannot by itself establish the status of an aircraft or an organisation. Likewise, agreement from a landowner does not establish the applicable airspace position. Keep evidence for these dependencies separately.</p>\n<p>A current-source register is essential. Record document title, edition or amendment, relevant section, jurisdiction and the date checked. A search result, an old screenshot or another pilot&#x27;s experience may identify a research lead, but should not silently become authoritative evidence.</p>\n<p>When information conflicts, stop the compliance conclusion and resolve the discrepancy through the current authority material and competent training or operational personnel. Record what is known and what remains unresolved. This lesson intentionally supplies no numerical operating limits and does not claim complete regulatory coverage.</p>\n<h3>Practice</h3>\n<p>Complete the five original items for this topic in za-foundations.draft.json. For every answer, explain why the alternatives do not follow from the scenario.</p>\n<h3>Desk task and marking</h3>\n<p>Write a fictional two-paragraph case applying the lesson. Identify the evidence, one assumption and a verification step. Mark for conceptual accuracy (4), evidence traceability (3), explicit limitations (2) and clear communication (1). This internal rubric is not an official examination standard.</p>\n<h3>Review</h3>\n<p>Use ../SOURCES.md to add exact current document sections. No instructor sign-off has been recorded.</p>"
+    },
+    {
+      "id": "aircraft",
+      "name": "Aircraft systems",
+      "html": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Aircraft general knowledge: opening lesson</h2>\n<p>Status: DRAFT. Provisional South African subject; current syllabus mapping and competent review pending.</p>\n<h3>Objective</h3>\n<p>Use configuration evidence and manufacturer instructions.</p>\n<h3>Lesson</h3>\n<p>Aircraft knowledge starts with the actual configuration. Record the aircraft identity, installed components, software versions, payload and applicable documentation. Similar-looking aircraft may have different capabilities or limitations. Avoid transferring a procedure merely because two systems share a brand.</p>\n<p>Understand each system by function. Positioning estimates location; attitude sensing supports orientation estimation; the command link carries control and status; propulsion supplies force. A status indicator can describe one function without proving that the entire system is ready. Review the meaning of indicators in the correct manual.</p>\n<p>Maintenance and fault decisions require evidence. Record symptoms and changes before replacing components or altering settings. Separate an observation from a proposed cause. A battery with visible damage requires the appropriate manufacturer and site process, not a live experiment intended to see whether it still works.</p>\n<p>A configuration record should allow another competent person to identify which manual and limitations apply. This foundation supports later aircraft-specific lessons. It supplies no universal maintenance procedure, calibration sequence or emergency control action.</p>\n<h3>Practice</h3>\n<p>Complete the five original items for this topic in za-foundations.draft.json. For every answer, explain why the alternatives do not follow from the scenario.</p>\n<h3>Desk task and marking</h3>\n<p>Write a fictional two-paragraph case applying the lesson. Identify the evidence, one assumption and a verification step. Mark for conceptual accuracy (4), evidence traceability (3), explicit limitations (2) and clear communication (1). This internal rubric is not an official examination standard.</p>\n<h3>Review</h3>\n<p>Use ../SOURCES.md to add exact current document sections. No instructor sign-off has been recorded.</p>"
+    },
+    {
+      "id": "principles",
+      "name": "Principles of flight",
+      "html": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Principles of flight: opening lesson</h2>\n<p>Status: DRAFT. Provisional South African subject; current syllabus mapping and competent review pending.</p>\n<h3>Objective</h3>\n<p>Reason about forces with stated assumptions.</p>\n<h3>Lesson</h3>\n<p>Use a simplified multirotor model for this desk lesson. Weight acts downward. The aircraft&#x27;s total thrust has a direction and magnitude. In a stationary level hover without other significant vertical effects, its upward component balances weight. This is an explanatory model, not a universal aircraft control setting.</p>\n<p>When the aircraft tilts, the thrust vector tilts. Its vertical component becomes smaller if the total magnitude stays the same, while a horizontal component is introduced. Maintaining height while accelerating horizontally therefore requires an appropriate change in the total force balance. The flight controller&#x27;s implementation depends on the aircraft.</p>\n<p>Distinguish attitude, velocity and acceleration. Attitude is orientation; velocity describes motion; acceleration describes a change in velocity. A change in attitude need not produce the same immediate displacement in every environment. Wind and control response matter.</p>\n<p>State assumptions before doing calculations. A diagram should name the aircraft type, axes, force directions and any effects omitted. Use the result to explain a concept, not to prescribe an unreviewed flight manoeuvre. Aircraft-specific performance and practical training belong in later reviewed lessons.</p>\n<h3>Practice</h3>\n<p>Complete the five original items for this topic in za-foundations.draft.json. For every answer, explain why the alternatives do not follow from the scenario.</p>\n<h3>Desk task and marking</h3>\n<p>Write a fictional two-paragraph case applying the lesson. Identify the evidence, one assumption and a verification step. Mark for conceptual accuracy (4), evidence traceability (3), explicit limitations (2) and clear communication (1). This internal rubric is not an official examination standard.</p>\n<h3>Review</h3>\n<p>Use ../SOURCES.md to add exact current document sections. No instructor sign-off has been recorded.</p>"
+    },
+    {
+      "id": "meteorology",
+      "name": "Meteorology",
+      "html": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Meteorology: opening lesson</h2>\n<p>Status: DRAFT. Provisional South African subject; current syllabus mapping and competent review pending.</p>\n<h3>Objective</h3>\n<p>Check the location and time represented by weather information.</p>\n<h3>Lesson</h3>\n<p>A forecast predicts conditions for a stated place and period. An observation records conditions at a reporting place and time. The crew&#x27;s site observations add local evidence. Keep these source types distinct and record their coverage rather than treating them as interchangeable statements about the whole mission.</p>\n<p>Terrain and structures can affect local airflow. A regional record may not describe flow near a particular ridge or building. Identify the gap and relate it to the planned operating area. Do not turn a general forecast into a guaranteed description of conditions at every point.</p>\n<p>Information has both an issue time and a valid period. A newly downloaded document can still be old, and a recently issued product may describe a different future period. Check the actual metadata. Relate the evidence to aircraft limitations and the operation&#x27;s reviewed procedures.</p>\n<p>A decision log should record source identity, time, place, uncertainty, review points and the response to changing conditions. This lesson teaches information handling and decision quality. It does not supply numeric weather minima or replace locally applicable operational procedures.</p>\n<h3>Practice</h3>\n<p>Complete the five original items for this topic in za-foundations.draft.json. For every answer, explain why the alternatives do not follow from the scenario.</p>\n<h3>Desk task and marking</h3>\n<p>Write a fictional two-paragraph case applying the lesson. Identify the evidence, one assumption and a verification step. Mark for conceptual accuracy (4), evidence traceability (3), explicit limitations (2) and clear communication (1). This internal rubric is not an official examination standard.</p>\n<h3>Review</h3>\n<p>Use ../SOURCES.md to add exact current document sections. No instructor sign-off has been recorded.</p>"
+    },
+    {
+      "id": "navigation",
+      "name": "Navigation",
+      "html": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Navigation and flight planning: opening lesson</h2>\n<p>Status: DRAFT. Provisional South African subject; current syllabus mapping and competent review pending.</p>\n<h3>Objective</h3>\n<p>Keep time, distance and reference frames consistent.</p>\n<h3>Lesson</h3>\n<p>Navigation calculations are meaningful only when units and reference frames are consistent. In a simple constant-speed ground-track example, time equals distance divided by ground speed. Two kilometres is 2000 metres; at 5 metres per second, the calculated travel time is 400 seconds. That result excludes acceleration, turns, wind changes, reserve and every other omitted mission factor.</p>\n<p>Heading describes the direction the aircraft is pointed. Ground track describes its movement over the ground. Wind can make these differ. A map line alone does not establish the heading, energy or clearance required to follow it.</p>\n<p>Coordinate-reference systems give numerical coordinates geographic meaning. Degrees of latitude and longitude are angular units, not metres. Changing a layer&#x27;s label is different from transforming its coordinate values. A display that aligns layers cannot by itself validate a measurement workflow.</p>\n<p>In mapping work, independent checkpoints are held out from the fitting or adjustment process so they can provide an independent check. Keep their role separate from control points. A planning note should identify units, horizontal and vertical references, the information omitted and the checks needed before applying a calculation to a real operation.</p>\n<h3>Practice</h3>\n<p>Complete the five original items for this topic in za-foundations.draft.json. For every answer, explain why the alternatives do not follow from the scenario.</p>\n<h3>Desk task and marking</h3>\n<p>Write a fictional two-paragraph case applying the lesson. Identify the evidence, one assumption and a verification step. Mark for conceptual accuracy (4), evidence traceability (3), explicit limitations (2) and clear communication (1). This internal rubric is not an official examination standard.</p>\n<h3>Review</h3>\n<p>Use ../SOURCES.md to add exact current document sections. No instructor sign-off has been recorded.</p>"
+    },
+    {
+      "id": "human-factors",
+      "name": "Human factors",
+      "html": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Human factors: opening lesson</h2>\n<p>Status: DRAFT. Provisional South African subject; current syllabus mapping and competent review pending.</p>\n<h3>Objective</h3>\n<p>Make pressure and uncertainty visible in decisions.</p>\n<h3>Lesson</h3>\n<p>Human performance is part of the operating system. Workload, fatigue, attention and expectations affect how people interpret information and respond. A technically available aircraft does not establish that the crew is ready for the task.</p>\n<p>External pressure can narrow attention. A client deadline, travel cost or desire to finish may encourage a person to dismiss contradictory evidence. Record the evidence and decision criteria before debating the commercial inconvenience of a delay. A stop decision supported by evidence can be a successful professional outcome.</p>\n<p>Checklists support consistency, but reading words without checking the actual condition does not complete the purpose of a check. Clear role allocation and a shared understanding of intervention criteria help a team detect an omitted step or a mistaken assumption.</p>\n<p>Use a debrief that separates observations from blame. Describe what happened, what information was available, what the team assumed and what process should change. Avoid inferring a person&#x27;s medical condition or competence from a single error. The aim is a better decision system, with competent review where individual readiness is uncertain.</p>\n<h3>Practice</h3>\n<p>Complete the five original items for this topic in za-foundations.draft.json. For every answer, explain why the alternatives do not follow from the scenario.</p>\n<h3>Desk task and marking</h3>\n<p>Write a fictional two-paragraph case applying the lesson. Identify the evidence, one assumption and a verification step. Mark for conceptual accuracy (4), evidence traceability (3), explicit limitations (2) and clear communication (1). This internal rubric is not an official examination standard.</p>\n<h3>Review</h3>\n<p>Use ../SOURCES.md to add exact current document sections. No instructor sign-off has been recorded.</p>"
+    },
+    {
+      "id": "communications",
+      "name": "Communications",
+      "html": "<p><strong>DRAFT — STAFF REVIEW ONLY. Incomplete and unreviewed; not approved aviation training.</strong></p><h2>Communications: opening lesson</h2>\n<p>Status: DRAFT. Provisional South African subject; current syllabus mapping and competent review pending.</p>\n<h3>Objective</h3>\n<p>Resolve ambiguity before acting.</p>\n<h3>Lesson</h3>\n<p>Effective team communication makes the speaker, recipient, intended action and important conditions clear. In this desk lesson, use fictional crew roles and written messages. Operational radio phraseology, licensing and frequencies require current local references and competent instruction before practical use.</p>\n<p>Ambiguity can arise from similar names, missing units, an unclear recipient or an unstated change of plan. A receiver should clarify uncertainty rather than choosing the most convenient interpretation. A response should demonstrate that the intended meaning was understood, not merely that a sound was heard.</p>\n<p>Closed-loop communication includes a clear instruction or information item, an appropriate acknowledgement or readback, and confirmation or correction where needed. It is especially useful when a misunderstanding would have a material consequence. The exact required form depends on the approved procedure and context.</p>\n<p>Keep operational records factual and proportionate. Record relevant changes and decisions without adding unnecessary personal information. After an unclear exchange, review the message structure and the team&#x27;s process. Do not turn this general classroom model into a claim that a particular phrase is approved for live aviation radio use.</p>\n<h3>Practice</h3>\n<p>Complete the five original items for this topic in za-foundations.draft.json. For every answer, explain why the alternatives do not follow from the scenario.</p>\n<h3>Desk task and marking</h3>\n<p>Write a fictional two-paragraph case applying the lesson. Identify the evidence, one assumption and a verification step. Mark for conceptual accuracy (4), evidence traceability (3), explicit limitations (2) and clear communication (1). This internal rubric is not an official examination standard.</p>\n<h3>Review</h3>\n<p>Use ../SOURCES.md to add exact current document sections. No instructor sign-off has been recorded.</p>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "za-foundation-air-law-001",
+      "topic": "air-law",
+      "objective": "Separate sources, permissions and responsibilities",
+      "stem": "A South African operation has a landowner agreement. Which question remains unresolved?",
+      "options": [
+        "Whether the applicable aviation requirements are also satisfied",
+        "No other permissions can be relevant",
+        "The aircraft is automatically registered"
+      ],
+      "correct": 0,
+      "feedback": [
+        "A site agreement does not establish aviation compliance.",
+        "Land access does not remove other applicable requirements.",
+        "A site agreement does not establish aircraft registration."
+      ],
+      "explanation": "A site agreement does not establish aviation compliance.",
+      "source": "SkyScholar original draft: authoring/subjects/air-law.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-air-law-002",
+      "topic": "air-law",
+      "objective": "Separate sources, permissions and responsibilities",
+      "stem": "An instructor asks you to verify a regulatory claim. Which record is most useful?",
+      "options": [
+        "An undated social media comment",
+        "A screenshot with its title removed",
+        "Current authority document, edition and exact section"
+      ],
+      "correct": 2,
+      "feedback": [
+        "An undated comment does not establish current authority.",
+        "Removing source identity prevents reliable verification.",
+        "A traceable source supports review of the specific claim."
+      ],
+      "explanation": "A traceable source supports review of the specific claim.",
+      "source": "SkyScholar original draft: authoring/subjects/air-law.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-air-law-003",
+      "topic": "air-law",
+      "objective": "Separate sources, permissions and responsibilities",
+      "stem": "A pilot qualification has been verified. What can you conclude from that fact alone?",
+      "options": [
+        "Every aircraft in the team is compliant",
+        "That the stated pilot qualification has been verified",
+        "Every proposed operation is authorised"
+      ],
+      "correct": 1,
+      "feedback": [
+        "Aircraft status needs its own evidence.",
+        "The evidence supports its narrow claim; other dependencies need separate checks.",
+        "Pilot evidence alone does not establish operational approval."
+      ],
+      "explanation": "The evidence supports its narrow claim; other dependencies need separate checks.",
+      "source": "SkyScholar original draft: authoring/subjects/air-law.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-air-law-004",
+      "topic": "air-law",
+      "objective": "Separate sources, permissions and responsibilities",
+      "stem": "Two sources give different versions of an operating rule. What should the author do?",
+      "options": [
+        "Resolve currency and applicability before approving the lesson",
+        "Choose whichever rule allows the mission",
+        "Average the two limits"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Conflicting sources require explicit review rather than a favourable assumption.",
+        "Convenience does not establish applicability.",
+        "Regulatory limits cannot be resolved by averaging them."
+      ],
+      "explanation": "Conflicting sources require explicit review rather than a favourable assumption.",
+      "source": "SkyScholar original draft: authoring/subjects/air-law.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-air-law-005",
+      "topic": "air-law",
+      "objective": "Separate sources, permissions and responsibilities",
+      "stem": "What does a SkyScholar practice target represent in this draft?",
+      "options": [
+        "An official licensing decision",
+        "Proof of complete syllabus coverage",
+        "An internal study setting"
+      ],
+      "correct": 2,
+      "feedback": [
+        "The learning platform does not make licensing decisions.",
+        "Coverage needs a reviewed objective map.",
+        "A study setting does not establish an official examination rule."
+      ],
+      "explanation": "A study setting does not establish an official examination rule.",
+      "source": "SkyScholar original draft: authoring/subjects/air-law.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-aircraft-001",
+      "topic": "aircraft",
+      "objective": "Use configuration evidence and manufacturer instructions",
+      "stem": "Which information best identifies the instructions applicable to an aircraft?",
+      "options": [
+        "Its actual configuration and the matching current manual",
+        "Only the colour of the aircraft",
+        "A manual for any drone from the same brand"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Instructions need to match the equipment and configuration in use.",
+        "Appearance is not a reliable configuration record.",
+        "Brand identity alone does not establish procedure compatibility."
+      ],
+      "explanation": "Instructions need to match the equipment and configuration in use.",
+      "source": "SkyScholar original draft: authoring/subjects/aircraft.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-aircraft-002",
+      "topic": "aircraft",
+      "objective": "Use configuration evidence and manufacturer instructions",
+      "stem": "A positioning indicator is normal. What does that establish by itself?",
+      "options": [
+        "That the command link cannot fail",
+        "That all mission permissions are complete",
+        "Only the reported status of that positioning function"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Positioning and command-link health are separate questions.",
+        "A technical indicator does not verify permissions.",
+        "One indicator cannot establish readiness of every subsystem."
+      ],
+      "explanation": "One indicator cannot establish readiness of every subsystem.",
+      "source": "SkyScholar original draft: authoring/subjects/aircraft.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-aircraft-003",
+      "topic": "aircraft",
+      "objective": "Use configuration evidence and manufacturer instructions",
+      "stem": "Vibration appeared after a component change. What is the most accurate initial statement?",
+      "options": [
+        "The aircraft is safe because the cause seems obvious",
+        "The timing is relevant evidence; the cause still needs investigation",
+        "The new component is conclusively the cause"
+      ],
+      "correct": 1,
+      "feedback": [
+        "An unexplained symptom cannot be resolved by assumption.",
+        "Temporal association supports a hypothesis, not confirmed causation.",
+        "The cause needs evidence and an appropriate technical investigation."
+      ],
+      "explanation": "Temporal association supports a hypothesis, not confirmed causation.",
+      "source": "SkyScholar original draft: authoring/subjects/aircraft.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-aircraft-004",
+      "topic": "aircraft",
+      "objective": "Use configuration evidence and manufacturer instructions",
+      "stem": "What should be recorded before a software change during troubleshooting?",
+      "options": [
+        "The current version, symptom and relevant permitted diagnostics",
+        "Only the final version if the change seems to work",
+        "Another team's private passwords"
+      ],
+      "correct": 0,
+      "feedback": [
+        "A baseline makes the effect of the change interpretable.",
+        "Omitting the baseline loses useful evidence.",
+        "Passwords are neither appropriate nor necessary diagnostic records."
+      ],
+      "explanation": "A baseline makes the effect of the change interpretable.",
+      "source": "SkyScholar original draft: authoring/subjects/aircraft.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-aircraft-005",
+      "topic": "aircraft",
+      "objective": "Use configuration evidence and manufacturer instructions",
+      "stem": "A battery has visible damage. Which response fits this lesson?",
+      "options": [
+        "Launch briefly to check whether power remains",
+        "Assume charge level establishes battery condition",
+        "Stop use and follow the applicable manufacturer and site process"
+      ],
+      "correct": 2,
+      "feedback": [
+        "A live test does not safely resolve damage concerns.",
+        "Charge level alone does not establish physical condition.",
+        "Damage requires a defined safe handling and technical review process."
+      ],
+      "explanation": "Damage requires a defined safe handling and technical review process.",
+      "source": "SkyScholar original draft: authoring/subjects/aircraft.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-principles-001",
+      "topic": "principles",
+      "objective": "Reason about forces with stated assumptions",
+      "stem": "In the simplified stationary level-hover model, what balances weight?",
+      "options": [
+        "The upward component of thrust",
+        "The camera resolution",
+        "The flight path drawn on a map"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Vertical force balance is the stated assumption of this model.",
+        "Image resolution is not a force balancing weight.",
+        "A planned path does not supply physical force."
+      ],
+      "explanation": "Vertical force balance is the stated assumption of this model.",
+      "source": "SkyScholar original draft: authoring/subjects/principles.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-principles-002",
+      "topic": "principles",
+      "objective": "Reason about forces with stated assumptions",
+      "stem": "Thrust magnitude stays constant while its vector tilts away from vertical. What happens to its vertical component?",
+      "options": [
+        "It must become larger",
+        "It becomes identical to image overlap",
+        "It becomes smaller"
+      ],
+      "correct": 2,
+      "feedback": [
+        "The vertical projection cannot increase under the stated tilt.",
+        "Image overlap is unrelated to the force component.",
+        "Tilting a fixed-magnitude vector reduces its vertical projection."
+      ],
+      "explanation": "Tilting a fixed-magnitude vector reduces its vertical projection.",
+      "source": "SkyScholar original draft: authoring/subjects/principles.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-principles-003",
+      "topic": "principles",
+      "objective": "Reason about forces with stated assumptions",
+      "stem": "Which term describes an aircraft's orientation?",
+      "options": [
+        "File size",
+        "Attitude",
+        "Ground sampling distance"
+      ],
+      "correct": 1,
+      "feedback": [
+        "A file size does not describe orientation.",
+        "Attitude describes orientation rather than position.",
+        "GSD describes approximate ground pixel spacing."
+      ],
+      "explanation": "Attitude describes orientation rather than position.",
+      "source": "SkyScholar original draft: authoring/subjects/principles.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-principles-004",
+      "topic": "principles",
+      "objective": "Reason about forces with stated assumptions",
+      "stem": "Why should a force calculation state its assumptions?",
+      "options": [
+        "They define when its conclusion applies",
+        "They make every real aircraft behave identically",
+        "They replace aircraft-specific limitations"
+      ],
+      "correct": 0,
+      "feedback": [
+        "A simplified model has a bounded scope of applicability.",
+        "Different designs and conditions still matter.",
+        "A classroom model cannot override a manual."
+      ],
+      "explanation": "A simplified model has a bounded scope of applicability.",
+      "source": "SkyScholar original draft: authoring/subjects/principles.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-principles-005",
+      "topic": "principles",
+      "objective": "Reason about forces with stated assumptions",
+      "stem": "A multirotor needs horizontal acceleration while maintaining height. Which explanation is appropriate?",
+      "options": [
+        "The vertical component can always be ignored",
+        "A sharper camera removes the force requirement",
+        "Both horizontal and vertical force requirements must be considered"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Maintaining height still requires vertical force balance.",
+        "A payload specification does not remove physical requirements.",
+        "Tilting thrust affects both components of the force balance."
+      ],
+      "explanation": "Tilting thrust affects both components of the force balance.",
+      "source": "SkyScholar original draft: authoring/subjects/principles.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-meteorology-001",
+      "topic": "meteorology",
+      "objective": "Check the location and time represented by weather information",
+      "stem": "Which statement best describes a forecast?",
+      "options": [
+        "A prediction for a stated place and period",
+        "A guarantee of identical conditions everywhere",
+        "A record that automatically approves a flight"
+      ],
+      "correct": 0,
+      "feedback": [
+        "A forecast has spatial and temporal scope.",
+        "Local variation and forecast uncertainty remain.",
+        "Weather information is not an operational authorisation."
+      ],
+      "explanation": "A forecast has spatial and temporal scope.",
+      "source": "SkyScholar original draft: authoring/subjects/meteorology.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-meteorology-002",
+      "topic": "meteorology",
+      "objective": "Check the location and time represented by weather information",
+      "stem": "A file was downloaded today but issued last week. Which time identifies its issue?",
+      "options": [
+        "Today's download time",
+        "The creation time of a copy on another device",
+        "The issue time stated in the file"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Retrieval time is a different event.",
+        "A copy timestamp does not establish the original issue.",
+        "Download time does not change when information was issued."
+      ],
+      "explanation": "Download time does not change when information was issued.",
+      "source": "SkyScholar original draft: authoring/subjects/meteorology.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-meteorology-003",
+      "topic": "meteorology",
+      "objective": "Check the location and time represented by weather information",
+      "stem": "Why might regional wind information be insufficient beside a large building?",
+      "options": [
+        "Regional information removes the need for local assessment",
+        "Local airflow can differ around terrain and structures",
+        "Buildings guarantee that wind is absent"
+      ],
+      "correct": 1,
+      "feedback": [
+        "Regional coverage does not resolve every local effect.",
+        "The local environment can affect the conditions the aircraft encounters.",
+        "Structures do not guarantee calm conditions."
+      ],
+      "explanation": "The local environment can affect the conditions the aircraft encounters.",
+      "source": "SkyScholar original draft: authoring/subjects/meteorology.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-meteorology-004",
+      "topic": "meteorology",
+      "objective": "Check the location and time represented by weather information",
+      "stem": "A weather product is valid after the mission ends. What is the key problem?",
+      "options": [
+        "Its valid period does not match the proposed mission",
+        "It automatically describes earlier conditions",
+        "Its filename alone establishes suitability"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Temporal applicability must be checked against the mission time.",
+        "A future valid period does not establish earlier conditions.",
+        "A filename cannot replace checking metadata."
+      ],
+      "explanation": "Temporal applicability must be checked against the mission time.",
+      "source": "SkyScholar original draft: authoring/subjects/meteorology.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-meteorology-005",
+      "topic": "meteorology",
+      "objective": "Check the location and time represented by weather information",
+      "stem": "Which decision record is most useful when conditions may change?",
+      "options": [
+        "A fixed decision with no review conditions",
+        "Only a favourable screenshot without its source",
+        "Evidence, uncertainty and explicit reassessment points"
+      ],
+      "correct": 2,
+      "feedback": [
+        "A plan should account for changing evidence.",
+        "Missing provenance prevents meaningful reassessment.",
+        "The crew needs a reasoned basis for updating the decision."
+      ],
+      "explanation": "The crew needs a reasoned basis for updating the decision.",
+      "source": "SkyScholar original draft: authoring/subjects/meteorology.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-navigation-001",
+      "topic": "navigation",
+      "objective": "Keep time, distance and reference frames consistent",
+      "stem": "At a constant ground speed of 5 m/s, how long is a 2 km straight segment in this simplified example?",
+      "options": [
+        "400 seconds",
+        "10 seconds",
+        "10000 seconds"
+      ],
+      "correct": 0,
+      "feedback": [
+        "2000 metres divided by 5 metres per second equals 400 seconds.",
+        "The distance must first be converted to 2000 metres.",
+        "Multiplying distance by speed does not calculate travel time."
+      ],
+      "explanation": "2000 metres divided by 5 metres per second equals 400 seconds.",
+      "source": "SkyScholar original draft: authoring/subjects/navigation.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-navigation-002",
+      "topic": "navigation",
+      "objective": "Keep time, distance and reference frames consistent",
+      "stem": "Heading and ground track differ in a scenario. Which factor can explain this?",
+      "options": [
+        "The filename of the mission plan",
+        "The colour of the map background",
+        "Wind affecting movement over the ground"
+      ],
+      "correct": 2,
+      "feedback": [
+        "A filename does not explain physical motion.",
+        "Display colour does not determine ground track.",
+        "Aircraft orientation and ground movement need not be identical."
+      ],
+      "explanation": "Aircraft orientation and ground movement need not be identical.",
+      "source": "SkyScholar original draft: authoring/subjects/navigation.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-navigation-003",
+      "topic": "navigation",
+      "objective": "Keep time, distance and reference frames consistent",
+      "stem": "A dataset uses longitude and latitude in degrees. What should an analyst avoid?",
+      "options": [
+        "Checking the coordinate units",
+        "Treating those numeric differences directly as metres",
+        "Recording the coordinate reference system"
+      ],
+      "correct": 1,
+      "feedback": [
+        "Checking units helps prevent invalid measurements.",
+        "Angular coordinates need an appropriate measurement method and reference handling.",
+        "Recording the CRS is necessary provenance."
+      ],
+      "explanation": "Angular coordinates need an appropriate measurement method and reference handling.",
+      "source": "SkyScholar original draft: authoring/subjects/navigation.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-navigation-004",
+      "topic": "navigation",
+      "objective": "Keep time, distance and reference frames consistent",
+      "stem": "What makes a checkpoint independent in a mapping adjustment?",
+      "options": [
+        "It is withheld from fitting and used for assessment",
+        "It is used to fit the model twice",
+        "It has a memorable name"
+      ],
+      "correct": 0,
+      "feedback": [
+        "A check is independent only if it was not used to fit the result being tested.",
+        "Repeated fitting does not produce an independent check.",
+        "Naming does not establish methodological independence."
+      ],
+      "explanation": "A check is independent only if it was not used to fit the result being tested.",
+      "source": "SkyScholar original draft: authoring/subjects/navigation.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-navigation-005",
+      "topic": "navigation",
+      "objective": "Keep time, distance and reference frames consistent",
+      "stem": "A simple travel-time calculation omits turns and reserve. How should it be reported?",
+      "options": [
+        "As a complete battery endurance guarantee",
+        "As proof that the route is authorised",
+        "As a limited calculation with the omissions stated"
+      ],
+      "correct": 2,
+      "feedback": [
+        "The calculation does not model all energy or flight factors.",
+        "A calculation does not establish permissions.",
+        "The result is valid only under its stated assumptions."
+      ],
+      "explanation": "The result is valid only under its stated assumptions.",
+      "source": "SkyScholar original draft: authoring/subjects/navigation.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-human-factors-001",
+      "topic": "human-factors",
+      "objective": "Make pressure and uncertainty visible in decisions",
+      "stem": "A client deadline conflicts with an unresolved safety concern. What should drive the decision?",
+      "options": [
+        "Evidence and the applicable stop criteria",
+        "The amount already spent on travel",
+        "A desire to avoid disappointing the client"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Commercial pressure does not resolve an unresolved safety concern.",
+        "Sunk costs do not establish that the operation is acceptable.",
+        "A preference cannot replace the required evidence."
+      ],
+      "explanation": "Commercial pressure does not resolve an unresolved safety concern.",
+      "source": "SkyScholar original draft: authoring/subjects/human-factors.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-human-factors-002",
+      "topic": "human-factors",
+      "objective": "Make pressure and uncertainty visible in decisions",
+      "stem": "A checklist item was read aloud without checking the equipment. What is missing?",
+      "options": [
+        "A louder voice alone",
+        "A more attractive checklist layout alone",
+        "Verification of the actual condition"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Volume does not establish the equipment state.",
+        "Layout can help usability but does not perform the check.",
+        "The purpose is to verify a condition, not only recite text."
+      ],
+      "explanation": "The purpose is to verify a condition, not only recite text.",
+      "source": "SkyScholar original draft: authoring/subjects/human-factors.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-human-factors-003",
+      "topic": "human-factors",
+      "objective": "Make pressure and uncertainty visible in decisions",
+      "stem": "Which debrief statement is most useful?",
+      "options": [
+        "Nothing can be learned because no damage occurred",
+        "The team assumed a mode was active without confirming the indicator",
+        "The pilot is always careless"
+      ],
+      "correct": 1,
+      "feedback": [
+        "An uneventful outcome can still reveal a risky process.",
+        "It describes observable behaviour and an actionable assumption.",
+        "A global personal judgement does not identify a specific process failure."
+      ],
+      "explanation": "It describes observable behaviour and an actionable assumption.",
+      "source": "SkyScholar original draft: authoring/subjects/human-factors.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-human-factors-004",
+      "topic": "human-factors",
+      "objective": "Make pressure and uncertainty visible in decisions",
+      "stem": "A complex camera task occupies most of a crew member's attention. What should be assessed?",
+      "options": [
+        "The remaining capacity to monitor and manage other demands",
+        "Only whether the final image is attractive",
+        "Whether more tasks can always be added"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Task allocation should consider total workload.",
+        "Image appearance does not assess remaining operational capacity.",
+        "Attention is finite; extra tasks need assessment."
+      ],
+      "explanation": "Task allocation should consider total workload.",
+      "source": "SkyScholar original draft: authoring/subjects/human-factors.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-human-factors-005",
+      "topic": "human-factors",
+      "objective": "Make pressure and uncertainty visible in decisions",
+      "stem": "A team stops because required information remains unresolved. How can this be evaluated?",
+      "options": [
+        "As failure solely because the job was delayed",
+        "As proof that no future mission can succeed",
+        "As a potentially well-supported professional decision"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Delay alone does not show the decision was wrong.",
+        "One unresolved decision does not establish permanent inability.",
+        "Stopping can demonstrate appropriate judgement rather than failure."
+      ],
+      "explanation": "Stopping can demonstrate appropriate judgement rather than failure.",
+      "source": "SkyScholar original draft: authoring/subjects/human-factors.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-communications-001",
+      "topic": "communications",
+      "objective": "Resolve ambiguity before acting",
+      "stem": "A message does not identify its intended recipient. What is the best next step?",
+      "options": [
+        "Clarify the recipient before acting on an uncertain instruction",
+        "Assume it is intended for whoever responds first",
+        "Ignore every later message"
+      ],
+      "correct": 0,
+      "feedback": [
+        "Resolving ambiguity avoids an unsupported assumption.",
+        "Speed does not establish the intended recipient.",
+        "A structured clarification is more useful than abandoning communication."
+      ],
+      "explanation": "Resolving ambiguity avoids an unsupported assumption.",
+      "source": "SkyScholar original draft: authoring/subjects/communications.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-communications-002",
+      "topic": "communications",
+      "objective": "Resolve ambiguity before acting",
+      "stem": "Which exchange best demonstrates a closed loop in this desk exercise?",
+      "options": [
+        "Message followed by an unrelated comment",
+        "Two people speaking over each other",
+        "Clear message, appropriate readback, and confirmation or correction"
+      ],
+      "correct": 2,
+      "feedback": [
+        "An unrelated response does not confirm meaning.",
+        "Overlapping speech can obscure meaning rather than confirm it.",
+        "The loop checks the shared understanding."
+      ],
+      "explanation": "The loop checks the shared understanding.",
+      "source": "SkyScholar original draft: authoring/subjects/communications.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-communications-003",
+      "topic": "communications",
+      "objective": "Resolve ambiguity before acting",
+      "stem": "A distance is communicated without units. What should the receiver do?",
+      "options": [
+        "Assume every distance in aviation uses one universal unit",
+        "Ask for the units and confirm the intended value",
+        "Choose the unit that makes the task easiest"
+      ],
+      "correct": 1,
+      "feedback": [
+        "Units depend on context and require verification.",
+        "The same number can have materially different meanings across units.",
+        "Convenience does not establish the intended measure."
+      ],
+      "explanation": "The same number can have materially different meanings across units.",
+      "source": "SkyScholar original draft: authoring/subjects/communications.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-communications-004",
+      "topic": "communications",
+      "objective": "Resolve ambiguity before acting",
+      "stem": "Does this draft lesson establish approved South African radio phraseology?",
+      "options": [
+        "No; local references and competent review are still required",
+        "Yes, any classroom phrase is automatically approved",
+        "Yes, because the lesson is available online"
+      ],
+      "correct": 0,
+      "feedback": [
+        "The general communication model is not an approved live-radio procedure.",
+        "Classroom wording does not establish regulatory or procedural approval.",
+        "Publication does not create operational approval."
+      ],
+      "explanation": "The general communication model is not an approved live-radio procedure.",
+      "source": "SkyScholar original draft: authoring/subjects/communications.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    },
+    {
+      "id": "za-foundation-communications-005",
+      "topic": "communications",
+      "objective": "Resolve ambiguity before acting",
+      "stem": "A communication log is prepared for a debrief. What belongs in it?",
+      "options": [
+        "Passwords for every crew account",
+        "Unverified personal accusations presented as fact",
+        "Relevant factual exchanges and decision changes"
+      ],
+      "correct": 2,
+      "feedback": [
+        "Passwords are not appropriate debrief content.",
+        "A factual log should distinguish observations from unsupported claims.",
+        "A proportionate record supports review without unnecessary personal data."
+      ],
+      "explanation": "A proportionate record supports review without unnecessary personal data.",
+      "source": "SkyScholar original draft: authoring/subjects/communications.md, opening lesson, authoring revision 2026-10-20. Candidate external references in authoring/SOURCES.md; exact current-source mapping pending review.",
+      "status": "draft",
+      "reviewer": "",
+      "review_date": ""
+    }
+  ]
+}

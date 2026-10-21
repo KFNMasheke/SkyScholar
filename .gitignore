@@ -4,6 +4,7 @@
 /runtime/
 /moodledata/
 config.php
+!moodle/theme/uavvisuals/config.php
 !deployment/config.example.php
 .env
 .env.*

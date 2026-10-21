@@ -1,0 +1,20 @@
+<?php
+// SPDX-License-Identifier: GPL-3.0-or-later
+defined('MOODLE_INTERNAL') || die();
+$string['pluginname'] = 'SkyScholar course content';
+$string['heading'] = 'Import SkyScholar draft course content';
+$string['intro'] = 'Load 14 hidden course starters, 35 native Page activities (course plans, opening lessons and seven subject notes), and 35 draft bank questions. Later lessons and complete exam banks are not included. No quizzes or learner attempts are created.';
+$string['safety'] = 'Courses and new activities stay hidden. Existing CSV courses are reused by their exact IDs. Existing pages, questions, grades and enrolments are not overwritten. Each course is imported in its own transaction; you can safely retry after an interruption.';
+$string['start'] = 'Import all draft course content';
+$string['running'] = 'Importing… Keep this page open.';
+$string['complete'] = 'Import complete. All draft courses are ready for staff review.';
+$string['failed'] = 'Import stopped. Read the message below, resolve the issue and retry. Previously completed courses will be skipped safely.';
+$string['retry'] = 'Retry draft import';
+$string['viewcourses'] = 'Manage courses and categories';
+$string['course'] = 'Course';
+$string['state'] = 'Import target';
+$string['newcourse'] = 'Create hidden course';
+$string['existingcourse'] = 'Reuse existing hidden course';
+$string['preflight'] = 'Before importing';
+$string['eventcourseimported'] = 'SkyScholar draft course content imported';
+$string['privacy:metadata'] = 'This plugin stores no personal data in its own tables. Course content, questions, creator records and audit events are managed by Moodle core.';
