@@ -3,7 +3,7 @@
 defined('MOODLE_INTERNAL') || die();
 $string['pluginname'] = 'SkyScholar course content';
 $string['heading'] = 'Import SkyScholar draft course content';
-$string['intro'] = 'Load 14 hidden course starters, 35 native Page activities (course plans, opening lessons and seven subject notes), and 35 draft bank questions. Later lessons and complete exam banks are not included. No quizzes or learner attempts are created.';
+$string['intro'] = 'Load 15 hidden foundational self-study curricula with 64 taught units, 76 original diagrams, 128 knowledge checks, 15 final projects and a 27-scenario radiotelephony lab. Includes 130 native Pages, 15 human-marked Assignments and 35 existing draft bank questions. Instructor review and official syllabus/practical assessment remain separate.';
 $string['safety'] = 'Courses and new activities stay hidden. Existing CSV courses are reused by their exact IDs. Existing pages, questions, grades and enrolments are not overwritten. Each course is imported in its own transaction; you can safely retry after an interruption.';
 $string['start'] = 'Import all draft course content';
 $string['running'] = 'Importing… Keep this page open.';

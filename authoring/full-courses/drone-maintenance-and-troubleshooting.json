@@ -1,0 +1,119 @@
+{
+  "slug": "drone-maintenance-and-troubleshooting",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Inspection evidence and approved limits",
+      "lesson": "Maintenance begins with identifying the exact aircraft, component and configuration. A procedure for a similar model is not necessarily applicable. Record serial numbers where relevant, operating time or cycles, software versions, the reported defect and the manual revision used. Separate routine preflight inspection from maintenance tasks requiring specific authorisation or competence.\n\nAn inspection compares an observed condition with an approved limit or requirement. Words such as fine or probably normal do not communicate that comparison. Describe location, extent and the method of observation, and retain suitable evidence. If the applicable limit cannot be established, the result is unresolved rather than automatically serviceable.\n\nRespect isolation and handling instructions. Batteries, propellers, stored energy and automatic activation can create hazards on the ground. Follow the manufacturer's safety procedures and the operator's approved maintenance system; this course does not instruct a learner to open, energise or repair an aircraft. A desk-based defect record is useful precisely because it makes uncertainty visible before equipment is returned to use.",
+      "example": "A propeller has a visible mark near its root. A photograph alone cannot establish whether it meets an approved condition limit. Record the exact propeller identity, the mark's location and the applicable manual requirement, then use the authorised assessment path.",
+      "task": "Complete a fictional defect record for an observed vibration, including identity, configuration, symptom, evidence and disposition.",
+      "model_answer": "The record identifies the aircraft and relevant components, states when vibration occurred and distinguishes observation from diagnosis. It records evidence and the manual reference, assigns an authorised reviewer and marks the equipment unavailable or unresolved until the applicable process determines disposition.",
+      "diagram": [
+        "Identify equipment",
+        "Observe condition",
+        "Compare approved limit",
+        "Record disposition"
+      ],
+      "checks": [
+        {
+          "prompt": "Is probably normal an inspection standard?",
+          "answer": "No. Compare evidence against an applicable documented requirement."
+        },
+        {
+          "prompt": "Does this lesson authorise physical repair?",
+          "answer": "No. Use the applicable competence, authorisation and approved procedures."
+        }
+      ],
+      "reading": [
+        "MANUFACTURER: inspection schedule, isolation and serviceability limits"
+      ]
+    },
+    {
+      "title": "02 · Distinguish symptoms from causes",
+      "lesson": "A symptom is what was observed; a cause explains why it occurred. Several causes can produce a similar symptom, and several symptoms can share one cause. Begin with the event timeline and configuration rather than replacing the first component that comes to mind. Preserve logs and other evidence before a change destroys the original state.\n\nBuild a fault tree or hypothesis table. For each candidate explanation, state what evidence would support it, what would contradict it and whether checking it is authorised and safe. A useful test distinguishes hypotheses; a test that produces the same result for all candidates adds little information. Avoid repeated powering or flight tests on suspect equipment unless the approved process specifically permits them.\n\nSoftware and configuration changes deserve the same discipline as hardware work. Record versions, settings and the time of any change. A correlation after an update is a starting point for investigation, not proof that the update caused the defect. Escalate with a concise reproduction history and evidence package rather than an unverified diagnosis.",
+      "example": "A system reports intermittent positioning warnings. Candidate explanations include environmental obstruction, interference, a configuration issue or a hardware fault. An authorised log review across locations may distinguish these better than immediately replacing a receiver.",
+      "task": "Create a hypothesis table for intermittent image blur with three possible causes and one discriminating evidence check for each.",
+      "model_answer": "Candidates include movement/exposure, optical contamination/focus configuration and vibration. Image metadata and a controlled authorised ground inspection may distinguish them. The answer states what evidence would contradict each explanation and avoids proposing an unsafe flight as the first diagnostic step.",
+      "diagram": [
+        "Symptom timeline",
+        "Competing causes",
+        "Discriminating evidence",
+        "Authorised next step"
+      ],
+      "checks": [
+        {
+          "prompt": "Does correlation prove the cause of a defect?",
+          "answer": "No. It supports a hypothesis that needs discriminating evidence."
+        },
+        {
+          "prompt": "What makes a diagnostic check useful?",
+          "answer": "It safely distinguishes competing explanations."
+        }
+      ],
+      "reading": [
+        "MANUFACTURER: troubleshooting and escalation procedures"
+      ]
+    },
+    {
+      "title": "03 · Control changes and escalate effectively",
+      "lesson": "A controlled change has a purpose, an authorised method, a known baseline and a verification plan. Change one relevant variable at a time when the approved process permits, so that the outcome can be interpreted. Record what was changed and retain the original evidence. Do not improvise an aircraft configuration or substitute an unapproved part to see what happens.\n\nEscalation should reduce the receiving specialist's uncertainty. Include equipment identity, configuration, symptom timeline, conditions, steps already taken, exact messages and the desired decision. Separate raw evidence from your interpretation. Remove unnecessary personal or client data from shared logs while preserving the information needed for diagnosis.\n\nDefine ownership while an issue remains open. The equipment's operational status, the next action and the person who can authorise return to use should be unambiguous. If a workaround changes an operating assumption, it requires its own review; a temporary label does not make it safe or approved.",
+      "example": "A support ticket says the aircraft is unreliable. A useful escalation instead states the exact model/version, the warning sequence, the conditions and the authorised checks performed, with time-correlated logs and a clear serviceability question.",
+      "task": "Write a concise escalation for a fictional intermittent telemetry fault. Include a baseline, evidence index and the decision you need.",
+      "model_answer": "The escalation separates the observed interruption from a claimed component fault, includes timestamps and configuration, lists approved checks and supplies a minimal evidence package. It asks whether further inspection, repair or restriction is required and identifies who owns equipment status while waiting.",
+      "diagram": [
+        "Known baseline",
+        "Authorised change",
+        "Verification evidence",
+        "Documented escalation"
+      ],
+      "checks": [
+        {
+          "prompt": "Can a temporary workaround bypass configuration approval?",
+          "answer": "No. Its changed assumptions still require review."
+        },
+        {
+          "prompt": "Why separate raw evidence from interpretation?",
+          "answer": "It lets the specialist assess the observations without inheriting an unsupported diagnosis."
+        }
+      ],
+      "reading": [
+        "MANUFACTURER: authorised configuration and support process"
+      ]
+    },
+    {
+      "title": "04 · Return-to-use evidence and reliability learning",
+      "lesson": "A defect being cleared from a display is not by itself evidence of an acceptable return to use. The responsible authorised person needs a record of the defect, the action taken and the verification required by the applicable system. Verify that related records, configuration and any restrictions agree. Close the issue only when the defined acceptance evidence is present.\n\nReliability records make repeated defects visible. Track the relevant exposure measure, such as operating hours, cycles or deployments, alongside events. Ten events across ten operations differs from ten across a thousand. Do not combine unrelated definitions or compare periods with incompatible logging practices.\n\nUse recurring evidence to improve inspection, training or escalation. A trend does not automatically justify a maintenance interval change; the approved maintenance system controls that decision. Preserve the audit trail and distinguish a proposed improvement from an approved instruction. The final exercise evaluates your documentation and reasoning, not your authority to certify an aircraft.",
+      "example": "Three similar warnings appear after a component change. Record exposure and configuration for each occurrence, compare the symptom definitions and refer the trend through the authorised process. Do not assume the replacement resolved the underlying issue.",
+      "task": "Create a return-to-use checklist and a small reliability register with event, exposure, action, verification and owner fields.",
+      "model_answer": "The checklist requires traceable defect/action records, approved verification, correct configuration and an identified release authority. The register records consistent exposure and event definitions so that rates can be compared. A proposed process improvement remains marked pending approval until accepted by the responsible authority.",
+      "diagram": [
+        "Defect record",
+        "Approved action",
+        "Required verification",
+        "Reliability feedback"
+      ],
+      "checks": [
+        {
+          "prompt": "Is a cleared warning sufficient release evidence?",
+          "answer": "Not on its own; apply the approved verification and release process."
+        },
+        {
+          "prompt": "Why record exposure alongside defect counts?",
+          "answer": "Counts alone do not show how frequently defects occur relative to use."
+        }
+      ],
+      "reading": [
+        "Approved operator maintenance system; MANUFACTURER: return-to-service instructions"
+      ]
+    }
+  ],
+  "capstone": "Produce a maintenance documentation dossier for a fictional recurring fault: defect report, hypothesis table, escalation, change record, return-to-use evidence checklist and trend register. Do not perform a physical repair.",
+  "rubric": [
+    "Equipment/configuration are traceable",
+    "Observations are separated from diagnoses",
+    "Checks and changes are authorised",
+    "Release evidence and authority are explicit",
+    "Trends use consistent exposure measures"
+  ]
+}

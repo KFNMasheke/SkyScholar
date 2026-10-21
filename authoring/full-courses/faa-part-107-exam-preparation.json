@@ -1,0 +1,119 @@
+{
+  "slug": "faa-part-107-exam-preparation",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Establish the US pathway and build an ACS study map",
+      "lesson": "This course concerns the United States FAA pathway. It does not establish South African privileges or cover every practical competence needed for a commercial service. Begin with the FAA's current certification information and the Remote Pilot Airman Certification Standards, then maintain a source register with document versions and checked dates.\n\nThe FAA describes eligibility including a minimum age of 16 and an initial aeronautical knowledge examination for first-time applicants. It also describes recurrent training every 24 calendar months. Different applicant pathways and current requirements must be checked directly; a remembered requirement from another country or an old study guide is not sufficient.\n\nUse the ACS as a structure for study rather than a list of answers to memorise. Map each task to a reading, an explanation in your own words and a scenario that requires a decision. Mark uncertain or outdated material and resolve it through the current official source. A self-study result is evidence of practice, not certification or authority to operate.",
+      "example": "A learner has a South African credential and assumes it automatically satisfies the FAA certificate pathway. The study map records that as an unresolved eligibility question and checks the applicable FAA process rather than treating jurisdictional experience as automatic credit.",
+      "task": "Create an ACS reading register with all five Areas of Operation and a current-source check column. Record your applicant pathway separately.",
+      "model_answer": "List regulations, airspace/requirements, weather, loading/performance and operations using the current ACS structure. Each topic has a source/version, learning task and unresolved questions. Applicant eligibility and certification steps remain separate from study completion, with no invented approval or equivalence.",
+      "diagram": [
+        "US applicant pathway",
+        "Current ACS",
+        "Reading / scenario evidence",
+        "Official examination process"
+      ],
+      "checks": [
+        {
+          "prompt": "Does this course itself issue an FAA certificate?",
+          "answer": "No. Certification follows the applicable FAA process."
+        },
+        {
+          "prompt": "Can another jurisdiction’s credential be assumed equivalent?",
+          "answer": "No. Verify the actual applicant pathway and current requirements."
+        }
+      ],
+      "reading": [
+        "FAA: Become a Certificated Remote Pilot; FAA-S-ACS-10B, introduction and Areas I–V"
+      ]
+    },
+    {
+      "title": "02 · Reason through operating rules and airspace",
+      "lesson": "Rules questions often turn on applicability: who is acting, what aircraft/activity is involved, where it occurs and whether a particular approval or exception applies. Build a rule card with the current provision, its conditions and the evidence needed. Do not treat an anecdote about one operation as a general permission.\n\nFor airspace study, distinguish the class/structure, chart information, airport environment and current restrictions. A chart is interpreted with its legend, date and applicable publications. An electronic planning tool can assist, but a familiar interface does not replace understanding or provide every required authorisation.\n\nWork a scenario in order: define the proposed operation and time, identify relevant airspace/restrictions, find the current rule, determine the required authorisation/coordination and record the conclusion. Keep US-specific procedures separate from ICAO-style radio practice and South African requirements. Where the information is incomplete, the correct study answer is to identify what must be resolved, not to invent a clearance.",
+      "example": "A fictional US task is near an airport and within controlled airspace. The learner identifies the relevant chart/class information and checks the current authorisation process before deciding feasibility. Permission from the property owner does not answer the airspace question.",
+      "task": "Build a rule-and-airspace worksheet for two fictional US tasks with different locations/times. For each, identify the official source needed and the unresolved conditions.",
+      "model_answer": "The worksheet distinguishes operational scope, airspace and current restrictions, cites the applicable current Part 107/FAA source and records the authorisation question. It does not apply a South African rule, assume an app notification is permission or make up operational details missing from the scenario.",
+      "diagram": [
+        "Define proposed operation",
+        "Interpret airspace / restrictions",
+        "Check applicable rule",
+        "Resolve authority / conditions"
+      ],
+      "checks": [
+        {
+          "prompt": "Can property permission resolve controlled-airspace requirements?",
+          "answer": "No. Different permissions address different matters."
+        },
+        {
+          "prompt": "How should an incomplete scenario be handled?",
+          "answer": "Identify and resolve the missing information instead of assuming permission."
+        }
+      ],
+      "reading": [
+        "Current 14 CFR Part 107 via FAA/eCFR; FAA-S-ACS-10B Areas I–II; current FAA chart legend/user guide"
+      ]
+    },
+    {
+      "title": "03 · Weather, loading and performance calculations",
+      "lesson": "Weather knowledge connects observations and forecasts to aircraft capability and operational decisions. Read the relevant official weather material, practising the distinction between source time, validity and local applicability. A numerical limit is meaningful only when it applies to the aircraft and operation under consideration.\n\nLoading and performance involve more than total mass. Configuration, centre of gravity where relevant, payload integration and environmental conditions affect capability. Use the aircraft documentation and the ACS learning objectives to identify what must be checked. Do not invent a generic centre-of-gravity limit or derive safe endurance from a marketing figure.\n\nPractise unit discipline and explain what a calculation does and does not establish. A simple headwind subtraction can illustrate groundspeed, while real planning also needs an approved performance/contingency method. Keep a calculation sheet with units, assumptions and a reasonableness check. The goal is to reason from the scenario rather than memorise an isolated number.",
+      "example": "In an intentionally simplified example, 7 m/s air-relative speed and a 2 m/s direct headwind produce 5 m/s groundspeed. The result does not establish usable battery time or a safe return policy; those require aircraft- and operation-specific evidence.",
+      "task": "Prepare a calculation sheet for a fictional payload selection and weather case, including nominal energy, a simple wind component and four limitations of the model.",
+      "model_answer": "The sheet uses consistent units and labels all values fictional. It separates nominal energy from usable endurance, groundspeed from airspeed and aircraft approval from arithmetic. It records load/configuration, environmental assumptions, reserve policy and the need for approved documentation rather than claiming the calculation authorises flight.",
+      "diagram": [
+        "Weather applicability",
+        "Approved configuration",
+        "Unit-consistent calculation",
+        "Limits / decision"
+      ],
+      "checks": [
+        {
+          "prompt": "Is nominal energy the same as safe usable endurance?",
+          "answer": "No. Load, condition, environment and reserve requirements matter."
+        },
+        {
+          "prompt": "Should a calculation include assumptions and units?",
+          "answer": "Yes. Without them its meaning and validity are unclear."
+        }
+      ],
+      "reading": [
+        "FAA-S-ACS-10B Areas III–IV; FAA Aviation Weather Handbook; aircraft manual"
+      ]
+    },
+    {
+      "title": "04 · Operations, human performance and exam readiness",
+      "lesson": "Operations study brings together communication, airport awareness, emergency procedures, crew resource management, maintenance/preflight knowledge, night-related topics and human performance. Use Area V of the ACS to check coverage. For each topic, create a scenario that asks what information matters, what decision follows and where the approved procedure is found.\n\nAn error log should classify a mistake: missing knowledge, wrong rule applicability, unit error, misread wording or weak reasoning. Re-read the relevant source and write a corrected explanation before attempting another item. Repeating a memorised answer without understanding can disguise a persistent gap.\n\nClose preparation with a coverage review rather than a claimed prediction of the official result. Practise timed reading if useful, but separate test-taking pace from actual knowledge. Use the current FAA examination/application process and independently verify readiness with an appropriate instructor or mentor. This course's original checks are learning exercises, not recalled or copied official exam items.",
+      "example": "A learner repeatedly misses questions involving a changed condition in the scenario. Their error log identifies applicability rather than a simple memory gap. They create paired scenarios that differ in one key condition and explain why the decision changes.",
+      "task": "Produce a readiness dossier: ACS coverage table, five scenario explanations across the Areas, an error log and a plan for any remaining gap.",
+      "model_answer": "The dossier maps current official objectives to reading and demonstrated reasoning, records errors without hiding them and plans targeted revision. It distinguishes study targets from official examination rules and does not claim that a small practice set is a complete test bank or a guarantee of passing.",
+      "diagram": [
+        "ACS operations topics",
+        "Original scenario reasoning",
+        "Error analysis",
+        "Coverage / readiness review"
+      ],
+      "checks": [
+        {
+          "prompt": "Does repeating a memorised answer prove understanding?",
+          "answer": "No. Explain the rule and its applicability to a changed scenario."
+        },
+        {
+          "prompt": "Can a small practice set guarantee an exam outcome?",
+          "answer": "No. Readiness needs broader coverage and appropriate review."
+        }
+      ],
+      "reading": [
+        "FAA-S-ACS-10B Area V; FAA certification/examination process; FAA Risk Management Handbook"
+      ]
+    }
+  ],
+  "capstone": "Build a US-only preparation dossier covering all five ACS Areas. Complete the assigned official readings, explain one original scenario per Area, show calculations with units, maintain an error log and identify unresolved eligibility/rule questions for an appropriate reviewer.",
+  "rubric": [
+    "Jurisdiction and applicant pathway are clear",
+    "All ACS Areas have reading/evidence entries",
+    "Rules are applied to scenario conditions",
+    "Calculations and human factors are reasoned",
+    "Readiness claims remain evidence-based"
+  ]
+}

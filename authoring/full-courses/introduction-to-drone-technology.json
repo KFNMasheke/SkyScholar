@@ -1,0 +1,119 @@
+{
+  "slug": "introduction-to-drone-technology",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Understand the complete aircraft system",
+      "lesson": "A drone service is a chain of dependencies, not a camera that happens to fly. The aircraft produces motion; the control station presents information and accepts commands; the command-and-control link connects them; the payload measures or records the subject. People, procedures, batteries, positioning services and the operating environment support that chain. A failure in any supporting element can invalidate a mission even when the aircraft remains airborne.\n\nSeparate commands from observations. A command requests an action; telemetry reports what a sensor or system believes is happening. A displayed battery percentage is an estimate, not a promise of remaining flight time. A map icon is a calculated position, not independent proof that the aircraft is where the operator expects. Cross-check important information using an appropriate independent cue, such as direct observation, a consistent instrument indication or a documented ground reference.\n\nDescribe an aircraft using capabilities, limitations and evidence. State what payload it carries, what deliverable it supports and which manual establishes its limits. Do not infer approval to operate from a product feature. Before selecting equipment, write the intended output, site constraints and acceptance tests. That turns a catalogue comparison into a defensible system decision.",
+      "example": "A client asks for a construction map. A high-resolution camera may supply sharp photographs, but a measurable surface also needs suitable capture geometry, a reference system, control or independent checks, processing and an accuracy report. The aircraft purchase alone does not meet that requirement.",
+      "task": "Draw the aircraft, station, link and payload for a fictional mapping service. For each, name an input, an output and one failure consequence. Add the person responsible for checking it.",
+      "model_answer": "Aircraft: receives control demand and produces motion; propulsion failure threatens containment. Station: receives telemetry and displays status; a frozen display can mislead the pilot. Link: carries commands/status; interruption requires the approved contingency. Payload: receives scene information and produces files; missing files can invalidate delivery. The pilot and data lead assign and verify these checks before accepting the job.",
+      "diagram": [
+        "Aircraft",
+        "Control station",
+        "Command link",
+        "Payload"
+      ],
+      "checks": [
+        {
+          "prompt": "Does a telemetry value independently prove the physical situation?",
+          "answer": "No. It is a system estimate that needs an appropriate cross-check."
+        },
+        {
+          "prompt": "What should be defined before equipment selection?",
+          "answer": "The required deliverable, constraints and evidence of acceptance."
+        }
+      ],
+      "reading": [
+        "FAA-PHAK: aircraft systems and aeronautical decision-making; aircraft-specific operating manual"
+      ]
+    },
+    {
+      "title": "02 · Choose an aircraft and payload for the job",
+      "lesson": "Multirotors can hold position and change viewing direction without maintaining forward flight. Fixed-wing aircraft generate lift primarily through airflow over a wing and need an operating concept compatible with launch, recovery and turning. Hybrid aircraft combine flight modes and introduce transition considerations. These are design tendencies, not performance guarantees. Compare the actual aircraft manual and the permitted operating environment rather than assuming one type is universally better.\n\nPayload selection begins with the measurement. RGB imagery records visible appearance. A thermal sensor measures radiance in a spectral band and needs interpretation and suitable conditions. A ranging sensor produces distance observations that depend on calibration, positioning and geometry. A heavier payload changes the aircraft system; it may affect endurance, balance, integration and authorised configurations.\n\nUse a decision matrix with must-have requirements separated from preferences. A platform that fails a mandatory requirement is not rescued by a high total score. Record uncertainty: if a supplier cannot establish a required accuracy or integration capability, mark it unresolved. A small pilot project with explicit acceptance criteria is more useful than an unsupported claim of survey-grade results.",
+      "example": "For a compact roof inspection, the ability to observe detail from controlled viewpoints may matter more than covering a very large area. For a long corridor, coverage efficiency matters, but launch/recovery, airspace and operating permissions can eliminate an otherwise attractive aircraft.",
+      "task": "Compare two fictional aircraft against five requirements: output type, spatial detail, site footprint, payload integration and evidence of operating limits. Identify one disqualifying requirement.",
+      "model_answer": "An acceptable matrix names the deliverable and uses evidence for each rating. A missing approved payload configuration is a stop condition, not a low preference score. The recommendation explains tradeoffs and includes a trial to verify image quality or measurement performance before a commercial promise.",
+      "diagram": [
+        "Client decision",
+        "Sensor choice",
+        "Aircraft fit",
+        "Acceptance trial"
+      ],
+      "checks": [
+        {
+          "prompt": "Can payload mass be evaluated independently of the aircraft?",
+          "answer": "No. It affects the integrated system and its limitations."
+        },
+        {
+          "prompt": "Should a mandatory failure be averaged into a score?",
+          "answer": "No. Mandatory constraints are pass/fail gates."
+        }
+      ],
+      "reading": [
+        "MANUFACTURER: approved payload/configuration and performance limitations"
+      ]
+    },
+    {
+      "title": "03 · Power, positioning and information quality",
+      "lesson": "A battery supplies finite stored energy. Voltage, current, temperature and condition affect what can be delivered under load. Energy in watt-hours is nominal voltage multiplied by amp-hours; this is useful for comparing stated capacities, but it does not establish usable flight endurance. Usable energy depends on the aircraft, payload, weather, battery condition and required reserve. Use manufacturer procedures for charging, storage, inspection and retirement.\n\nPosition estimates combine sensors and algorithms. GNSS can be degraded by poor geometry, reflections, interference or obstruction. An inertial system estimates motion from accelerometers and gyroscopes but accumulates error without suitable correction. A compass is vulnerable to magnetic influences. Extra satellites or an RTK status label do not guarantee a correct datum, clean observations or accurate delivered coordinates.\n\nInformation quality has several dimensions: accuracy, precision, completeness, freshness and traceability. A very repeatable wrong position is precise but inaccurate. A correct coordinate with no reference system is incomplete. A recent firmware update without a configuration record weakens traceability. Preserve raw observations, record system versions and validate critical results against independent evidence.",
+      "example": "A nominal 22.2 V battery rated at 5 Ah represents 111 Wh. Two packs with that label need not provide the same usable endurance after ageing or under different loads. Plan from approved performance evidence and reserve policy rather than dividing a marketing flight-time figure into the job.",
+      "task": "Calculate nominal energy for a 14.8 V, 6 Ah pack. Then list four reasons this calculation cannot predict a safe mission duration.",
+      "model_answer": "The nominal energy is 88.8 Wh. Actual load, battery condition, temperature and required reserve all matter; so do the aircraft/payload configuration and environmental conditions. The calculation is a capacity comparison, not permission to exhaust the pack or a substitute for the manual.",
+      "diagram": [
+        "Stored energy",
+        "Aircraft load",
+        "Position estimate",
+        "Independent check"
+      ],
+      "checks": [
+        {
+          "prompt": "What is the nominal energy of 14.8 V × 6 Ah?",
+          "answer": "88.8 Wh."
+        },
+        {
+          "prompt": "Can a precise position be inaccurate?",
+          "answer": "Yes. Repeated measurements can cluster around an incorrect location."
+        }
+      ],
+      "reading": [
+        "MANUFACTURER: battery care and positioning limitations"
+      ]
+    },
+    {
+      "title": "04 · Build and verify a complete mission workflow",
+      "lesson": "A repeatable workflow links discovery, planning, capture, processing, validation and delivery. At discovery, turn the client's question into a concrete output and acceptance criterion. At planning, verify permissions, site constraints, roles, equipment and contingency arrangements. At capture, follow the approved operational process and collect evidence that the required coverage and file integrity were achieved.\n\nProcessing is not the final quality gate. Check whether the data answer the original question and whether the limitations are clear. Missing coverage, a wrong reference system or an unsuitable thermal observation cannot always be repaired by software. Retain an issue log and decide whether to reprocess, recapture or qualify the deliverable. Do not quietly fill evidential gaps with confident language.\n\nUse versioned handover folders with a readme explaining dates, units, reference systems, methods and known limitations. Keep original files separate from working exports and final deliverables. Close the workflow by recording what the client accepted and what should change next time. This learning loop improves reliability without erasing the evidence of an imperfect result.",
+      "example": "A visually attractive orthomosaic has a blank area behind a structure. If the client's question concerns that area, the output fails even when the rest looks excellent. Record the gap and agree on a permitted recapture or a clearly limited delivery.",
+      "task": "Write a one-page workflow for a fictional site progress record with an acceptance checklist and a file handover structure.",
+      "model_answer": "Include the client question, date/area to be covered, operational approval gate, capture quality checks, file verification, processing version and a final coverage review. Handover separates originals, working files and finals; the readme records limitations. Acceptance explicitly addresses coverage and the intended decision, not merely file count.",
+      "diagram": [
+        "Discover",
+        "Plan / capture",
+        "Validate",
+        "Deliver / improve"
+      ],
+      "checks": [
+        {
+          "prompt": "Is processing success the same as client acceptance?",
+          "answer": "No. The result must satisfy the agreed purpose and quality criteria."
+        },
+        {
+          "prompt": "What should happen to a known data gap?",
+          "answer": "Record it and agree on recapture or a qualified deliverable."
+        }
+      ],
+      "reading": [
+        "FAA-PHAK: decision-making; project-specific data specification"
+      ]
+    }
+  ],
+  "capstone": "Prepare a system-selection and mission-to-delivery brief for a fictional 2 ha construction progress project. Include a system diagram, decision matrix, information-quality checks, a limitation statement and a handover index.",
+  "rubric": [
+    "Deliverable and acceptance criteria are explicit",
+    "System dependencies and limits are evidenced",
+    "Quality checks are independent and traceable",
+    "Contingencies and unresolved assumptions are visible",
+    "Handover explains methods, units and limitations"
+  ]
+}

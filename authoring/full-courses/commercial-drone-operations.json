@@ -1,0 +1,119 @@
+{
+  "slug": "commercial-drone-operations",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Discover the client decision and scope the work",
+      "lesson": "A commercial brief should describe the decision the client needs to make, not merely the aircraft they want flown. Ask who will use the result, what action it supports and what evidence will make it acceptable. A marketing image, an inspection observation and a measurement product require different methods and review skills.\n\nWrite the scope as deliverables, coverage, quality criteria, responsibilities and exclusions. Record site access, permissions, client-supplied information and the dependencies that can delay work. A request for survey accuracy needs a defined reference system, accuracy specification and validation method; do not substitute a sharp-looking image for those requirements.\n\nConfirm the brief in writing before pricing. Ambiguous words such as complete, accurate or all defects should become testable statements. If the information needed to quote is missing, propose a discovery stage or conditional estimate. A scope boundary protects both parties by making the promised service understandable.",
+      "example": "A property owner requests a roof survey. Discovery reveals that the intended decision is whether a contractor should inspect a suspected leak. The deliverable becomes dated imagery and located observations, with interpretation by the appropriate specialist, rather than an unsupported structural certification.",
+      "task": "Rewrite “drone survey of our warehouse” into a scope with three acceptance criteria and two exclusions.",
+      "model_answer": "Specify the site/area, capture date, required views and an observation index. Acceptance can require agreed coverage, readable detail and a documented handover. Exclude inaccessible/occluded areas and professional engineering certification unless separately contracted and competently provided. Record approval and access dependencies.",
+      "diagram": [
+        "Client question",
+        "Measurable scope",
+        "Dependencies",
+        "Written agreement"
+      ],
+      "checks": [
+        {
+          "prompt": "What should discovery identify first?",
+          "answer": "The client decision and evidence needed to support it."
+        },
+        {
+          "prompt": "Why define exclusions?",
+          "answer": "They prevent an ambiguous request becoming an unsupported promise."
+        }
+      ],
+      "reading": [
+        "Project specification; applicable professional and operating authorisations"
+      ]
+    },
+    {
+      "title": "02 · Plan delivery around operational dependencies",
+      "lesson": "Commercial scheduling must respect the operational decision, not the reverse. A confirmed booking does not resolve airspace, land access, crew competence, weather or aircraft availability. Build an approval and dependency register showing the owner, evidence, expiry and consequence of each unresolved item.\n\nSeparate commercial authority from operational authority. A client can approve a budget without authorising a flight. Define who makes the operational go/no-go decision and how a postponement is communicated. A contract should not reward the crew for ignoring a stop condition.\n\nPlan the data workflow alongside the fieldwork. Identify file transfer, processing time, quality review and specialist interpretation needs before promising delivery. Establish alternatives for conditions that prevent the intended observation. An alternative must still answer the client question; simply flying another route may not recover an unsuitable thermal or measurement observation.",
+      "example": "A construction manager agrees on a date but cannot confirm access to a critical area. The dependency remains open. The delivery plan records who will resolve it and when the job must be rescheduled rather than treating the booking as operational clearance.",
+      "task": "Create a dependency register for a fictional two-day job with access, airspace information, weather, crew and data-processing entries.",
+      "model_answer": "Each entry has an owner, required evidence, decision deadline and effect on delivery. It distinguishes permissions from commercial sign-off and identifies the operational decision-maker. The schedule includes validation and an agreed response if the data needed for acceptance cannot be collected.",
+      "diagram": [
+        "Dependency register",
+        "Operational decision",
+        "Capture window",
+        "Validation window"
+      ],
+      "checks": [
+        {
+          "prompt": "Does a booking authorise flight?",
+          "answer": "No. Operational requirements are separate."
+        },
+        {
+          "prompt": "What makes an alternative capture plan acceptable?",
+          "answer": "It remains authorised and produces evidence suitable for the original decision."
+        }
+      ],
+      "reading": [
+        "Approved operator procedures; current site/airspace information"
+      ]
+    },
+    {
+      "title": "03 · Price effort, uncertainty and change",
+      "lesson": "A sustainable price starts with a cost model: labour, equipment allocation, travel, processing, review, insurance/overheads and delivery support. Define which costs vary with the job and which must be recovered across the business. Quoting only the time airborne hides much of the effort.\n\nDistinguish markup from margin. Markup divides gross contribution by cost; margin divides it by selling price. In a simplified model, a selling price for target gross margin m is cost divided by (1 − m). This is an illustrative pricing calculation, not a market rate or tax recommendation. Use applicable tax and professional advice for actual invoices and contracts.\n\nPrice uncertainty transparently. State assumptions, what constitutes a scope change and how approval happens before extra work. A contingency allowance is not permission to ignore foreseeable dependencies. Track estimates against actual effort so that future prices reflect evidence rather than memory.",
+      "example": "For fictional direct costs of R4,000 and a target 20% gross margin, the simplified price is R5,000, not R4,800. R800 added to R4,000 is a 20% markup but only a 16.7% margin. Taxes and other costs are excluded from this exercise.",
+      "task": "Calculate the price for fictional costs of R6,000 at a 25% gross margin. List three assumptions that should accompany a quote.",
+      "model_answer": "R6,000 ÷ 0.75 = R8,000 before any applicable taxes or excluded costs. Assumptions should address coverage/access, capture conditions and processing/delivery requirements. Changes require an agreed scope, price/time impact and explicit approval; they are not quietly absorbed or billed afterwards.",
+      "diagram": [
+        "Full effort cost",
+        "Risk assumptions",
+        "Price / margin",
+        "Approved change"
+      ],
+      "checks": [
+        {
+          "prompt": "Are markup and margin identical?",
+          "answer": "No. Their denominators differ."
+        },
+        {
+          "prompt": "When should scope changes be approved?",
+          "answer": "Before the extra work, with the effect on price and timing clear."
+        }
+      ],
+      "reading": [
+        "Original illustrative cost model; project contract and qualified tax advice where applicable"
+      ]
+    },
+    {
+      "title": "04 · Handover, acceptance and recurring value",
+      "lesson": "Handover should make the work usable without the client having to reconstruct your process. Supply the agreed outputs, a concise readme, observation or measurement limitations and a clear route for questions. File names, dates, units, reference systems and version identifiers should be consistent.\n\nAcceptance checks the agreed criteria, not an expanding informal wish list. Record whether each criterion is met, qualified or outstanding, with evidence. If a limitation prevents the intended decision, agree on the remedy or a revised acceptance; do not bury the issue in a large archive.\n\nRecurring work creates value when repeated observations are comparable. Preserve capture references, processing settings and known differences between visits. A visually different result may reflect changed conditions or methods rather than physical change. Close each job with a review of estimates, defects, client questions and improvements, then obtain appropriate permission before using project imagery in marketing.",
+      "example": "A monthly progress record uses consistent view identifiers. One visit has an obstructed viewpoint; the handover marks it unavailable and explains the consequence instead of inserting a different view under the old name.",
+      "task": "Create an acceptance sheet for a recurring progress service with a change log and a client handover index.",
+      "model_answer": "The sheet lists coverage, date, view identifiers, output formats and limitations. It records exceptions and agreed remedies, preserves a method/change log and separates originals, working data and final outputs. Acceptance and any marketing permission are distinct decisions.",
+      "diagram": [
+        "Handover index",
+        "Acceptance evidence",
+        "Comparable repeat visits",
+        "Service improvement"
+      ],
+      "checks": [
+        {
+          "prompt": "Does visual difference always mean site change?",
+          "answer": "No. Capture or processing differences can cause it."
+        },
+        {
+          "prompt": "Is marketing reuse implied by delivery?",
+          "answer": "No. Establish the appropriate permission and purpose separately."
+        }
+      ],
+      "reading": [
+        "Project acceptance specification; Information Regulator privacy guidance"
+      ]
+    }
+  ],
+  "capstone": "Build a complete commercial proposal and delivery pack for a fictional warehouse observation service: discovery brief, scope, dependency register, illustrative cost model, change request, acceptance sheet and handover index.",
+  "rubric": [
+    "Decision and deliverables align",
+    "Operational dependencies have owners",
+    "Costs and margin are calculated correctly",
+    "Change/acceptance are explicit",
+    "Handover and recurring comparisons are traceable"
+  ]
+}

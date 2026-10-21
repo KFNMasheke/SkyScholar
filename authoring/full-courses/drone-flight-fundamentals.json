@@ -1,0 +1,119 @@
+{
+  "slug": "drone-flight-fundamentals",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Forces, axes and the meaning of control",
+      "lesson": "Describe roll about the longitudinal axis, pitch about the lateral axis and yaw about the vertical axis. These are rotations of the aircraft, not necessarily directions of travel. A multirotor can point one way while translating another way. Distinguish attitude, heading, track and groundspeed when describing what a display or observer is showing.\n\nIn a simplified level hover, the vertical component of total thrust balances weight. Tilting the thrust vector creates a horizontal component; maintaining the same vertical support then requires greater total thrust. This explains why manoeuvring and wind compensation can consume performance margin. The simplified relationship T cos(theta) = W describes the geometry; it is not a flight command or a full model of a particular controller.\n\nWeight, aerodynamic forces and control authority interact with the environment and payload. Knowing the names of forces does not establish a safe operating limit. Use the aircraft manual and supervised training for actual control inputs. The desk exercise here asks you to explain a response, not to practise unapproved manoeuvres outdoors.",
+      "example": "If an idealised vehicle has weight 100 N and tilts 30 degrees while maintaining vertical equilibrium, total thrust would need to be about 115.5 N because cos(30°) ≈ 0.866. A real aircraft also has aerodynamic and control effects not captured by this model.",
+      "task": "Sketch the weight vector, tilted thrust vector and its vertical/horizontal components. Explain why heading and track may differ in wind.",
+      "model_answer": "Weight acts downward; the thrust vector follows the simplified aircraft thrust direction. Its vertical component must support weight and its horizontal component changes motion or opposes a disturbance. Heading describes orientation; track describes movement over the ground, so wind and control choices can make them differ.",
+      "diagram": [
+        "Weight downward",
+        "Thrust vector",
+        "Vertical support",
+        "Horizontal motion"
+      ],
+      "checks": [
+        {
+          "prompt": "Which axis is associated with yaw?",
+          "answer": "The vertical axis."
+        },
+        {
+          "prompt": "Does tilting leave the vertical thrust component unchanged?",
+          "answer": "No. At the same total thrust it reduces the vertical component."
+        }
+      ],
+      "reading": [
+        "FAA-PHAK: principles of flight and aerodynamics; MANUFACTURER: control modes"
+      ]
+    },
+    {
+      "title": "02 · Orientation, reference frames and control modes",
+      "lesson": "Control interpretation depends on the reference frame. A direction on a hand controller may be tied to the aircraft heading, an earth reference or a special assisted mode. Never infer the active frame from the aircraft's appearance alone. Identify the actual mode, its indications, the sensors it requires and its fallback behaviour from the manual.\n\nOrientation errors arise when a pilot confuses their own viewpoint with the aircraft's axes. In a simulator, start with a stable reference and introduce one change at a time. Describe what you expect before applying an input, observe the result and pause when prediction and observation disagree. This separates learning from random correction.\n\nAssistance is conditional. Position holding, obstacle sensing and automated return functions depend on valid inputs and suitable conditions. Sensor coverage may have blind regions; maps and height references may be wrong or out of date. A mode change can alter workload abruptly. Build a mode-awareness briefing that states what is available, how loss of an assistance function is recognised and where the approved response is documented.",
+      "example": "A simulated aircraft faces towards the operator. An aircraft-relative right movement appears opposite to the operator's own right. The lesson is reference-frame awareness, not a universal instruction for a particular product's control mapping.",
+      "task": "For a simulator configuration, record three modes, the reference frame of each, its required sensors and one indication of a mode change.",
+      "model_answer": "A good table cites the actual simulator/manual configuration and distinguishes heading-relative from earth-relative behaviour. It states the sensor dependencies and a visible mode annunciation. It avoids assuming that a mode name has the same meaning across manufacturers.",
+      "diagram": [
+        "Identify frame",
+        "Predict movement",
+        "Observe response",
+        "Confirm active mode"
+      ],
+      "checks": [
+        {
+          "prompt": "Should a mode name be assumed identical across products?",
+          "answer": "No. Verify the specific manual and configuration."
+        },
+        {
+          "prompt": "What should follow an unexpected simulator response?",
+          "answer": "Pause, reconcile the reference frame/mode and restart at an appropriate difficulty."
+        }
+      ],
+      "reading": [
+        "MANUFACTURER: mode descriptions, limitations and fallback indications"
+      ]
+    },
+    {
+      "title": "03 · Normal procedures and simulator briefing",
+      "lesson": "A briefing should define a task, boundaries, roles, expected sequence and stop criteria. A checklist verifies essential conditions; it does not replace understanding. Distinguish a challenge-response check from a memory aid and document who has authority to stop the exercise. For this course, practical manoeuvring remains in a suitable simulator or approved training environment.\n\nUse a progression from stable attitude/orientation awareness to controlled transitions between simple tasks. Add only one workload factor at a time. Record the simulator model, assistance settings and success criteria, because a change in configuration can make two sessions incomparable. A successful exercise is one the learner can explain and repeat, not a lucky outcome.\n\nBefore each scenario, state the normal indications and what would make the scenario invalid. A poor frame rate, unexpected control mapping or missing instructor communication can prevent meaningful learning. Stop and resolve those conditions rather than recording a misleading pass. After the scenario, compare the intended and observed sequence using a concise event log.",
+      "example": "A simulator task asks the learner to maintain a specified virtual position and heading. The briefing includes the simulation boundary, a pause command and a measurable observation period. No outdoor flight or licence privilege is implied by completing it.",
+      "task": "Write a simulator briefing for orientation awareness. Include configuration, task, observable success evidence and three stop conditions.",
+      "model_answer": "The briefing names the aircraft model and control mode, gives a bounded task and records observations against predefined criteria. Stop conditions include unexpected mapping, simulator performance that invalidates feedback and loss of agreed supervision/communication. The debrief records causes rather than merely pass/fail.",
+      "diagram": [
+        "Brief",
+        "Verify configuration",
+        "Run bounded task",
+        "Debrief evidence"
+      ],
+      "checks": [
+        {
+          "prompt": "Does a checklist replace understanding?",
+          "answer": "No. It verifies essential conditions within an understood procedure."
+        },
+        {
+          "prompt": "Why record simulator configuration?",
+          "answer": "To make the exercise interpretable and repeatable."
+        }
+      ],
+      "reading": [
+        "FAA-PHAK: aeronautical decision-making; approved training organisation procedures"
+      ]
+    },
+    {
+      "title": "04 · Abnormal events, prioritisation and debrief",
+      "lesson": "An abnormal scenario changes a normal assumption: information may be unreliable, a function unavailable or workload excessive. Recognise the change, protect control and containment priorities, communicate as appropriate and use the aircraft/operator's approved procedure. Generic online lessons cannot supply one correct lost-link, battery or positioning response for all aircraft.\n\nIn desk-based rehearsal, work through indications, competing explanations and the evidence needed to distinguish them. Avoid premature diagnosis. A moving map anomaly might originate in position data, display behaviour or an incorrect reference; a symptom is not automatically a component failure. Identify which actions require immediate execution under the approved procedure and which diagnostic work belongs after the aircraft is safe.\n\nA useful debrief separates the timeline, observations, decisions and outcomes. Ask what information was available at the time rather than judging solely from hindsight. Record a corrective action with an owner and a verification method. Repeating the scenario at the same difficulty without addressing its cause is not a learning plan.",
+      "example": "In a simulator, the map display freezes while other indications continue. The learner identifies unreliable information, follows the approved simulation procedure and records the discrepancy. They do not invent a live-aircraft emergency command from this example.",
+      "task": "Create a four-column debrief for a fictional positioning anomaly: observation, interpretation, decision and evidence to review. Include an action for the next simulation.",
+      "model_answer": "An acceptable debrief distinguishes the frozen display from a proven navigation failure, records the information available at each decision and cites the applicable procedure. The follow-up tests recognition and communication after correcting the training/configuration issue; it does not reward a speculative diagnosis.",
+      "diagram": [
+        "Recognise change",
+        "Use approved priorities",
+        "Communicate",
+        "Review and improve"
+      ],
+      "checks": [
+        {
+          "prompt": "Is a symptom proof of a diagnosis?",
+          "answer": "No. Several causes can produce similar indications."
+        },
+        {
+          "prompt": "What makes a corrective action useful?",
+          "answer": "A clear owner, a change to make and evidence that verifies improvement."
+        }
+      ],
+      "reading": [
+        "MANUFACTURER: abnormal procedures; FAA Risk Management Handbook: decision-making"
+      ]
+    }
+  ],
+  "capstone": "Produce a simulator training pack with a force/axis explanation, mode-awareness table, normal briefing, one abnormal scenario and an evidence-based debrief. A competent instructor must assess any practical flying competence separately.",
+  "rubric": [
+    "Axes and reference frames are distinguished",
+    "Assistance dependencies are stated",
+    "Simulation is bounded and repeatable",
+    "Abnormal responses cite approved procedures",
+    "Debrief actions are measurable"
+  ]
+}

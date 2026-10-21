@@ -31,7 +31,7 @@ define([], function() {
                         var row = document.createElement('li');
                         var item = payload.result;
                         row.textContent = item.name + ': ' + item.courses + ' courses, ' + item.pages
-                            + ' pages, ' + item.questions + ' draft questions added.';
+                            + ' pages, ' + item.questions + ' draft questions, ' + (item.assignments || 0) + ' projects added.';
                         results.appendChild(row);
                     }
                     status.textContent = strings.complete;

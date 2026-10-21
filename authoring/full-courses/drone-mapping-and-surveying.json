@@ -1,0 +1,119 @@
+{
+  "slug": "drone-mapping-and-surveying",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Define a measurable product and its reference system",
+      "lesson": "A map, model and measurement report answer different questions. An orthomosaic supports a plan-view representation, a surface model represents the visible surface and a terrain model aims to represent terrain under a specified definition. Vegetation, structures and occlusion affect what can be established. Define the product and its use before capture.\n\nCoordinates require a reference system, units and relevant epoch/height information. Assigning a CRS tells software how to interpret existing values; transforming coordinates computes values in another reference. Labelling incorrect coordinates with the desired CRS does not transform them. Horizontal and vertical references must be considered separately.\n\nAn accuracy specification describes the quantity, method and acceptance criterion to be evaluated. Ground sample distance describes represented ground spacing per pixel; it is not a guarantee of positional accuracy. Write a quality plan with independent checks, coverage and limitations so that the delivered number is interpretable rather than simply visually convincing.",
+      "example": "A dataset in degrees is relabelled as a metre-based CRS without transformation. Its values now have an incorrect meaning; changing the label did not move them correctly into the target system. Verify the source definition before choosing a transformation.",
+      "task": "Draft a specification for a fictional site surface product, naming the intended decision, horizontal/vertical references, units and independent acceptance evidence.",
+      "model_answer": "The specification distinguishes surface from terrain, states the coordinate/height definitions and explains what independent observations will test the result. It treats GSD as image sampling, identifies coverage/occlusion limits and avoids calling an output survey-grade without an appropriate specification and evidence.",
+      "diagram": [
+        "Client measurement",
+        "Product definition",
+        "CRS / units / height",
+        "Independent acceptance"
+      ],
+      "checks": [
+        {
+          "prompt": "Is assigning a CRS the same as transforming coordinates?",
+          "answer": "No. Assigning defines interpretation; transformation computes new coordinate values."
+        },
+        {
+          "prompt": "Does small GSD guarantee positional accuracy?",
+          "answer": "No. Accuracy depends on the whole measurement and validation chain."
+        }
+      ],
+      "reading": [
+        "QGIS 3.44 documentation: layer/project CRS and transformations; USGS calibration guidelines"
+      ]
+    },
+    {
+      "title": "02 · Design capture geometry and usable image quality",
+      "lesson": "Photogrammetric reconstruction depends on observations of common scene features from suitable viewpoints. Coverage, overlap, viewing geometry, surface texture, lighting and image sharpness all affect the result. A flight pattern alone cannot guarantee reconstruction in feature-poor, reflective, moving or occluded areas.\n\nUse the camera geometry to understand sampling. In a simplified nadir, flat-ground model, GSD is approximately height above the local ground multiplied by sensor pixel pitch, divided by focal length, with consistent units. Terrain changes alter the local height relationship. This geometric estimate is not an accuracy assessment or a universal flight-height instruction.\n\nPlan quality checks for representative images and difficult areas. Check focus, blur, exposure, coverage and consistency, and identify where additional suitable views may be needed under an approved operation. The required geometry should follow the product specification and camera/processing guidance rather than a single overlap percentage copied into every project.",
+      "example": "With a fictional 2.4 μm pixel pitch, 8 mm focal length and 80 m local height, the simplified GSD is 0.024 m, or 2.4 cm/pixel. A different local terrain height changes the estimate; independent checks are still needed for accuracy.",
+      "task": "Calculate simplified GSD at 60 m with the same fictional camera. Identify three site conditions that can invalidate an otherwise neat capture plan.",
+      "model_answer": "The estimate is 0.018 m, or 1.8 cm/pixel. Poor texture, reflective/moving surfaces and occlusion can undermine reconstruction; blur and exposure also matter. The result is a sampling calculation, not an operational recommendation or proof of accuracy.",
+      "diagram": [
+        "Camera geometry",
+        "Coverage / viewpoints",
+        "Sharp observations",
+        "Reconstruction suitability"
+      ],
+      "checks": [
+        {
+          "prompt": "What units must be consistent in the GSD formula?",
+          "answer": "Height, pixel pitch and focal length must use compatible length units."
+        },
+        {
+          "prompt": "Is one overlap percentage suitable for every project?",
+          "answer": "No. Geometry, scene and product requirements vary."
+        }
+      ],
+      "reading": [
+        "USGS calibration guidelines: acquisition geometry and image quality; camera/payload manual"
+      ]
+    },
+    {
+      "title": "03 · Separate control, checkpoints and model fitting",
+      "lesson": "Control observations help establish or constrain a model. Checkpoints test the resulting model independently. Using the same observations for fitting and then presenting their residuals as an independent accuracy test confuses these roles. Record point identities, reference definitions, measurement methods and how each point is used.\n\nConsider distribution, not just count. A cluster of checkpoints in one easy corner cannot establish performance everywhere else. Evaluate horizontal and vertical results as relevant to the product, with attention to terrain, edges and difficult surfaces. A small test set or uncertain reference observations limit the strength of any claim.\n\nKeep residuals and uncertainty concepts distinct. A residual is a difference under a specified comparison; an uncertainty statement concerns the measurement process and its limitations. Report the signs, units, summary statistics and scope of the checks. An excellent fitting score is useful diagnostic information, but it is not a substitute for independent validation.",
+      "example": "For fictional checkpoint vertical differences +0.03, −0.04 and +0.05 m, RMSE is √((0.0009+0.0016+0.0025)/3) ≈ 0.0408 m. Three points are used only to teach the calculation, not to satisfy an accuracy standard.",
+      "task": "Calculate mean signed error and RMSE for fictional differences +0.02, −0.02 and +0.04 m. Explain what these statistics do not establish.",
+      "model_answer": "The mean signed error is about +0.0133 m; RMSE is about 0.0283 m. These describe this tiny sample and reference comparison. They do not establish full-site accuracy, a particular confidence level or compliance with a standard without an appropriate sampling/design and reference-quality assessment.",
+      "diagram": [
+        "Independent reference",
+        "Withheld checkpoints",
+        "Residuals / statistics",
+        "Qualified accuracy statement"
+      ],
+      "checks": [
+        {
+          "prompt": "Can fitting residuals alone be called independent validation?",
+          "answer": "No. The test observations need to be independent of fitting."
+        },
+        {
+          "prompt": "Why does checkpoint distribution matter?",
+          "answer": "It affects which parts and conditions of the product are actually tested."
+        }
+      ],
+      "reading": [
+        "USGS lidar specification: checkpoint independence; USGS photogrammetric calibration guidance"
+      ]
+    },
+    {
+      "title": "04 · Process, inspect and report measurement limitations",
+      "lesson": "A processing record should preserve input identities, software/version, important settings, coordinate handling and quality decisions. Inspect alignment and coverage before investing in downstream outputs. A successful job status or plausible surface can hide local artefacts, gaps and reference errors.\n\nValidate the final delivered product, not only an intermediate model. Reprojection, clipping, resampling or export can introduce new issues. Check units, extents, orientation, height reference and representative values in an independent viewing environment where practical. Maintain links between the report, checkpoints and the exact output version.\n\nReport what the product supports and where it is limited. Distinguish measured surface, inferred/filled areas and unobserved regions. Supply a concise methods/quality note and avoid implying a professional survey certification unless that service is within the provider's competence and applicable authority. A reproducible limitation is more valuable than an unqualified accuracy slogan.",
+      "example": "A surface passes an intermediate check but is exported with a different height interpretation. The delivery check catches a consistent offset. The corrected output and report receive a new version so the recipient can identify the change.",
+      "task": "Write a processing and final-QA checklist for a fictional orthomosaic/surface delivery, including one failure that requires recapture rather than reprocessing.",
+      "model_answer": "The checklist records inputs/settings/references, tests alignment and coverage, evaluates independent checks and rechecks final exports. Missing usable observations behind an occlusion may require an authorised recapture; software cannot establish a surface it never observed. The report identifies inferred areas and qualified use.",
+      "diagram": [
+        "Traceable processing",
+        "Inspect local artefacts",
+        "Check final export",
+        "Report method / limits"
+      ],
+      "checks": [
+        {
+          "prompt": "Why test the exported product?",
+          "answer": "Export and transformation can change the delivered result."
+        },
+        {
+          "prompt": "Can processing always recover unobserved surfaces?",
+          "answer": "No. Inference or filling is not equivalent to observation."
+        }
+      ],
+      "reading": [
+        "QGIS export/CRS documentation; USGS quality-control guidance"
+      ]
+    }
+  ],
+  "capstone": "Produce a fictional measurement dossier with product/reference specification, camera-sampling calculation, control/checkpoint design, residual calculations, processing record and qualified handover. Use synthetic numbers and do not claim a legally certified survey.",
+  "rubric": [
+    "Product and references are explicit",
+    "Sampling is distinguished from accuracy",
+    "Checks are independent/distributed",
+    "Calculations and units are correct",
+    "Final exports and limitations are traceable"
+  ]
+}

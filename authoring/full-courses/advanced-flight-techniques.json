@@ -1,0 +1,119 @@
+{
+  "slug": "advanced-flight-techniques",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Performance margins before complexity",
+      "lesson": "An advanced task combines demands that may each be manageable alone: position control, orientation, observation, communication and payload operation. Performance margin is the capacity left after meeting current demands. It can shrink through fatigue, unfamiliarity, environmental complexity or degraded assistance even when the aircraft remains within a published limit.\n\nBuild prerequisites from observable evidence. A learner should demonstrate the simpler component skills consistently in the intended simulator configuration before combining them. A previous flight count or confident self-description does not establish readiness. State the required supervision and approvals for any subsequent real operation.\n\nUse a task-demand table to identify coupling. If a payload adjustment requires looking away from traffic information at the same moment a mode change increases control workload, those demands interact. Reduce or sequence them before adding complexity. Advanced practice should improve judgement about when not to continue, not normalise operating at the edge of control.",
+      "example": "A simulated inspection requires the learner to navigate, frame a close detail and answer a radio prompt simultaneously. The instructor first separates the tasks, then introduces communication at a low-demand moment before increasing complexity.",
+      "task": "List five demands in a simulated inspection and mark the two most likely to compete for attention. Propose a change that removes one conflict.",
+      "model_answer": "A strong answer identifies control/orientation and payload framing as potentially competing, with communication and monitoring adding demand. Assigning a payload role or sequencing the framing task can reduce conflict. The proposed exercise still requires clear stop criteria and evidence of the prerequisite skills.",
+      "diagram": [
+        "Prerequisites",
+        "Task demands",
+        "Available margin",
+        "Go / simplify / stop"
+      ],
+      "checks": [
+        {
+          "prompt": "Does experience count alone prove readiness?",
+          "answer": "No. Readiness needs current, observable evidence."
+        },
+        {
+          "prompt": "What is an effective response to coupled workload?",
+          "answer": "Reduce, assign or sequence demands before increasing difficulty."
+        }
+      ],
+      "reading": [
+        "FAA Risk Management Handbook: risk management and human performance"
+      ]
+    },
+    {
+      "title": "02 · Plan coordinated movement in simulation",
+      "lesson": "A planned camera move describes the desired path, orientation and framing over time. These are separate variables. A smooth-looking result can hide unstable control or an unnecessarily narrow margin. Use a simulator to decompose the move into entry, stable portion and exit, and to identify where workload changes.\n\nChoose reference features that support orientation without encouraging fixation. A learner who watches only the subject may stop noticing aircraft attitude, boundaries or other relevant cues. Describe a deliberate monitoring pattern and the conditions that require pausing the simulation. Do not generalise an attractive cinematic manoeuvre into a recommended live-aircraft technique.\n\nEvaluate the process as well as the image. Record whether the learner anticipated the next phase, maintained situational awareness and ended the manoeuvre within the exercise bounds. Variation should come from planned practice conditions, not repeated improvisation. If the control system or assistance setting changes, re-establish the baseline before comparing performance.",
+      "example": "For a virtual orbit, separate path consistency from camera pointing. First rehearse each component, then combine them at a simple pace with defined entry/exit references. The simulation result says nothing by itself about authorisation to orbit a real structure.",
+      "task": "Create a three-phase plan for a simulated tracking shot. For each phase, identify the control demand, visual reference and observation to record.",
+      "model_answer": "The plan defines an entry reference and settled configuration, a stable section with an intentional monitoring pattern, and an exit with sufficient room in the virtual exercise. It records path and framing separately and has a pause condition for lost orientation or conflicting cues.",
+      "diagram": [
+        "Entry reference",
+        "Stable movement",
+        "Monitor beyond subject",
+        "Controlled exit"
+      ],
+      "checks": [
+        {
+          "prompt": "Are path and framing the same variable?",
+          "answer": "No. Evaluate them separately before combining them."
+        },
+        {
+          "prompt": "What risk does subject fixation create?",
+          "answer": "Other control, boundary and situational cues can be missed."
+        }
+      ],
+      "reading": [
+        "Approved simulator syllabus and aircraft operating documentation"
+      ]
+    },
+    {
+      "title": "03 · Rehearse a complex mission as a crew",
+      "lesson": "A complex mission needs a shared picture of the task, responsibilities and changing conditions. Brief the operating concept, who monitors each critical source of information and the language used to stop or replan the exercise. A crew member should be able to raise a concern without solving it first.\n\nRehearse handovers explicitly. State what is being transferred, the current state and the acknowledgement that completes the transfer. Silence is not acceptance. Where one person performs several roles, identify when those roles cannot be fulfilled simultaneously and redesign the task. Adding another person without a clear role can increase ambiguity rather than reduce workload.\n\nInject a small number of defined changes into a desk or simulator scenario. Useful changes include a lost client requirement, a conflicting information update or a role becoming unavailable. The objective is to observe the team's decision process, not to surprise people with impossible combinations. Keep a timeline so that the debrief can distinguish a communication failure from a missing plan.",
+      "example": "A virtual mission's payload operator becomes unavailable. The crew pauses the scenario and removes the payload task rather than silently assigning it to a pilot already handling a demanding phase. The revised plan is read back before restarting.",
+      "task": "Write a two-person simulation briefing with responsibility boundaries and a handover phrase. Add a contingency for one person becoming unavailable.",
+      "model_answer": "The briefing names the pilot/control role and the information/payload role, defines a stop phrase and requires explicit acknowledgement for transfers. The contingency reduces or stops the task when role coverage becomes inadequate. It does not assume that spare attention is always available.",
+      "diagram": [
+        "Shared brief",
+        "Explicit roles",
+        "Acknowledged handover",
+        "Revised shared picture"
+      ],
+      "checks": [
+        {
+          "prompt": "Is silence an adequate acknowledgement of a handover?",
+          "answer": "No. Transfer must be explicitly acknowledged."
+        },
+        {
+          "prompt": "Does more crew automatically mean less risk?",
+          "answer": "No. Roles and communication have to be designed."
+        }
+      ],
+      "reading": [
+        "FAA-PHAK: crew resource management and aeronautical decision-making"
+      ]
+    },
+    {
+      "title": "04 · Evaluate readiness and build the next practice cycle",
+      "lesson": "Readiness is a decision supported by a defined standard and repeatable evidence. An attractive output, a single successful attempt or the absence of an incident does not establish competence. Evaluate control, awareness, communication, procedure use and decision-making in addition to the visible product.\n\nUse a rubric before watching the performance. Separate critical failures from areas that can improve through ordinary practice. A task performed with an unrecognised boundary excursion should not receive a pass because the final image looks good. When evidence is insufficient, record that result rather than forcing a numerical score.\n\nTurn the debrief into a focused next session. Select one or two specific improvements and choose an exercise that exposes them without unnecessary complexity. Record the conditions and the expected evidence. A competent instructor decides whether simulator learning transfers to approved practical training; this self-study course does not issue an advanced-flight rating.",
+      "example": "A learner produces a smooth simulated shot but misses two required monitoring calls. The result is a communication/awareness gap, not a complete pass. The next session isolates the monitoring task at lower control demand.",
+      "task": "Design a readiness rubric with four criteria and one non-negotiable stop/fail condition. Explain how an insufficient-evidence result would be handled.",
+      "model_answer": "Criteria can cover orientation/control, monitoring, communication and procedure use. A loss of exercise containment or an unacknowledged control transfer can be critical. Insufficient evidence leads to a specifically planned reassessment, not a guessed score or an unsupported statement of live-flight competence.",
+      "diagram": [
+        "Define standard",
+        "Observe evidence",
+        "Identify gap",
+        "Targeted reassessment"
+      ],
+      "checks": [
+        {
+          "prompt": "Does no incident equal demonstrated competence?",
+          "answer": "No. Observe performance against explicit criteria."
+        },
+        {
+          "prompt": "Who determines practical training transfer?",
+          "answer": "A competent instructor within the applicable approved training framework."
+        }
+      ],
+      "reading": [
+        "Approved training assessment standards; FAA Risk Management Handbook"
+      ]
+    }
+  ],
+  "capstone": "Create a complete advanced simulator session: prerequisites, task-demand map, three-phase manoeuvre plan, crew brief, one injected change and readiness rubric. Explain the basis for a go, simplify or stop decision.",
+  "rubric": [
+    "Prerequisites are observable",
+    "Task coupling is addressed",
+    "Roles and transfers are explicit",
+    "Critical failures are defined",
+    "Next practice follows evidence"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "slug": "drone-ethics-and-professionalism",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Identify stakeholders, purpose and information harm",
+      "lesson": "Ethical planning asks who may be affected by a capture, not just who commissioned it. People appearing in images, neighbouring occupants, workers, land managers and downstream users may have different interests. Identify the legitimate purpose, the information actually needed and the harms that could follow collection or disclosure.\n\nData minimisation is a design decision. Adjust coverage, timing, detail, retention and distribution to collect what the task requires rather than everything technically possible. A flight permission and a data-processing justification are different matters. Consult current South African privacy requirements and qualified advice where necessary; this course does not establish a legal basis for a particular project.\n\nRecord the decision process. A stakeholder map and purpose statement help the team notice unnecessary capture and challenge a client's vague request. If the purpose changes, reassess the data use instead of assuming the original arrangement covers every future use.",
+      "example": "A property marketing brief does not require a detailed view into neighbouring gardens. The team can frame the intended building while reducing unnecessary collection and separately reviewing any identifiable information in the output.",
+      "task": "Map four stakeholders in a fictional school-roof observation project. Propose three ways to reduce unnecessary personal information.",
+      "model_answer": "Consider the school, pupils/staff, neighbours and the specialist using the observations. Reduce capture scope, choose a suitable time and restrict distribution; review/redact identifiable material where appropriate. Record the purpose and obtain the required advice/authorisations rather than assuming one person's permission resolves every interest.",
+      "diagram": [
+        "Purpose",
+        "Affected people",
+        "Minimum needed data",
+        "Review proposed use"
+      ],
+      "checks": [
+        {
+          "prompt": "Does technical ability justify collecting all visible information?",
+          "answer": "No. Collection should be proportionate to an established purpose."
+        },
+        {
+          "prompt": "Does flight permission settle privacy questions?",
+          "answer": "No. These are separate requirements."
+        }
+      ],
+      "reading": [
+        "Information Regulator: POPIA overview and relevant guidance"
+      ]
+    },
+    {
+      "title": "02 · Make claims that match the evidence",
+      "lesson": "Professional language distinguishes an observation, an interpretation and a conclusion requiring specialist competence. An image can show a visible feature; diagnosing its cause may require additional evidence or expertise. Avoid translating a strong visual impression into an unsupported engineering, medical, agricultural or legal conclusion.\n\nDescribe uncertainty specifically. State what was observed, the conditions, what was not observed and the effect on the decision. A limitation is useful when the reader understands what they can and cannot infer. Generic small print cannot repair a misleading headline.\n\nBe equally accurate about credentials and tools. Completing a study course, holding a pilot credential, operating under a particular approval and possessing professional measurement competence are distinct claims. Cite evidence for each claim you make. Correct a material error promptly and preserve a version history so that earlier recipients can identify what changed.",
+      "example": "A thermal image contains a warmer-looking area. The report calls it an observed thermal anomaly under stated conditions, not a confirmed water leak or electrical defect without appropriate corroboration and interpretation.",
+      "task": "Rewrite “our drone proves the roof is structurally safe” into an evidence-based statement for a visual observation service.",
+      "model_answer": "State that the service provides dated imagery of the agreed visible areas, identify observations and disclose coverage/visibility limits. Explain that structural safety requires assessment by an appropriately competent professional. The revised statement should not imply that absence of a visible defect proves safety.",
+      "diagram": [
+        "Observation",
+        "Supported interpretation",
+        "Limits",
+        "Appropriate specialist conclusion"
+      ],
+      "checks": [
+        {
+          "prompt": "Does absence of a visible defect prove safety?",
+          "answer": "No. The method has coverage and interpretive limits."
+        },
+        {
+          "prompt": "How should a material reporting error be handled?",
+          "answer": "Correct it transparently with a traceable version and communication to affected recipients."
+        }
+      ],
+      "reading": [
+        "Professional scope of service; FLIR measurement interpretation guidance"
+      ]
+    },
+    {
+      "title": "03 · Handle, share and retain data deliberately",
+      "lesson": "A data-handling plan identifies what is collected, where it is stored, who can access it, how it moves and when it is deleted or retained. Use the least access necessary for the task. Avoid sharing a general account or leaving a public link active simply because it is convenient.\n\nSeparate working files from approved deliverables. Check metadata and incidental personal information before sharing. A file may reveal more than the visible image through location data, names or attached records. The exact legal and contractual requirements depend on the project; identify the responsible people and current requirements before processing.\n\nPlan for mistakes. If a link is sent to the wrong person, act through the organisation's incident process, preserve the facts and involve the appropriate privacy/security lead. Do not claim an incident is resolved merely because a link was disabled. Reassess retention and access at project close, including backups and outsourced processing arrangements.",
+      "example": "A team member proposes a public link to an entire project folder for one reviewer. A limited, time-bounded access arrangement to the relevant deliverables better matches the review task and reduces unnecessary exposure.",
+      "task": "Create a data-flow map for a fictional inspection project, naming access roles, transfer points, retention decisions and an incident escalation owner.",
+      "model_answer": "The map covers capture media, working storage, processing services, review and delivery. It limits each role to necessary material, records external processors and explains review/deletion responsibilities. An incident path preserves evidence and refers decisions to the designated responsible personnel.",
+      "diagram": [
+        "Capture",
+        "Restricted processing",
+        "Reviewed sharing",
+        "Retention / incident response"
+      ],
+      "checks": [
+        {
+          "prompt": "Can metadata disclose information beyond the picture?",
+          "answer": "Yes. Location, names and attached records may be included."
+        },
+        {
+          "prompt": "Does disabling a mistaken link finish incident handling?",
+          "answer": "Not necessarily. Follow the applicable assessment and response process."
+        }
+      ],
+      "reading": [
+        "Information Regulator: POPIA conditions and security/incident guidance"
+      ]
+    },
+    {
+      "title": "04 · Resolve difficult requests and maintain accountability",
+      "lesson": "Pressure often arrives as a plausible business request: remove a limitation, omit a missed area, make a qualification sound stronger or publish footage quickly. Identify the ethical issue before negotiating the delivery details. Explain the consequence in terms of the client's decision and the people affected.\n\nOffer a workable alternative. A qualified report, a permitted recapture, a specialist review or a different framing can meet a legitimate need without making a misleading claim. If the request cannot be fulfilled responsibly, record the refusal and escalate through the agreed process. Professionalism includes saying no clearly and respectfully.\n\nBuild accountability into routine work through peer review, correction records, access review and reflective debriefs. Distinguish an honest error from an attempt to hide one; both require action, but the response should address the actual cause. Do not use a course exercise to name or accuse a real person. The capstone is a fictional decision record demonstrating your reasoning.",
+      "example": "A client asks the team to delete a documented coverage gap from the report. The team explains how that could mislead the recipient and offers an explicitly limited report or an authorised recapture, keeping the correspondence in the project record.",
+      "task": "Write a response to a fictional request to exaggerate a qualification. Include an alternative and an escalation path.",
+      "model_answer": "The response states the verifiable credential accurately, explains why the requested wording would mislead and offers evidence of actual work or a suitable specialist partner. It records the decision and escalates if pressure persists. It does not invent an approval or attack the requester.",
+      "diagram": [
+        "Recognise pressure",
+        "Explain consequence",
+        "Offer responsible alternative",
+        "Record / escalate"
+      ],
+      "checks": [
+        {
+          "prompt": "Is professional conduct only about avoiding mistakes?",
+          "answer": "No. It includes transparent correction and accountable decisions."
+        },
+        {
+          "prompt": "What makes a refusal constructive?",
+          "answer": "A clear reason, a responsible alternative where possible and a documented escalation path."
+        }
+      ],
+      "reading": [
+        "Project professional standards and organisational ethics/incident process"
+      ]
+    }
+  ],
+  "capstone": "Write an ethics decision dossier for a fictional inspection involving identifiable people, uncertain observations and pressure to remove a limitation. Include stakeholder/purpose analysis, minimisation, a data-flow map, revised claim wording and a client response.",
+  "rubric": [
+    "Stakeholder harms are recognised",
+    "Purpose and minimisation are specific",
+    "Claims match competence/evidence",
+    "Access and incident ownership are clear",
+    "The difficult request is resolved transparently"
+  ]
+}

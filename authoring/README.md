@@ -28,3 +28,18 @@ Run `python scripts/review_content.py` from the repository root. It validates th
 3. Reconcile the later catalogue and author its remaining courses.
 4. Build adequate objective coverage, pilot the lessons and check accessibility.
 5. Approve reviewed versions, import through the plugin and publish only after readiness and live-host checks pass.
+
+## Expanded self-study edition (21 October 2026)
+
+`full-courses/` contains 15 foundational self-study sequences (64 units), with
+worked examples, original illustrations, exercises/model answers, 128 checks and
+15 final projects. `radiotelephony/scenarios.json` supplies 27 fictional practice
+scenarios. `references-v2.json` records checked primary-source entry points and
+verification needs. Technical and instructor review remain pending; no reviewer
+or authority approval is invented. These are not a verified complete licensing
+syllabus or approved practical training. The older source files remain for
+provenance; the edition-2 study guide defines the expanded sequence.
+
+Run `python3 scripts/validate_curricula.py`, `python3 scripts/build_course_content.py`
+and `node tests/radio_test.js`. Artwork is reproducible with Pillow using
+`scripts/render_course_art.py`; deployed Moodle needs no Python or Node.

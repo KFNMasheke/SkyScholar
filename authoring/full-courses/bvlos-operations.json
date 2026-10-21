@@ -1,0 +1,119 @@
+{
+  "slug": "bvlos-operations",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Define the operating concept before choosing technology",
+      "lesson": "Beyond-visual-line-of-sight study begins with an operating concept, not a range specification. Describe the purpose, area, time, aircraft/system, people, environment and how the proposed operation differs from a visual operation. Identify the assumptions normally supported by direct observation and what evidence would be needed when those assumptions change.\n\nTechnology does not establish permission. A long-range link, an automated route or a map display does not by itself address all air/ground risk, containment, oversight and approval requirements. Keep the applicable authority/operator process separate from the technical concept.\n\nUse a desk-based concept of operations to expose missing evidence. Define boundaries and interfaces, including the people or services the operation depends on. Do not treat this introductory course as an approved BVLOS procedure or authority to conduct a real flight. The objective is a reviewable concept and a clear record of what cannot yet be justified.",
+      "example": "A fictional pipeline observation service proposes a long corridor. The concept identifies where direct observation would be unavailable, nearby third-party activity and the dependence on communications and contingency arrangements. A supplier's range claim is only one input.",
+      "task": "Write a concept-of-operations outline with purpose, area/time, system, roles, dependencies and unresolved approval questions. Assign review responsibilities.",
+      "model_answer": "The outline defines the intended operation and changed assumptions, separates technical capability from authority and identifies evidence needed for air/ground risk and containment. It does not prescribe an unapproved route, separation method or real-world emergency action.",
+      "diagram": [
+        "Operating purpose",
+        "Changed assumptions",
+        "Dependencies / boundaries",
+        "Approval evidence needed"
+      ],
+      "checks": [
+        {
+          "prompt": "Does long advertised range grant BVLOS authority?",
+          "answer": "No. Capability and operational authorisation are separate."
+        },
+        {
+          "prompt": "What should an introductory BVLOS concept reveal?",
+          "answer": "Assumptions, dependencies, boundaries and evidence gaps."
+        }
+      ],
+      "reading": [
+        "Current SACAA/operator advanced-operation requirements; aircraft and link documentation"
+      ]
+    },
+    {
+      "title": "02 · Analyse links, navigation and containment dependencies",
+      "lesson": "Command-and-control, navigation and payload-data links may have different purposes and failure effects. Losing a video feed is not necessarily the same event as losing command/control, and a position estimate can degrade while a link remains connected. Define each interface and the information it carries before evaluating a failure.\n\nContainment concerns where the aircraft could go under relevant conditions, not only the intended route line. Consider system behaviour, navigation uncertainty, environment and the applicable approved contingency concept. Claims require aircraft/system-specific evidence; a generic geofence feature is not a complete containment assurance.\n\nMap common dependencies. Two apparently independent links may share power, antennas, coverage, a service provider or a control station. A redundancy label is only meaningful when the independence and failure handling are established. Record what is assumed, what has been tested and what remains for specialist assessment.",
+      "example": "A fictional primary and backup link use different radios but share one power source and one control computer. The dependency map shows that a common failure may defeat both, so the word redundant alone is not an adequate assurance.",
+      "task": "Draw a dependency map distinguishing command/control, navigation and payload data. Add two common-cause failures and the evidence needed to assess them.",
+      "model_answer": "The map names the information and function of each path, identifies shared power/computation/services and separates loss-of-information effects. It asks for system-specific behaviour, verification and approved contingency evidence rather than assuming a generic automatic return function solves every failure.",
+      "diagram": [
+        "Command / control",
+        "Navigation estimate",
+        "Shared dependencies",
+        "Containment assurance"
+      ],
+      "checks": [
+        {
+          "prompt": "Is payload video loss always command-link loss?",
+          "answer": "No. Distinguish functions and failure effects."
+        },
+        {
+          "prompt": "What makes a redundancy claim meaningful?",
+          "answer": "Evidence of independence and the system’s handling of relevant failures."
+        }
+      ],
+      "reading": [
+        "Aircraft/link safety documentation and approved operating concept"
+      ]
+    },
+    {
+      "title": "03 · Build an assurance argument and contingency evidence plan",
+      "lesson": "An assurance argument links a claim to evidence through explicit reasoning. For example, a proposed containment claim needs defined conditions, system behaviour and suitable verification, not only a statement that the aircraft has a feature. Identify the scope and limitations of each evidence item.\n\nUse a hazard analysis to consider what could happen, the causes, existing controls and the remaining uncertainty. A control must be implemented, effective under the relevant conditions and assigned an owner. Do not multiply optimistic assumptions into an appearance of safety. Where the evidence is insufficient, record the claim as not yet justified.\n\nContingency planning belongs within the approved system and authority framework. In this course, write the information and test questions an authorised specialist must resolve; do not invent live-aircraft response sequences. Review who detects a condition, who decides, how communications are maintained and how the outcome is verified in an appropriate test environment.",
+      "example": "A claim that the operation remains contained after a navigation anomaly requires more than a geofence screenshot. The argument identifies the aircraft behaviour, dependencies, relevant conditions and approved verification evidence that would support or limit the claim.",
+      "task": "Create an assurance table with three claims, supporting evidence, assumptions, gaps and a responsible reviewer.",
+      "model_answer": "Each claim is bounded and traceable. Evidence is specific to the system and operation, assumptions are explicit and gaps remain open until resolved. The reviewer role is proposed, not falsely recorded as having approved the work. Contingency details refer to the applicable approved procedure/test plan.",
+      "diagram": [
+        "Bounded safety claim",
+        "Relevant evidence",
+        "Assumptions / gaps",
+        "Independent review"
+      ],
+      "checks": [
+        {
+          "prompt": "Is a feature list a complete assurance argument?",
+          "answer": "No. Show how relevant evidence supports a bounded claim."
+        },
+        {
+          "prompt": "What should happen to unsupported claims?",
+          "answer": "Keep them unresolved and identify the evidence/review needed."
+        }
+      ],
+      "reading": [
+        "Applicable authority safety/approval framework; approved system test and contingency documentation"
+      ]
+    },
+    {
+      "title": "04 · Review the concept through desk and simulator exercises",
+      "lesson": "A review exercise tests whether the operating concept is understandable and whether people recognise when its assumptions fail. Brief the scope, roles and evaluation criteria. Use fictional information and a suitable simulator or tabletop format; no real BVLOS operation is authorised by the exercise.\n\nInject one meaningful change at a time and record the response. Examples include unavailable coordination, inconsistent information or a dependency losing its assumed independence. Evaluate recognition, communication, use of the approved framework and the decision to stop or revise. An exercise should reveal evidence gaps rather than pressure participants to keep the original plan alive.\n\nClose with a decision record stating what the concept can support, what remains unproven and the next authorised review step. Separate successful rehearsal from regulatory approval or demonstrated aircraft safety. The completed self-study dossier is an input to competent specialist discussion, not an operational clearance.",
+      "example": "A tabletop exercise removes a service assumed by the concept. The team identifies which safety claims depend on it, records that they are no longer justified and suspends the proposed activity pending review rather than improvising a replacement in real time.",
+      "task": "Prepare a tabletop exercise with roles, two sequential injects, observation criteria and a final unresolved-evidence register.",
+      "model_answer": "The exercise makes assumptions visible, records detection and decisions, and does not reward continuation after a key claim fails. Its debrief separates communication/process findings from system proof and assigns the next review/evidence tasks without inventing an approval.",
+      "diagram": [
+        "Brief concept",
+        "Change one assumption",
+        "Observe decision process",
+        "Record remaining evidence"
+      ],
+      "checks": [
+        {
+          "prompt": "Does successful rehearsal equal operational approval?",
+          "answer": "No. Those are different forms of evidence and authority."
+        },
+        {
+          "prompt": "What is a good response when a key assumption fails?",
+          "answer": "Recognise its effect, stop or revise through the approved review process."
+        }
+      ],
+      "reading": [
+        "Approved operator/specialist review process; original tabletop exercise rubric"
+      ]
+    }
+  ],
+  "capstone": "Produce a desk-only BVLOS concept dossier with operating concept, dependency map, hazard/assurance table, contingency evidence questions and a tabletop exercise/debrief. Identify every unresolved approval or evidence requirement.",
+  "rubric": [
+    "Concept and boundaries are specific",
+    "Dependencies and common causes are analysed",
+    "Claims are bounded by evidence",
+    "Contingencies remain within approved processes",
+    "Rehearsal is distinguished from authority"
+  ]
+}

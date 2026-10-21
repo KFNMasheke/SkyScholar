@@ -48,9 +48,11 @@ php local/skyscholar/cli/manage.php --action=readiness --track=za-remote
 
 Install the standalone `local_skyscholarcontent` plugin ZIP, then open
 **Site administration → Courses → SkyScholar course content**. One explicit admin
-import provisions 14 hidden draft starters, 35 native Pages and 35 draft bank
-questions. Existing CSV course identities are reused; staff edits are preserved.
-This does not finish the unwritten modules or publish aviation courses. See
+import provisions 15 hidden self-study curricula: 64 taught units, 76 original
+illustrations, 128 knowledge checks, 15 final project Assignments and a 27-scenario
+radiotelephony lab. It includes 130 native Pages and 35 existing draft bank questions. Existing CSV course identities are reused; staff edits are preserved.
+The authored scope is foundational self-study. Instructor review, complete official
+syllabus verification and approved practical/licensing assessment remain separate. See
 [course content installer](docs/COURSE-CONTENT-INSTALLER.md).
 
 ## Build the Xneelo ZIP
@@ -68,7 +70,12 @@ Moodle recommends one-minute cron. Xneelo's standard control-panel scheduler doc
 
 ## Content and scope
 
-Course authoring has started separately from Moodle setup. See [authoring workspace](authoring/README.md) for 14 core course blueprints and opening lessons, seven subject lessons and 35 original draft questions. These are incomplete, unreviewed drafts. They do not constitute an approved bank or a recovered complete 36-course catalogue. Validate locally with `python scripts/review_content.py`.
+The self-study content edition expands the original 14 starters into four-unit
+foundational curricula and adds an eight-unit radiotelephony course. See
+[expanded curricula](authoring/full-courses/README.md) and the
+[content installer](docs/COURSE-CONTENT-INSTALLER.md) for lessons, illustrations,
+exercises, models, projects and practice software. Technical/instructor review is
+pending; these are not approved training or a verified complete official exam bank. They do not constitute an approved bank or a recovered complete 36-course catalogue. Validate locally with `python scripts/review_content.py`.
 
 Questions must be original or explicitly licensed for redistribution. Do not scrape commercial question banks, reconstruct recalled live examination questions or claim regulator endorsement. Each aviation question needs a syllabus objective, reference and instructor review before publication. Study targets/durations in the initial configuration are not official examination specifications.
 

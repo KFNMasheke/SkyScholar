@@ -1,0 +1,21 @@
+{
+  "checked_date": "2026-10-21",
+  "review_status": "Source availability checked; technical and regulatory approval pending",
+  "references": [
+    {"title":"SACAA personnel licensing and terminology notices","url":"https://www.caa.co.za/industry-information/personnel-licensing/licensing/","use":"South African applicant pathway; verify current notices and applicable CAR/CATS."},
+    {"title":"SACAA training and approved provider information","url":"https://www.caa.co.za/industry-information/personnel-licensing/training/","use":"Verify training approval and scope; no provider endorsement inferred."},
+    {"title":"SACAA examinations and study references","url":"https://www.caa.co.za/industry-information/personnel-licensing/examinations/","use":"Identify current syllabus and external examination information."},
+    {"title":"SACAA legislation portal","url":"https://caa.mylexisnexis.co.za/","use":"Retrieve current applicable regulations/technical standards; do not treat legacy course terminology as law."},
+    {"title":"SACAA AIC 005/2018, Radiotelephony Procedures","url":"https://caasanwebsitestorage.blob.core.windows.net/aeronautical-information-circular/005-2018.pdf","use":"SA-indexed radiotelephony reference. Sections 7–9 address spelling, numbers and transmitting technique. Recheck currency with AIC/AIP and an instructor."},
+    {"title":"SACAA AIC index","url":"https://www.caa.co.za/industry-information/aeronautical-information-index-of-aics/","use":"Check current listing and relevant amendments/notices."},
+    {"title":"FAA Remote Pilot certification pathway","url":"https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot","use":"United States only: applicant pathway and current recency information."},
+    {"title":"FAA-S-ACS-10B, April 2021","url":"https://www.faa.gov/training_testing/testing/acs/uas_acs.pdf","use":"US knowledge study organisation, Areas I–V; check current FAA ACS index."},
+    {"title":"FAA aviation handbook index","url":"https://www.faa.gov/regulations_policies/handbooks_manuals/aviation","use":"Current PHAK, risk management and aviation weather handbooks; general concepts do not establish SA operating rules."},
+    {"title":"FAA Small UAS Remote Pilot Study Guide, August 2016","url":"https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf","use":"Concept reference; older rule content must be checked against current rules/ACS."},
+    {"title":"QGIS 3.44: Working with projections","url":"https://docs.qgis.org/3.44/en/docs/user_manual/working_with_projections/working_with_projections.html","use":"Layer/project CRS, assigning versus transforming. Menu/version compatibility with QGIS 4 is not asserted."},
+    {"title":"USGS OFR 2023-1033: UAS imagery calibration","url":"https://pubs.usgs.gov/publication/ofr20231033/full","use":"Geometric/radiometric acquisition and quality concepts; no generic point-count or accuracy guarantee adopted."},
+    {"title":"USGS lidar specification: processing/handling","url":"https://www.usgs.gov/ngp-standards-and-specifications/lidar-base-specification-data-processing-and-handling-requirements","use":"Control/checkpoint independence concept. Does not certify this course or a particular survey."},
+    {"title":"FLIR: Emissivity and reflected temperature","url":"https://www.flir.com/en-gb/discover/professional-tools/how-does-emissivity-affect-thermal-imaging/","use":"Measurement interpretation concepts; use the actual sensor manual and competent thermography review."},
+    {"title":"Information Regulator: POPIA","url":"https://inforegulator.org.za/popia/","use":"SA privacy entry point. Project-specific legal requirements need appropriate advice."}
+  ]
+}

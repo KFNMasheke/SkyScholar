@@ -1,0 +1,119 @@
+{
+  "slug": "aerial-photography-and-videography",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Translate a story into a capture plan",
+      "lesson": "A useful image has a purpose within a sequence. Identify the audience, the intended message and the action or understanding the work should support. A property overview, a progress record and a cinematic narrative use different viewpoints and editing logic. Write the story before proposing aircraft movements.\n\nA shot list describes subject, framing, duration, relationship to other shots and the operational dependencies of capture. Establishing views orient the audience; medium views connect elements; details support specific information. Plan transitions so that direction, time and place remain understandable. A beautiful isolated shot may not belong in the final sequence.\n\nSeparate creative intention from operational feasibility. Record permissions, privacy concerns, access and conditions for each proposed view, and let the authorised operating process determine what can be captured. Prepare alternatives that preserve the narrative without pressuring a crew to deliver an unsuitable manoeuvre.",
+      "example": "A fictional farm film needs to explain the relationship between fields, a river and access routes. An establishing view provides context, a medium view shows activity and a detail provides texture. The sequence should not imply that unrelated views are adjacent.",
+      "task": "Write a six-shot storyboard for a fictional site overview. Give each shot a narrative purpose and a feasible alternative.",
+      "model_answer": "The storyboard moves from context to relationship to detail, uses consistent direction and explains why each shot belongs. Alternatives preserve the same information without requiring a particular flight. The plan records constraints rather than assuming creative approval authorises capture.",
+      "diagram": [
+        "Audience / message",
+        "Storyboard",
+        "Operational feasibility",
+        "Useful alternatives"
+      ],
+      "checks": [
+        {
+          "prompt": "Does a visually impressive shot necessarily help the story?",
+          "answer": "No. It needs a purpose in the sequence."
+        },
+        {
+          "prompt": "Can a creative brief override operational constraints?",
+          "answer": "No. Feasibility and authorisation remain separate gates."
+        }
+      ],
+      "reading": [
+        "Original storyboard framework; camera/aircraft operating manuals"
+      ]
+    },
+    {
+      "title": "02 · Exposure, motion and image detail",
+      "lesson": "Exposure describes the amount of light recorded and the sensor response. Shutter time affects motion depiction; aperture, where adjustable, affects light and optical behaviour; ISO changes the image-processing/sensitivity setting and noise tradeoffs. The controls available and their useful ranges depend on the camera. Avoid universal settings that ignore scene brightness, movement and intended output.\n\nFor moving imagery, shutter time interacts with frame rate and the visual appearance of motion. A creative convention is not an operational rule. For measurement imagery, sharpness and stable geometry may take priority over cinematic motion blur. Check actual files at the detail needed for the intended use, not only the small live display.\n\nFocus, lens condition, compression, lighting and subject movement also affect usable detail. More pixels do not recover blur or lost highlights. Record a short camera test, inspect representative material and choose settings for the deliverable. Do not change aircraft handling to rescue an unsuitable camera plan without an operational review.",
+      "example": "Two photographs have the same pixel dimensions. One is blurred by motion and the other retains edges needed for an observation. Equal resolution labels do not make them equally useful. A test image should be checked against the required detail.",
+      "task": "For a fictional progress photograph and a cinematic clip, list the different image priorities and a verification test for each.",
+      "model_answer": "The progress image prioritises interpretable detail, comparable views and appropriate exposure. The clip prioritises intended motion appearance and continuity while remaining usable. Both use camera-specific controls and representative file review; neither assumes a single shutter setting works for every scene.",
+      "diagram": [
+        "Scene / movement",
+        "Camera controls",
+        "Recorded detail",
+        "Inspect representative files"
+      ],
+      "checks": [
+        {
+          "prompt": "Can more pixels repair motion blur?",
+          "answer": "No. Pixel count is only one aspect of usable detail."
+        },
+        {
+          "prompt": "Should cinematic settings automatically be used for mapping?",
+          "answer": "No. The deliverable has different image-quality priorities."
+        }
+      ],
+      "reading": [
+        "Camera-specific exposure/focus/recording documentation"
+      ]
+    },
+    {
+      "title": "03 · Capture continuity and preserve the originals",
+      "lesson": "Continuity lets the audience understand changes in viewpoint and time. Record direction of movement, lighting, subject state and camera settings where they affect the sequence. For repeat progress views, give viewpoints stable identifiers and record how they were obtained, while respecting the approved operating method.\n\nCapture quality checks should happen while a permitted remedy is still possible. Verify that required views exist, files can be read and representative material has suitable detail/exposure. A thumbnail or file count does not prove complete coverage. If a required view is unavailable, record the gap rather than silently substituting a misleading one.\n\nPreserve original media and distinguish it from proxies, working edits and exports. Use a naming and backup process appropriate to the project, verify transfers and retain a clear association between the shot list and files. Protect personal or client information during transfer and review. Do not erase the only source copy because an export appears to play correctly.",
+      "example": "A monthly view labelled N-01 is obstructed on one visit. A different angle can be supplied as an alternative, but it should receive an appropriate identifier and a note explaining that it is not a directly comparable replacement.",
+      "task": "Create a shot-to-file register with six planned views, capture status, file references, continuity notes and a transfer-verification field.",
+      "model_answer": "Every planned view has a status, including unavailable or qualified results. File references distinguish original media from edits. Continuity notes record relevant changes, and transfer checks confirm readable files rather than relying solely on copy completion. The register preserves evidence of missing coverage.",
+      "diagram": [
+        "Shot register",
+        "Coverage / quality check",
+        "Verified transfer",
+        "Protected originals"
+      ],
+      "checks": [
+        {
+          "prompt": "Does a completed copy operation prove every file is usable?",
+          "answer": "No. Use appropriate integrity and readability checks."
+        },
+        {
+          "prompt": "Should an unavailable repeat view be silently replaced?",
+          "answer": "No. Label the alternative and its comparability limitation."
+        }
+      ],
+      "reading": [
+        "Camera media-handling documentation; project data-handling plan"
+      ]
+    },
+    {
+      "title": "04 · Edit, review and deliver a coherent sequence",
+      "lesson": "Editing selects and orders evidence for the intended story. Build an assembly from the storyboard, then remove shots that do not help the audience. Maintain spatial and temporal clarity. Music, graphics and colour treatment should support the message without disguising a material limitation or implying an observation the source does not support.\n\nReview the output against the brief and technical delivery requirements. Check readability, audio rights/levels where relevant, titles, aspect ratio and representative playback. Export settings depend on the target; a large master and a delivery copy may serve different needs. Keep the project and source associations needed for later corrections.\n\nUse a structured client review with version identifiers and consolidated feedback. Distinguish an error from a new creative request or scope change. Before publication, confirm the appropriate rights and privacy arrangements. Deliver a concise readme and the agreed files, with any unavailable views or other material qualifications visible.",
+      "example": "A client wants both a widescreen presentation and a vertical social clip. Reframing may remove important context, so the vertical version needs its own review rather than an automatic crop treated as equivalent.",
+      "task": "Create an edit review checklist and handover index for a fictional 60-second site film with two aspect ratios.",
+      "model_answer": "The checklist covers narrative clarity, continuity, exposure/colour consistency, titles, rights and target playback. Each aspect ratio is checked for retained context. The index identifies versions, approved outputs and source/project retention arrangements, while new requests are recorded through change control.",
+      "diagram": [
+        "Assembly",
+        "Narrative / technical review",
+        "Versioned approval",
+        "Delivery / archive"
+      ],
+      "checks": [
+        {
+          "prompt": "Is a vertical crop always equivalent to the master?",
+          "answer": "No. Reframing can remove necessary context."
+        },
+        {
+          "prompt": "How should new creative requests be handled?",
+          "answer": "Separate them from errors and agree on any scope/time/price change."
+        }
+      ],
+      "reading": [
+        "Target platform delivery specification; project usage rights and review agreement"
+      ]
+    }
+  ],
+  "capstone": "Build a complete desk-based production pack for a fictional 60-second site story: audience/message, six-shot storyboard, camera test plan, continuity/file register, edit decision list, review checklist and handover. Use only authorised or synthetic imagery.",
+  "rubric": [
+    "Story and shots serve a clear purpose",
+    "Camera choices suit the output",
+    "Capture and originals are traceable",
+    "Editing preserves truthful context",
+    "Delivery and rights are reviewed"
+  ]
+}

@@ -20,9 +20,44 @@ final class loader {
     }
 
     public static function validate(array $data): void {
-        if (($data['schema'] ?? null) !== 1 || count($data['courses'] ?? []) !== 14
+        if (!in_array($data['schema'] ?? null, [1, 2], true) || count($data['courses'] ?? []) !== ($data['schema'] === 2 ? 15 : 14)
                 || count($data['subjects'] ?? []) !== 7 || count($data['questions'] ?? []) !== 35) {
             throw new \InvalidArgumentException('Unexpected content package schema/counts.');
+        }
+        if ($data['schema'] === 2) {
+            if (count($data['assets'] ?? []) !== 76 || count($data['radio']['scenarios'] ?? []) !== 27) {
+                throw new \InvalidArgumentException('Incomplete illustrated curriculum or radio lab.');
+            }
+            foreach ($data['assets'] as $name => $hash) {
+                if (!preg_match('/^[a-z0-9-]+\.png$/D', $name) || !is_string($hash)
+                        || !preg_match('/^[a-f0-9]{64}$/D', $hash)) {
+                    throw new \InvalidArgumentException('Invalid illustration identity.');
+                }
+                $file = __DIR__ . '/../../content/illustrations/' . $name;
+                if (!is_file($file) || !hash_equals($hash, hash_file('sha256', $file))) {
+                    throw new \RuntimeException('An illustration is missing or damaged. Re-upload the complete plugin.');
+                }
+            }
+            $scenarioids = [];
+            foreach ($data['radio']['scenarios'] as $scenario) {
+                if (!preg_match('/^[a-z0-9-]+$/D', $scenario['id'] ?? '') || isset($scenarioids[$scenario['id']])) {
+                    throw new \InvalidArgumentException('Duplicate or invalid radio scenario.');
+                }
+                $scenarioids[$scenario['id']] = true;
+                foreach (['title', 'group', 'context', 'prompt', 'model', 'notes'] as $field) {
+                    if (!is_string($scenario[$field] ?? null) || strlen($scenario[$field]) > 5000) {
+                        throw new \InvalidArgumentException('Invalid radio scenario text.');
+                    }
+                }
+                foreach ($scenario['checks'] ?? [] as $check) {
+                    if (!is_string($check['label'] ?? null) || empty($check['any'])) {
+                        throw new \InvalidArgumentException('Invalid radio checklist.');
+                    }
+                    foreach ($check['any'] as $term) {
+                        if (!is_string($term) || strlen($term) > 200) { throw new \InvalidArgumentException('Invalid radio term.'); }
+                    }
+                }
+            }
         }
         $ids = [];
         foreach ($data['courses'] as $course) {
@@ -35,6 +70,25 @@ final class loader {
             foreach (['name', 'category', 'summary', 'lesson', 'blueprint'] as $field) {
                 if (!is_string($course[$field] ?? null) || $course[$field] === '' || strlen($course[$field]) > 100000) {
                     throw new \InvalidArgumentException('Missing course content: ' . $field);
+                }
+            }
+            if ($data['schema'] === 2) {
+                $pagekeys = [];
+                foreach ($course['pages'] ?? [] as $page) {
+                    if (!preg_match('/^[a-z0-9-]{1,60}$/D', $page['key'] ?? '') || isset($pagekeys[$page['key']])
+                            || !is_int($page['section'] ?? null) || $page['section'] < 0 || $page['section'] > 4
+                            || !is_string($page['name'] ?? null) || !is_string($page['html'] ?? null)
+                            || strlen($page['html']) > 150000) {
+                        throw new \InvalidArgumentException('Invalid curriculum Page.');
+                    }
+                    $pagekeys[$page['key']] = true;
+                    foreach ($page['assets'] ?? [] as $name) {
+                        if (!isset($data['assets'][$name])) { throw new \InvalidArgumentException('Unknown Page illustration.'); }
+                    }
+                }
+                $expectedpages = $id === 'draft-radiotelephony-practice' ? 11 : 6;
+                if (count($pagekeys) !== $expectedpages || !is_string($course['assignment']['html'] ?? null)) {
+                    throw new \InvalidArgumentException('Incomplete lesson sequence or final project.');
                 }
             }
             foreach ($course['modules'] as $title) {
@@ -111,6 +165,9 @@ final class loader {
         if (!$DB->record_exists('modules', ['name' => 'page', 'visible' => 1])) {
             throw new \RuntimeException('Enable the native Page activity before importing.');
         }
+        if (self::pack()['schema'] === 2 && !$DB->record_exists('modules', ['name' => 'assign', 'visible' => 1])) {
+            throw new \RuntimeException('Enable the native Assignment activity before importing.');
+        }
         $result = [];
         foreach (self::pack()['courses'] as $spec) { $result[$spec['id']] = self::existing($spec); }
         return $result;
@@ -132,7 +189,7 @@ final class loader {
             $transaction = $DB->start_delegated_transaction();
             try {
                 $course = self::existing($spec);
-                $result = ['name' => $spec['name'], 'courses' => 0, 'pages' => 0, 'questions' => 0];
+                $result = ['name' => $spec['name'], 'courses' => 0, 'pages' => 0, 'questions' => 0, 'assignments' => 0];
                 if (!$course) {
                     $parent = self::category('skyscholar:draft-content', 'SkyScholar — Draft content', 0);
                     $category = self::category('ssc:' . substr(hash('sha256', $spec['category']), 0, 30),
@@ -145,6 +202,9 @@ final class loader {
                     ]);
                     $result['courses']++;
                 }
+                if (!empty($spec['previoussummary']) && $course->summary === $spec['previoussummary']) {
+                    update_course((object)['id' => $course->id, 'summary' => $spec['summary'], 'summaryformat' => FORMAT_HTML]);
+                }
                 course_create_sections_if_missing($course, range(0, 4));
                 foreach ($spec['modules'] as $index => $title) {
                     $section = $DB->get_record('course_sections', ['course' => $course->id, 'section' => $index + 1], '*', MUST_EXIST);
@@ -152,8 +212,17 @@ final class loader {
                         course_update_section($course, $section, ['name' => $title]);
                     }
                 }
-                $result['pages'] += self::page($course, $key, 'plan', 'DRAFT — Course plan and learning outcomes', $spec['blueprint'], 0);
-                $result['pages'] += self::page($course, $key, 'lesson-01', 'DRAFT — Opening lesson and desk exercise', $spec['lesson'], 1);
+                if ($key !== 'draft-radiotelephony-practice') {
+                    $result['pages'] += self::page($course, $key, 'plan', 'DRAFT — Course plan and learning outcomes', $spec['blueprint'], 0);
+                    $result['pages'] += self::page($course, $key, 'lesson-01', 'DRAFT — Opening lesson and desk exercise', $spec['lesson'], 1);
+                }
+                foreach ($spec['pages'] ?? [] as $page) {
+                    $html = str_replace('[[RADIOLAB]]', (new \moodle_url('/local/skyscholarcontent/radio.php', ['courseid' => $course->id]))->out(false), $page['html']);
+                    $result['pages'] += self::page($course, $key, $page['key'], $page['name'], $html, $page['section'], $page['assets']);
+                }
+                if (!empty($spec['assignment'])) {
+                    $result['assignments'] += self::assignment($course, $key, $spec['assignment']);
+                }
                 if ($key === 'draft-sacaa-drone-pilot-license-preparation') {
                     foreach ($pack['subjects'] as $subject) {
                         $section = in_array($subject['id'], ['meteorology', 'navigation', 'communications'], true) ? 3 : 2;
@@ -170,10 +239,10 @@ final class loader {
             } catch (\Throwable $error) { $transaction->rollback($error); }
             rebuild_course_cache($course->id, true);
             $result['courseid'] = (int)$course->id;
-            if ($result['courses'] + $result['pages'] + $result['questions'] > 0) {
+            if ($result['courses'] + $result['pages'] + $result['questions'] + $result['assignments'] > 0) {
                 \local_skyscholarcontent\event\course_imported::create([
                     'context' => \context_course::instance($course->id), 'objectid' => $course->id,
-                    'other' => ['pages' => $result['pages'], 'questions' => $result['questions'], 'pack' => 1],
+                    'other' => ['pages' => $result['pages'], 'questions' => $result['questions'], 'assignments' => $result['assignments'], 'pack' => $pack['schema']],
                 ])->trigger();
             }
             return $result;
@@ -196,7 +265,7 @@ final class loader {
         ]);
     }
 
-    private static function page(\stdClass $course, string $key, string $item, string $name, string $html, int $section): int {
+    private static function page(\stdClass $course, string $key, string $item, string $name, string $html, int $section, array $assets = []): int {
         global $DB;
         $idnumber = 'ssc:' . substr(hash('sha256', $key . ':' . $item), 0, 40);
         $cms = $DB->get_records('course_modules', ['course' => $course->id, 'idnumber' => $idnumber]);
@@ -222,6 +291,45 @@ final class loader {
         $data->display = 5; // RESOURCELIB_DISPLAY_OPEN: native Page view.
         $data->printintro = 0;
         $data->printlastmodified = 0;
+        $created = add_moduleinfo($data, $course);
+        $context = \context_module::instance($created->coursemodule);
+        foreach ($assets as $filename) {
+            get_file_storage()->create_file_from_pathname([
+                'contextid' => $context->id, 'component' => 'mod_page', 'filearea' => 'content',
+                'itemid' => 0, 'filepath' => '/', 'filename' => $filename, 'mimetype' => 'image/png',
+            ], __DIR__ . '/../../content/illustrations/' . $filename);
+        }
+        return 1;
+    }
+
+    private static function assignment(\stdClass $course, string $key, array $spec): int {
+        global $DB;
+        $idnumber = 'ssc:' . substr(hash('sha256', $key . ':v2-project-assignment'), 0, 40);
+        $cms = $DB->get_records('course_modules', ['course' => $course->id, 'idnumber' => $idnumber]);
+        if (count($cms) > 1) { throw new \RuntimeException('Duplicate project identifiers.'); }
+        if ($cms) {
+            $cm = reset($cms);
+            $module = $DB->get_field('modules', 'id', ['name' => 'assign'], MUST_EXIST);
+            if ($cm->module != $module || $cm->deletioninprogress || !$DB->record_exists('assign', ['id' => $cm->instance, 'course' => $course->id])) {
+                throw new \RuntimeException('An imported project was removed or its identity changed.');
+            }
+            return 0;
+        }
+        [, , , , $data] = prepare_new_moduleinfo_data($course, 'assign', 4);
+        $data->name = $spec['name']; $data->cmidnumber = $idnumber; $data->visible = 0;
+        $data->completion = COMPLETION_TRACKING_NONE;
+        $data->introeditor = ['text' => $spec['html'], 'format' => FORMAT_HTML, 'itemid' => 0];
+        foreach (['requiresubmissionstatement', 'sendnotifications', 'sendlatenotifications', 'sendstudentnotifications',
+            'duedate', 'cutoffdate', 'gradingduedate', 'allowsubmissionsfromdate', 'teamsubmission',
+            'requireallteammemberssubmit', 'blindmarking', 'markingworkflow', 'markingallocation'] as $field) { $data->$field = 0; }
+        $data->submissiondrafts = 1; $data->grade = 100; $data->gradepass = 0;
+        $data->maxattempts = -1; $data->attemptreopenmethod = 'manual';
+        $data->assignsubmission_onlinetext_enabled = 1;
+        $data->assignsubmission_onlinetext_wordlimit_enabled = 0;
+        $data->assignsubmission_file_enabled = 0;
+        $data->assignfeedback_comments_enabled = 1;
+        $data->assignfeedback_file_enabled = 0;
+        $data->assignfeedback_editpdf_enabled = 0;
         add_moduleinfo($data, $course);
         return 1;
     }

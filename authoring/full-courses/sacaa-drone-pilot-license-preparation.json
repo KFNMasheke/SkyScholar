@@ -1,0 +1,119 @@
+{
+  "slug": "sacaa-drone-pilot-license-preparation",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Understand the South African approval and training pathway",
+      "lesson": "Begin with current SACAA licensing, training, examination and legislation sources. Terminology and applicable provisions have changed over time, so record the exact document, edition and checked date rather than relying on an old course title. This independent self-study course supports preparation; it is not an ATO approval, licence application or assurance that a particular applicant meets the requirements.\n\nSeparate the pilot, aircraft, operator and proposed operation. A pilot credential does not automatically authorise every aircraft or business activity. An operator approval does not establish that a particular pilot, configuration, site and mission are within scope. Build an evidence matrix showing the distinct questions and the current authority/source for each.\n\nConfirm an intended training provider's approval and scope through current SACAA information. Keep examination, radiotelephony, language, medical and practical-assessment questions in a personal pathway checklist for verification with the appropriate approved provider. Do not substitute this course's self-study completion for a required external assessment.",
+      "example": "A fictional learner has a pilot document but wants to offer a new specialist service. The approval matrix records aircraft/operator/mission-scope questions separately; it does not mark the entire business authorised because one document exists.",
+      "task": "Create a current-source pathway checklist and a four-column pilot/aircraft/operator/mission matrix. Mark all applicant-specific requirements as needing verification.",
+      "model_answer": "The checklist cites current SACAA entry points and records provider/authority confirmation, document edition and open questions. The matrix distinguishes privileges and approvals rather than treating them as interchangeable. Required practical or licensing assessments remain external, with no invented eligibility finding.",
+      "diagram": [
+        "Current authority sources",
+        "Pilot / aircraft / operator",
+        "Mission scope",
+        "Approved training / assessment"
+      ],
+      "checks": [
+        {
+          "prompt": "Does one pilot document authorise every commercial service?",
+          "answer": "No. The other applicable approvals and scope still matter."
+        },
+        {
+          "prompt": "Does SkyScholar self-study replace an approved practical assessment?",
+          "answer": "No. The relevant external process remains required."
+        }
+      ],
+      "reading": [
+        "SACAA Licensing, Training and Examinations pages; current CAR/CATS via SACAA legislation portal"
+      ]
+    },
+    {
+      "title": "02 · Aircraft knowledge and human performance foundations",
+      "lesson": "Aircraft understanding connects systems, forces, limitations and information quality. Review the supplied aircraft/principles notes and the actual operating manual. Explain the relationship between control input, system response and observed evidence without assuming assistance functions are available under every condition.\n\nHuman performance affects information gathering and decisions. Workload, fatigue, expectation and fixation can narrow attention or encourage premature conclusions. Use a briefing that identifies responsibilities, uncertain information and a clear route to stop or replan. Self-assessment should identify a concern rather than rationalise it away to meet a schedule.\n\nPractise reasoning with a paired scenario: first describe normal assumptions, then change one condition such as a degraded information source or unavailable crew role. Explain what needs reassessment and where the approved response is documented. Avoid teaching one universal emergency action for all aircraft. The exercise evaluates recognition and use of evidence, not practical competence.",
+      "example": "A fictional positioning indication becomes inconsistent with other observations. The learner identifies unreliable information and consults the applicable approved procedure instead of assuming a universal control input from an online example.",
+      "task": "Build a systems-dependency map and a human-performance brief for a fictional observation job. Include a change that requires reassessment.",
+      "model_answer": "The map connects aircraft, station, link, positioning and payload with their limitations. The brief allocates monitoring and decisions, names workload concerns and stop language, and identifies the approved procedure source. It distinguishes symptom recognition from an unsupported diagnosis or practical flight instruction.",
+      "diagram": [
+        "System assumptions",
+        "Human workload",
+        "Changed condition",
+        "Approved reassessment"
+      ],
+      "checks": [
+        {
+          "prompt": "Can assistance functions be assumed available in every condition?",
+          "answer": "No. Their dependencies and limitations must be understood."
+        },
+        {
+          "prompt": "What should a degraded information source trigger?",
+          "answer": "Recognition, appropriate approved priorities and reassessment of the plan."
+        }
+      ],
+      "reading": [
+        "Supplied aircraft, principles and human-factors notes; aircraft manual; approved training syllabus"
+      ]
+    },
+    {
+      "title": "03 · Integrate weather, navigation and communications",
+      "lesson": "Weather, position/reference information and communication describe different parts of the same mission picture. Review the supplied subject notes and use current official information for the actual site/time. Identify where a forecast applies, how a coordinate or height is referenced and which communications process is required under the approved operation.\n\nA navigation statement without units or a reference can be ambiguous. Distinguish heading from ground track, altitude references from local height, and a planned position from independent evidence of an actual position. Do not supply real operational routes or frequencies from a generic training exercise.\n\nCommunication should preserve a shared understanding of identity, state, restrictions and next action. Practise structured information and explicit clarification in the radiotelephony course, but verify local procedures with a competent instructor and current SACAA material. A confident voice is not evidence that a message is correct. When a critical instruction is unclear, resolve it rather than inventing the missing detail.",
+      "example": "A fictional brief gives a height but not its reference, and a changed capture time falls outside the weather information used. The learner identifies both ambiguities before deciding feasibility and does not assume that a radio acknowledgement resolves them.",
+      "task": "Write a combined information brief with weather validity, position/height references, communications responsibilities and two clarification questions.",
+      "model_answer": "The brief uses time/location-specific sources, explicit units/references and named communication roles. Questions resolve the missing height definition and the delayed weather applicability. It distinguishes information exchange from operational authorisation and preserves unresolved restrictions.",
+      "diagram": [
+        "Weather validity",
+        "Position / height reference",
+        "Shared communication",
+        "Clarify before decision"
+      ],
+      "checks": [
+        {
+          "prompt": "Does confident delivery make a message correct?",
+          "answer": "No. Content, references and restrictions must be verified."
+        },
+        {
+          "prompt": "What is missing from an unreferenced height?",
+          "answer": "Its datum/reference and context, which can materially change its meaning."
+        }
+      ],
+      "reading": [
+        "SACAA Aeronautical Information; AIC 005/2018; supplied weather/navigation/communications notes"
+      ]
+    },
+    {
+      "title": "04 · Revise with evidence and prepare for external assessment",
+      "lesson": "A complete revision workflow maps the current approved syllabus to study material, original practice, error analysis and external review. The seven provisional SkyScholar subject groups are an organisational aid, not a verified statement of the entire applicable SACAA syllabus. Resolve the mapping with the approved provider and current source documents.\n\nUse an error register to explain why an answer was wrong, the correct reasoning and the source that resolves it. Separate a study target from an official pass requirement. Practice questions should test understanding without copying commercial banks or reconstructing confidential examination items.\n\nBefore external assessment, review unresolved technical, terminology and applicant-pathway questions with an appropriate instructor. Collect the required evidence through the actual authority/provider process. This course closes with a study portfolio and a review plan; it does not issue a licence, radio certificate or practical competence endorsement.",
+      "example": "A learner can answer a memorised item but cannot explain how a changed altitude reference affects the scenario. The error log records a reference-frame gap and schedules targeted reading and instructor review rather than another identical attempt.",
+      "task": "Produce a review portfolio with a source/syllabus map, one explanation per provisional subject, a corrected error log and a list of questions for the approved provider.",
+      "model_answer": "The portfolio clearly marks provisional coverage, cites current documents and shows corrected reasoning. It does not invent reviewer names, approval dates or official pass settings. Any practical, medical, language or examination requirement is verified externally rather than declared complete from this workbook.",
+      "diagram": [
+        "Current syllabus mapping",
+        "Original practice",
+        "Corrected error log",
+        "Instructor / authority review"
+      ],
+      "checks": [
+        {
+          "prompt": "Are the seven provisional groups a verified complete SACAA syllabus?",
+          "answer": "No. Reconcile them with the current approved syllabus."
+        },
+        {
+          "prompt": "May a reviewer name or approval date be invented?",
+          "answer": "No. Review evidence must be real and supplied after review."
+        }
+      ],
+      "reading": [
+        "Current SACAA examination/training requirements and approved provider syllabus; authoring source register"
+      ]
+    }
+  ],
+  "capstone": "Prepare a South African study-and-pathway dossier: current-source register, approval matrix, seven-subject revision map, integrated mission information brief, corrected error log and external assessment checklist. Submit it for competent instructor review.",
+  "rubric": [
+    "Current sources and terminology are checked",
+    "Approval layers stay distinct",
+    "Technical reasoning is evidenced",
+    "Provisional coverage is honestly labelled",
+    "External assessment and unresolved issues are explicit"
+  ]
+}

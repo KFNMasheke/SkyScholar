@@ -1,0 +1,119 @@
+{
+  "slug": "weather-and-airspace-management",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Read weather as time-and-location evidence",
+      "lesson": "Weather information has a source, observation or validity time, location and purpose. An observation reports conditions at a place/time; a forecast describes expected conditions over a stated period/area. Neither automatically describes every point of a mission site. Check the publication time and the period relevant to the planned work.\n\nLocal terrain, buildings, surfaces and changing heating can alter conditions. A calm observation elsewhere does not establish calm airflow around a structure. Distinguish measured information from assumption and identify what site assessment or specialist input is needed. Use approved operational limits and current aviation weather services rather than a generic consumer icon as the sole decision basis.\n\nKeep a weather evidence register with the source, time, applicability and unresolved concerns. Plan reassessment points because conditions and forecasts change. This lesson develops interpretation and decision records; it does not give universal wind, visibility or cloud limits for your aircraft or operation.",
+      "example": "A forecast covers the wider region during the job, but a local building corridor may produce different airflow. The crew records the forecast as one input and assesses site conditions through the approved process instead of treating the regional value as a guarantee.",
+      "task": "Create a weather evidence register for a fictional morning job and identify what would trigger reassessment.",
+      "model_answer": "The register distinguishes observations and forecasts, records validity/location and links each concern to the mission. Triggers include changed site conditions, new warnings, expired information or a delayed capture window. The decision uses applicable approved limits, not an invented universal threshold.",
+      "diagram": [
+        "Source / validity",
+        "Local applicability",
+        "Approved limits",
+        "Reassess change"
+      ],
+      "checks": [
+        {
+          "prompt": "Does a forecast prove the exact site condition?",
+          "answer": "No. Its spatial/temporal applicability and local effects matter."
+        },
+        {
+          "prompt": "Why reassess after a delay?",
+          "answer": "The relevant weather and information validity may have changed."
+        }
+      ],
+      "reading": [
+        "FAA Aviation Weather Handbook: observations/forecasts and local effects; current official aviation weather service"
+      ]
+    },
+    {
+      "title": "02 · Connect weather to aircraft and data performance",
+      "lesson": "Weather affects aircraft performance, crew workload and the usefulness of collected data. Wind changes the relationship between motion through the air and motion over the ground; temperature and air density influence performance; precipitation and moisture may exceed equipment limitations. Use the aircraft/payload documentation for actual limits and approved decision rules.\n\nA simple wind-vector exercise helps separate heading, track, airspeed and groundspeed. It is a learning model, not a flight plan. Real operations must account for the aircraft's control system, performance, airspace and contingencies. Do not infer a safe return plan from a single averaged wind value.\n\nWeather can also invalidate the measurement even when flight is otherwise feasible. Illumination, cloud movement, surface wetness and thermal conditions can affect comparability or interpretation. The operational go decision and the data-quality go decision both need to be satisfied. Record why the conditions suit the particular observation.",
+      "example": "In a simplified straight-line example, an air-relative speed of 8 m/s with a 3 m/s headwind gives 5 m/s groundspeed; a 3 m/s tailwind gives 11 m/s. This arithmetic omits real aircraft/mission effects and does not establish endurance or reserve requirements.",
+      "task": "Use a fictional 6 m/s air-relative speed and 2 m/s headwind to calculate groundspeed. Then identify two data-quality reasons to postpone a capture.",
+      "model_answer": "The simplified groundspeed is 4 m/s. Rapid illumination changes may undermine comparable RGB observations, and unsuitable thermal/environmental conditions may undermine the intended thermal interpretation. The actual postpone decision follows the measurement specification and approved operational process.",
+      "diagram": [
+        "Weather condition",
+        "Aircraft / crew effect",
+        "Sensor / scene effect",
+        "Two go/no-go gates"
+      ],
+      "checks": [
+        {
+          "prompt": "Can safe-to-fly conditions still produce unsuitable data?",
+          "answer": "Yes. The intended measurement has its own conditions."
+        },
+        {
+          "prompt": "Does a vector exercise establish a safe reserve?",
+          "answer": "No. It is a simplified conceptual calculation."
+        }
+      ],
+      "reading": [
+        "FAA Aviation Weather Handbook: weather/performance; MANUFACTURER: environment limits"
+      ]
+    },
+    {
+      "title": "03 · Build an airspace and information-validity picture",
+      "lesson": "Airspace assessment is a current, location-specific task. Identify the planned area, altitude reference, time window, relevant airspace/locations and the authoritative information needed. Static charts, amendments, supplements and current notices have different roles. A familiar map or a previous approval is not automatically applicable to a new operation.\n\nRecord which permissions and coordination are required through the applicable operator/authority process. Do not infer permission from the absence of a warning in a consumer application. Land access, airspace authority, pilot privileges and operator approvals address different questions and must not be substituted for each other.\n\nTrack the information lifecycle. Note when a source was checked, the effective period and any conditions or expiry. If a notice is ambiguous or the planned activity does not match the permission, resolve it before proceeding. The course uses fictional scenarios rather than prescribing current frequencies, routes or local operating permissions.",
+      "example": "A team has access to a site but discovers that an information update affects the intended time window. Land access does not resolve the airspace issue. The mission remains unconfirmed until the relevant authority/operator process resolves the conflict.",
+      "task": "Create an information/permission register for a fictional project with separate rows for land access, airspace, pilot privileges and operator scope.",
+      "model_answer": "Each row identifies the authority/source, applicability, effective time, owner and evidence needed. No row is used as a substitute for another. Open questions and conditions remain visible, with a decision deadline before work is treated as operationally feasible.",
+      "diagram": [
+        "Location / time / height",
+        "Authoritative information",
+        "Required permissions",
+        "Validity / conditions"
+      ],
+      "checks": [
+        {
+          "prompt": "Does an application’s silence equal permission?",
+          "answer": "No. Verify the applicable authoritative requirements."
+        },
+        {
+          "prompt": "Is land access the same as airspace authorisation?",
+          "answer": "No. They concern different permissions."
+        }
+      ],
+      "reading": [
+        "SACAA Aeronautical Information: AIP/AIC/NOTAM resources; current operator approval process"
+      ]
+    },
+    {
+      "title": "04 · Make and communicate a defensible decision",
+      "lesson": "A decision brief combines current evidence, applicable limits, uncertainty and alternatives. State what is known, what remains unresolved and who has authority to decide. A deadline or travel cost is a commercial consequence, not evidence that conditions are acceptable.\n\nChoose explicit reassessment points and stop conditions. A no-go can become a revised plan if the new plan is authorised and still meets the client's evidence need. Do not quietly expand limits or reinterpret a permission to preserve the original schedule. Communicate the decision and its operational and delivery consequences to the relevant people.\n\nAfter the job or rehearsal, compare the observed conditions with the plan and record useful changes. A good outcome does not prove every decision was sound; an inconvenient cancellation can be a well-supported professional decision. The capstone evaluates the quality of the information and reasoning rather than rewarding a predetermined go answer.",
+      "example": "A capture window moves beyond the validity of the information used in the briefing. The team pauses and reassesses instead of treating the original go decision as permanent. The client receives a clear explanation of the delivery effect and alternatives.",
+      "task": "Write both a go-with-conditions and a no-go brief for two fictional variations of the same job, stating what evidence changes the decision.",
+      "model_answer": "Both briefs name the evidence, applicable limits, authority and unresolved issues. Conditions are specific and reassessment is timed. The no-go explains the relevant uncertainty or failure and proposes an authorised alternative if one exists. Neither relies on pressure to meet the schedule.",
+      "diagram": [
+        "Evidence and limits",
+        "Uncertainty",
+        "Decision / alternatives",
+        "Communication / review"
+      ],
+      "checks": [
+        {
+          "prompt": "Does a successful outcome validate every decision?",
+          "answer": "No. Review the evidence and reasoning available at the time."
+        },
+        {
+          "prompt": "Can schedule pressure change an approved operating limit?",
+          "answer": "No. Revise the plan or timing through the proper process."
+        }
+      ],
+      "reading": [
+        "FAA Risk Management Handbook; approved operator decision and briefing procedures"
+      ]
+    }
+  ],
+  "capstone": "Prepare a weather-and-airspace decision dossier for a fictional job with a delayed start. Include source/validity registers, a simple wind-vector calculation, separate permissions, operational/data-quality gates, reassessment triggers and a client decision brief.",
+  "rubric": [
+    "Sources have time/location applicability",
+    "Weather effects are linked to the task",
+    "Permissions remain distinct",
+    "Decision authority and uncertainty are clear",
+    "Reassessment and communication are explicit"
+  ]
+}

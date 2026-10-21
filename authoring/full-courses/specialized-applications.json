@@ -1,0 +1,119 @@
+{
+  "slug": "specialized-applications",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Select a measurement for an industry decision",
+      "lesson": "Specialised work begins with a decision that ordinary imagery may not resolve. An infrastructure owner may need located visual observations; an agronomist may need a repeatable crop measurement; a maintenance team may need thermal evidence under defined conditions. Name the decision-maker and the evidence they consider valid before selecting a payload.\n\nDistinguish observation from diagnosis. A visible pattern or unusual sensor value can direct further investigation without identifying a cause. Review the scale, timing, access, calibration and specialist interpretation needed. A sensor with a sophisticated name does not remove those dependencies.\n\nBuild a method suitability statement: what the method can observe, under which conditions and with which limitations. If the decision requires information the proposed method cannot establish, change the method or scope. Do not promise that one flight can answer every question about a structure, field or asset.",
+      "example": "A client asks whether a solar installation has an electrical fault. A thermal observation may identify an area for investigation, but a defensible diagnosis also depends on suitable conditions, measurement practice and qualified interpretation.",
+      "task": "For three fictional client questions, identify a candidate sensor, the needed validation and the specialist who should interpret the result.",
+      "model_answer": "The answer connects sensor output to the actual decision and states its limits. It distinguishes RGB observation, thermal radiance/temperature interpretation and geometric measurement. Each proposal includes conditions and an appropriate independent or specialist check rather than assuming automatic diagnosis.",
+      "diagram": [
+        "Industry decision",
+        "Measurement needed",
+        "Suitable method",
+        "Qualified interpretation"
+      ],
+      "checks": [
+        {
+          "prompt": "Does an anomalous value establish its cause?",
+          "answer": "No. It is evidence to interpret and corroborate."
+        },
+        {
+          "prompt": "What comes before payload choice?",
+          "answer": "The decision and its evidence requirements."
+        }
+      ],
+      "reading": [
+        "Manufacturer measurement documentation; project specialist specification"
+      ]
+    },
+    {
+      "title": "02 · Interpret thermal and agricultural observations cautiously",
+      "lesson": "Thermal cameras observe radiation, and displayed temperature depends on the measurement model and conditions. Emissivity, reflected radiation, distance and the environment can matter. A colour palette is a display choice, not a diagnosis. Use the specific sensor instructions and competent thermography practice before making temperature claims.\n\nAgricultural imagery also requires context. A spectral difference can reflect several influences, including crop state, soil/background, illumination or processing. Compare observations collected under a justified method and use relevant ground evidence. A vegetation index is not a universal yield, disease or nutrient diagnosis.\n\nPreserve the acquisition conditions and processing choices. When comparing dates, identify changes in illumination, sensor configuration and scene conditions. If these undermine comparability, state the limitation rather than treating every difference as physical change. Avoid universal capture thresholds or interpretation rules that are not supported for the particular task.",
+      "example": "Two roof images use different automatic thermal scales. The colours look different, but this alone does not establish a temperature change. Compare actual measurement settings and conditions, with appropriate expertise.",
+      "task": "Write an observation record for a fictional thermal anomaly and a separate crop-pattern observation, with alternative explanations and follow-up evidence.",
+      "model_answer": "Record time, conditions, sensor/configuration, location and the observed pattern. Thermal interpretation considers emissivity/reflection and display scale; crop interpretation considers capture comparability and ground evidence. Both records identify alternatives and a qualified follow-up instead of asserting a cause.",
+      "diagram": [
+        "Sensor signal",
+        "Conditions / calibration",
+        "Observed pattern",
+        "Corroborating evidence"
+      ],
+      "checks": [
+        {
+          "prompt": "Does a palette colour prove a fault?",
+          "answer": "No. Display and measurement context matter."
+        },
+        {
+          "prompt": "Is a vegetation index a universal diagnosis?",
+          "answer": "No. Interpret it with suitable context and ground evidence."
+        }
+      ],
+      "reading": [
+        "FLIR: emissivity/reflected temperature guidance; sensor-specific radiometric calibration documentation"
+      ]
+    },
+    {
+      "title": "03 · Quantify infrastructure and volume with appropriate checks",
+      "lesson": "A measurement product must define what is being measured, its units, reference surface and uncertainty. A stockpile volume is the difference between a represented surface and a chosen base within a boundary. Changing that base or boundary can change the result even when the photographs are unchanged.\n\nVisual infrastructure observations need location and traceability. Use an asset identifier, observation identifier, view reference and confidence/limitation statement. A blurred or occluded feature should not be classified with the same certainty as a clearly observed one. Specialist standards govern any professional condition assessment.\n\nValidation must be independent of model fitting. Checkpoint observations used to assess accuracy should not also be used as control for that same assessment. Report the relevant checks, distribution and limitations rather than relying only on a software quality score. The final number is useful when the recipient understands its definition and how it was tested.",
+      "example": "For a simplified 100 m² area with mean height 2 m above an agreed flat base, the illustrative volume is 200 m³. Real surfaces and boundaries need a suitable method; this arithmetic does not validate a photogrammetric stockpile survey.",
+      "task": "Define a fictional stockpile measurement: boundary, base, units, independent checks and an uncertainty/limitation statement. Explain the comparison basis.",
+      "model_answer": "The definition states the physical surface and base used, explains boundary selection and records the coordinate/height reference. Independent checks are withheld from fitting. The report distinguishes the calculated result from its validation and identifies occlusion, base assumptions or missing evidence.",
+      "diagram": [
+        "Boundary / base",
+        "Observed surface",
+        "Independent checks",
+        "Defined result / limitations"
+      ],
+      "checks": [
+        {
+          "prompt": "Can fitting control serve as independent validation of the same model?",
+          "answer": "No. Independence would be lost."
+        },
+        {
+          "prompt": "Why specify the volume base?",
+          "answer": "The base is part of the definition and can materially change the result."
+        }
+      ],
+      "reading": [
+        "USGS calibration guidelines; USGS lidar specification: control/checkpoint separation"
+      ]
+    },
+    {
+      "title": "04 · Write a specialist-ready case report",
+      "lesson": "A case report links the client question to the method, observations, checks and next decision. Provide a short summary and a traceable evidence index so that specialists can examine the supporting material. Keep assumptions and limitations close to the conclusions they affect.\n\nUse consistent observation categories without implying greater certainty than the method supports. If a classification requires specialist judgement, identify who made it and under which scope. A data capture provider should not silently take responsibility for a conclusion outside their competence.\n\nClose the loop with a review of usability. Can the recipient locate the observation, understand the conditions and decide what further action is justified? Corrections should be versioned and communicated. A professionally cautious report is not an unhelpful report: it states what is known, why it matters and what evidence would resolve what remains uncertain.",
+      "example": "An observation index links asset A-03, image I-17 and a marked location. The summary describes the observed feature and recommends specialist review, with the visibility limitation stated alongside it. The recipient can locate the supporting view without guessing.",
+      "task": "Draft a one-page report for a fictional asset observation with three indexed findings, one unresolved issue and a proposed next step.",
+      "model_answer": "Each finding has an asset/location reference, evidence link, observation and confidence/limitation. The unresolved issue is not disguised as a negative finding. The next step names the evidence or specialist assessment needed and the report avoids unsupported safety or diagnostic certification.",
+      "diagram": [
+        "Client question",
+        "Indexed evidence",
+        "Qualified findings",
+        "Decision / next evidence"
+      ],
+      "checks": [
+        {
+          "prompt": "Where should a limitation appear?",
+          "answer": "Close to the finding or conclusion it affects."
+        },
+        {
+          "prompt": "What makes a report specialist-ready?",
+          "answer": "Traceable observations, clear methods and conditions, and an explicit interpretive scope."
+        }
+      ],
+      "reading": [
+        "Project specialist reporting standard; original case-report rubric"
+      ]
+    }
+  ],
+  "capstone": "Produce a fictional specialist-service case study, choosing thermal, agriculture, infrastructure or volumetrics. Include a method suitability statement, conditions register, evidence index, independent checks, uncertainty discussion and qualified report.",
+  "rubric": [
+    "Measurement matches the decision",
+    "Conditions and calibration are recorded",
+    "Observation and diagnosis remain distinct",
+    "Validation is independent",
+    "Report supports a justified next action"
+  ]
+}

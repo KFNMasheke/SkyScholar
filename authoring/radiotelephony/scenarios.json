@@ -1,0 +1,846 @@
+{
+  "schema": 1,
+  "status": "fictional-self-study-review-pending",
+  "scenarios": [
+    {
+      "id": "phonetic-abc",
+      "title": "Spell ZS-ABC",
+      "group": "Phonetics",
+      "context": "Written token only; no station or clearance is involved.",
+      "prompt": "Spell the training token ZS-ABC using the phonetic alphabet.",
+      "model": "Zulu Sierra Alfa Bravo Charlie.",
+      "checks": [
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        }
+      ],
+      "notes": "Keep the letter order. This is a spelling exercise, not a real aircraft identification claim.",
+      "forbidden": []
+    },
+    {
+      "id": "phonetic-jqx",
+      "title": "Spell JQX",
+      "group": "Phonetics",
+      "context": "Practise unfamiliar letter combinations.",
+      "prompt": "Spell JQX.",
+      "model": "Juliett Quebec X-ray.",
+      "checks": [
+        {
+          "label": "J",
+          "any": [
+            "juliett"
+          ]
+        },
+        {
+          "label": "Q",
+          "any": [
+            "quebec"
+          ]
+        },
+        {
+          "label": "X",
+          "any": [
+            "xray"
+          ]
+        }
+      ],
+      "notes": "The checker accepts ordinary written spelling variants but does not evaluate pronunciation.",
+      "forbidden": []
+    },
+    {
+      "id": "phonetic-klm",
+      "title": "Spell ZS-KLM",
+      "group": "Phonetics",
+      "context": "Written token only.",
+      "prompt": "Spell ZS-KLM.",
+      "model": "Zulu Sierra Kilo Lima Mike.",
+      "checks": [
+        {
+          "label": "Prefix",
+          "any": [
+            "zulu sierra"
+          ]
+        },
+        {
+          "label": "Suffix",
+          "any": [
+            "kilo lima mike"
+          ]
+        }
+      ],
+      "notes": "Listen back and ask a partner to reconstruct all five letters.",
+      "forbidden": []
+    },
+    {
+      "id": "digits-pressure",
+      "title": "Pressure-setting digits",
+      "group": "Numbers",
+      "context": "Synthetic pressure-setting exercise, not current weather information.",
+      "prompt": "Read QNH 1018 as a labelled pressure-setting value.",
+      "model": "QNH one zero one eight.",
+      "checks": [
+        {
+          "label": "Quantity label",
+          "any": [
+            "qnh"
+          ]
+        },
+        {
+          "label": "Value",
+          "any": [
+            "1018",
+            "one zero one eight"
+          ]
+        }
+      ],
+      "notes": "Retain the quantity label; do not interpret this as an altitude or a clearance.",
+      "forbidden": []
+    },
+    {
+      "id": "digits-runway",
+      "title": "Runway designator",
+      "group": "Numbers",
+      "context": "Fictional runway designator. No runway access is authorised.",
+      "prompt": "Read the designator Runway 27.",
+      "model": "Runway two seven.",
+      "checks": [
+        {
+          "label": "Runway label",
+          "any": [
+            "runway"
+          ]
+        },
+        {
+          "label": "Designator",
+          "any": [
+            "27",
+            "two seven"
+          ]
+        }
+      ],
+      "notes": "A designator is not permission to enter, cross or take off.",
+      "forbidden": []
+    },
+    {
+      "id": "digits-heading",
+      "title": "Heading digits",
+      "group": "Numbers",
+      "context": "A numeric pronunciation drill, not a control instruction.",
+      "prompt": "Read heading 080.",
+      "model": "Heading zero eight zero.",
+      "checks": [
+        {
+          "label": "Heading label",
+          "any": [
+            "heading"
+          ]
+        },
+        {
+          "label": "Value",
+          "any": [
+            "080",
+            "zero eight zero"
+          ]
+        }
+      ],
+      "notes": "Preserve the leading zero in this drill and distinguish heading from track.",
+      "forbidden": []
+    },
+    {
+      "id": "initial-information",
+      "title": "Initial information request",
+      "group": "Initial contact",
+      "context": "Your training token is ZS-ABC. You are in a fictional briefing position called North Point.",
+      "prompt": "Make a concise first contact to Dune Information, giving your identity and North Point, requesting information.",
+      "model": "Dune Information, Zulu Sierra Alfa Bravo Charlie, North Point, request information.",
+      "checks": [
+        {
+          "label": "Station",
+          "any": [
+            "dune information"
+          ]
+        },
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        },
+        {
+          "label": "Position",
+          "any": [
+            "north point"
+          ]
+        },
+        {
+          "label": "Request",
+          "any": [
+            "request information"
+          ]
+        }
+      ],
+      "notes": "This is a structural rehearsal, not universal phraseology for every local service.",
+      "forbidden": []
+    },
+    {
+      "id": "initial-ops",
+      "title": "Report ready to a training operations desk",
+      "group": "Initial contact",
+      "context": "You are rehearsing a crew briefing, not contacting ATC.",
+      "prompt": "Tell Training Operations that UAV Alpha One is ready for its briefing.",
+      "model": "Training Operations, UAV Alpha One, ready for briefing.",
+      "checks": [
+        {
+          "label": "Recipient",
+          "any": [
+            "training operations"
+          ]
+        },
+        {
+          "label": "Training identity",
+          "any": [
+            "uav alfa one",
+            "uav alpha one"
+          ]
+        },
+        {
+          "label": "State",
+          "any": [
+            "ready for briefing"
+          ]
+        }
+      ],
+      "notes": "A briefing readiness report is not an operating clearance or a filed flight plan.",
+      "forbidden": []
+    },
+    {
+      "id": "initial-clarify",
+      "title": "Request missing information",
+      "group": "Initial contact",
+      "context": "The fictional brief omits a required reporting point.",
+      "prompt": "Ask Dune Information to confirm the reporting point, using ZS-ABC.",
+      "model": "Dune Information, Zulu Sierra Alfa Bravo Charlie, confirm reporting point.",
+      "checks": [
+        {
+          "label": "Station",
+          "any": [
+            "dune information"
+          ]
+        },
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        },
+        {
+          "label": "Clarification",
+          "any": [
+            "confirm reporting point"
+          ]
+        }
+      ],
+      "notes": "Identify the missing item. Do not invent a reporting point from an earlier scenario.",
+      "forbidden": []
+    },
+    {
+      "id": "hold-short",
+      "title": "Preserve a runway restriction",
+      "group": "Readback",
+      "context": "Fictional aircraft scenario; current local procedures need instructor review.",
+      "prompt": "Zulu Sierra Alfa Bravo Charlie, hold short of runway two seven.",
+      "model": "Holding short of runway two seven, Zulu Sierra Alfa Bravo Charlie.",
+      "checks": [
+        {
+          "label": "Restriction",
+          "any": [
+            "holding short",
+            "hold short"
+          ]
+        },
+        {
+          "label": "Runway",
+          "any": [
+            "runway two seven",
+            "runway 27"
+          ]
+        },
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        }
+      ],
+      "notes": "Acknowledge the actual restriction. The exercise never grants runway entry or take-off authority.",
+      "forbidden": [
+        "cleared for takeoff",
+        "cleared for take off",
+        "crossing runway",
+        "not holding short"
+      ]
+    },
+    {
+      "id": "remain-outside",
+      "title": "Remain outside a training boundary",
+      "group": "Readback",
+      "context": "The boundary and reporting point are fictional.",
+      "prompt": "Zulu Sierra Alfa Bravo Charlie, remain outside the training boundary, report North Point.",
+      "model": "Remaining outside the training boundary, report North Point, Zulu Sierra Alfa Bravo Charlie.",
+      "checks": [
+        {
+          "label": "Boundary restriction",
+          "any": [
+            "remaining outside",
+            "remain outside"
+          ]
+        },
+        {
+          "label": "Report point",
+          "any": [
+            "north point"
+          ]
+        },
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        }
+      ],
+      "notes": "Retain both the restriction and the reporting point. A token match does not validate every part of a response.",
+      "forbidden": [
+        "entering the boundary",
+        "cleared to enter"
+      ]
+    },
+    {
+      "id": "qnh-readback",
+      "title": "Preserve the pressure setting",
+      "group": "Readback",
+      "context": "Synthetic value for practice only.",
+      "prompt": "Zulu Sierra Alfa Bravo Charlie, QNH one zero one eight.",
+      "model": "QNH one zero one eight, Zulu Sierra Alfa Bravo Charlie.",
+      "checks": [
+        {
+          "label": "QNH",
+          "any": [
+            "qnh"
+          ]
+        },
+        {
+          "label": "Value",
+          "any": [
+            "1018",
+            "one zero one eight"
+          ]
+        },
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        }
+      ],
+      "notes": "Compare every digit and the identity. Do not add an unrelated instruction.",
+      "forbidden": []
+    },
+    {
+      "id": "report-point",
+      "title": "Read back a report requirement",
+      "group": "Readback",
+      "context": "The point is fictional.",
+      "prompt": "Zulu Sierra Alfa Bravo Charlie, report South Gate.",
+      "model": "Report South Gate, Zulu Sierra Alfa Bravo Charlie.",
+      "checks": [
+        {
+          "label": "Action",
+          "any": [
+            "report"
+          ]
+        },
+        {
+          "label": "Point",
+          "any": [
+            "south gate"
+          ]
+        },
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        }
+      ],
+      "notes": "Keep the report requirement distinct from permission to proceed beyond a restriction.",
+      "forbidden": []
+    },
+    {
+      "id": "roger-limit",
+      "title": "Receipt is not a full required readback",
+      "group": "Understanding",
+      "context": "A station has explicitly requested a readback of a runway restriction.",
+      "prompt": "Explain why responding only ROGER would not complete the requested readback.",
+      "model": "ROGER acknowledges receipt; I must still read back the required restriction and identity.",
+      "checks": [
+        {
+          "label": "Receipt meaning",
+          "any": [
+            "receipt",
+            "received"
+          ]
+        },
+        {
+          "label": "Readback requirement",
+          "any": [
+            "read back",
+            "readback"
+          ]
+        },
+        {
+          "label": "Restriction",
+          "any": [
+            "restriction"
+          ]
+        }
+      ],
+      "notes": "The checker checks selected concepts only; review your complete explanation with the lesson.",
+      "forbidden": []
+    },
+    {
+      "id": "say-again",
+      "title": "Request a missed value",
+      "group": "Clarification",
+      "context": "You did not understand the pressure-setting value.",
+      "prompt": "Ask for repetition of the QNH, using ZS-ABC.",
+      "model": "Say again QNH, Zulu Sierra Alfa Bravo Charlie.",
+      "checks": [
+        {
+          "label": "Repetition request",
+          "any": [
+            "say again"
+          ]
+        },
+        {
+          "label": "Affected item",
+          "any": [
+            "qnh"
+          ]
+        },
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        }
+      ],
+      "notes": "Do not guess the value. The model is a concise fictional rehearsal.",
+      "forbidden": []
+    },
+    {
+      "id": "own-correction",
+      "title": "Correct your own report point",
+      "group": "Clarification",
+      "context": "You just said North Point but intended South Gate.",
+      "prompt": "Rehearse an explicit correction with your training identity.",
+      "model": "Correction, South Gate, Zulu Sierra Alfa Bravo Charlie.",
+      "checks": [
+        {
+          "label": "Correction marker",
+          "any": [
+            "correction"
+          ]
+        },
+        {
+          "label": "Correct item",
+          "any": [
+            "south gate"
+          ]
+        },
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        }
+      ],
+      "notes": "Make clear which version replaces the mistaken item. Do not leave two competing values.",
+      "forbidden": []
+    },
+    {
+      "id": "confirm-reference",
+      "title": "Clarify an omitted height reference",
+      "group": "Clarification",
+      "context": "A desk exercise states a height without its reference.",
+      "prompt": "State the clarification needed rather than guessing what the number means.",
+      "model": "Confirm height reference and units.",
+      "checks": [
+        {
+          "label": "Verification request",
+          "any": [
+            "confirm"
+          ]
+        },
+        {
+          "label": "Reference",
+          "any": [
+            "reference"
+          ]
+        },
+        {
+          "label": "Units",
+          "any": [
+            "units"
+          ]
+        }
+      ],
+      "notes": "This is a briefing clarification exercise, not complete live radiotelephony phraseology for all contexts.",
+      "forbidden": []
+    },
+    {
+      "id": "unable-request",
+      "title": "Communicate inability honestly",
+      "group": "Clarification",
+      "context": "In a fictional rehearsal, you cannot comply with a requested report because the location is uncertain.",
+      "prompt": "Rehearse a clear statement of inability and request clarification, using ZS-ABC.",
+      "model": "Unable, position uncertain, request clarification, Zulu Sierra Alfa Bravo Charlie.",
+      "checks": [
+        {
+          "label": "Inability",
+          "any": [
+            "unable"
+          ]
+        },
+        {
+          "label": "Reason",
+          "any": [
+            "position uncertain"
+          ]
+        },
+        {
+          "label": "Request",
+          "any": [
+            "request clarification"
+          ]
+        },
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        }
+      ],
+      "notes": "Do not acknowledge compliance that you cannot provide. Actual operational response follows the approved procedure.",
+      "forbidden": []
+    },
+    {
+      "id": "similar-callsign",
+      "title": "Notice another addressee",
+      "group": "Listening",
+      "context": "Your training identity ends Charlie. The received identity ends Delta.",
+      "prompt": "Dune Tower addresses Zulu Sierra Alfa Bravo Delta. What must you notice before responding?",
+      "model": "The message is not addressed to my callsign. I must not assume it is mine; clarify identity if needed.",
+      "checks": [
+        {
+          "label": "Identity mismatch",
+          "any": [
+            "not addressed",
+            "different callsign",
+            "another callsign"
+          ]
+        },
+        {
+          "label": "Do not assume",
+          "any": [
+            "not assume",
+            "do not assume"
+          ]
+        }
+      ],
+      "notes": "This is a recognition question. Do not read the instruction back as if it was for ZS-ABC.",
+      "forbidden": []
+    },
+    {
+      "id": "changed-point",
+      "title": "Notice changed content",
+      "group": "Listening",
+      "context": "An earlier rehearsal used North Point. The new instruction uses South Gate.",
+      "prompt": "Zulu Sierra Alfa Bravo Charlie, report South Gate.",
+      "model": "Report South Gate, Zulu Sierra Alfa Bravo Charlie.",
+      "checks": [
+        {
+          "label": "Current point",
+          "any": [
+            "south gate"
+          ]
+        },
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        }
+      ],
+      "notes": "Read the received message, not the one you expected.",
+      "forbidden": [
+        "report north point"
+      ]
+    },
+    {
+      "id": "position-report",
+      "title": "Give a stated position",
+      "group": "Reports",
+      "context": "Fictional observation point; no real navigation information.",
+      "prompt": "Report that ZS-ABC is at North Point.",
+      "model": "Zulu Sierra Alfa Bravo Charlie, North Point.",
+      "checks": [
+        {
+          "label": "Full training callsign",
+          "any": [
+            "zulu sierra alfa bravo charlie",
+            "zs abc",
+            "zsabc"
+          ]
+        },
+        {
+          "label": "Point",
+          "any": [
+            "north point"
+          ]
+        }
+      ],
+      "notes": "Use the stated information. Do not invent time, height or a clearance.",
+      "forbidden": []
+    },
+    {
+      "id": "crew-stop",
+      "title": "Use an explicit crew stop message",
+      "group": "Reports",
+      "context": "Crew coordination rehearsal, not ATC phraseology.",
+      "prompt": "Tell Training Operations that UAV Alpha One is stopping the exercise because its brief is incomplete.",
+      "model": "Training Operations, UAV Alpha One, stopping exercise, brief incomplete.",
+      "checks": [
+        {
+          "label": "Recipient",
+          "any": [
+            "training operations"
+          ]
+        },
+        {
+          "label": "Identity",
+          "any": [
+            "uav alfa one"
+          ]
+        },
+        {
+          "label": "Stop",
+          "any": [
+            "stopping exercise",
+            "stop exercise"
+          ]
+        },
+        {
+          "label": "Reason",
+          "any": [
+            "brief incomplete"
+          ]
+        }
+      ],
+      "notes": "The exercise encourages speaking up. It does not prescribe an aircraft emergency control sequence.",
+      "forbidden": []
+    },
+    {
+      "id": "exercise-complete",
+      "title": "Close a fictional rehearsal",
+      "group": "Reports",
+      "context": "The tabletop session is complete; no flight occurred.",
+      "prompt": "Report the end of the training exercise to Training Operations, using UAV Alpha One.",
+      "model": "Training Operations, UAV Alpha One, training exercise complete.",
+      "checks": [
+        {
+          "label": "Recipient",
+          "any": [
+            "training operations"
+          ]
+        },
+        {
+          "label": "Identity",
+          "any": [
+            "uav alfa one"
+          ]
+        },
+        {
+          "label": "State",
+          "any": [
+            "exercise complete"
+          ]
+        }
+      ],
+      "notes": "Do not turn this into an unsupported statement that a real aircraft has landed safely.",
+      "forbidden": []
+    },
+    {
+      "id": "distress-card",
+      "title": "Plan fictional distress information",
+      "group": "Emergency planning",
+      "context": "TABLETOP ONLY. An instructor must review category and actual phraseology. No live transmission.",
+      "prompt": "List the key information you would prepare for a distress communication rehearsal.",
+      "model": "Training only: identity, nature of distress, intentions, position and relevant additional information.",
+      "checks": [
+        {
+          "label": "Identity",
+          "any": [
+            "identity",
+            "callsign"
+          ]
+        },
+        {
+          "label": "Nature",
+          "any": [
+            "nature",
+            "problem"
+          ]
+        },
+        {
+          "label": "Intentions",
+          "any": [
+            "intentions",
+            "intention"
+          ]
+        },
+        {
+          "label": "Position",
+          "any": [
+            "position"
+          ]
+        }
+      ],
+      "notes": "This is an information-planning card. It is not an executable emergency procedure or an assessment of correct event classification.",
+      "forbidden": []
+    },
+    {
+      "id": "urgency-category",
+      "title": "Distinguish urgency from routine traffic",
+      "group": "Emergency planning",
+      "context": "TABLETOP ONLY. Use the current official manual and instructor review.",
+      "prompt": "Which standard signal identifies urgency, and can this browser exercise be used as a real transmission?",
+      "model": "PAN PAN identifies urgency. This is a training exercise, not a live transmission.",
+      "checks": [
+        {
+          "label": "Urgency signal",
+          "any": [
+            "pan pan"
+          ]
+        },
+        {
+          "label": "Training limitation",
+          "any": [
+            "not a live transmission",
+            "not live",
+            "training exercise"
+          ]
+        }
+      ],
+      "notes": "The lab does not assess whether a real event is correctly classified or managed.",
+      "forbidden": []
+    },
+    {
+      "id": "readback-error",
+      "title": "Detect a wrong runway readback",
+      "group": "Listening",
+      "context": "The instruction refers to runway 27; the proposed reply says runway 09.",
+      "prompt": "What is wrong with the proposed readback, and what should happen to the discrepancy?",
+      "model": "The runway designator is wrong: two seven was changed to zero nine. The discrepancy needs correction.",
+      "checks": [
+        {
+          "label": "Wrong item",
+          "any": [
+            "runway",
+            "designator"
+          ]
+        },
+        {
+          "label": "Correct value",
+          "any": [
+            "two seven",
+            "27"
+          ]
+        },
+        {
+          "label": "Resolution",
+          "any": [
+            "correction",
+            "corrected",
+            "correct"
+          ]
+        }
+      ],
+      "notes": "A confident voice does not repair a changed restriction or value.",
+      "forbidden": []
+    },
+    {
+      "id": "source-current",
+      "title": "Keep local procedure current",
+      "group": "Understanding",
+      "context": "You found an old internet script with a real frequency.",
+      "prompt": "Explain what must be checked before treating a procedure or frequency as current operational information.",
+      "model": "Check the current authoritative publication, applicability, validity and approved local procedure.",
+      "checks": [
+        {
+          "label": "Authority",
+          "any": [
+            "authoritative",
+            "official"
+          ]
+        },
+        {
+          "label": "Validity",
+          "any": [
+            "validity",
+            "current"
+          ]
+        },
+        {
+          "label": "Applicability",
+          "any": [
+            "applicability",
+            "applicable"
+          ]
+        },
+        {
+          "label": "Local procedure",
+          "any": [
+            "local procedure"
+          ]
+        }
+      ],
+      "notes": "A practice script and a current operational information source have different purposes.",
+      "forbidden": []
+    }
+  ]
+}

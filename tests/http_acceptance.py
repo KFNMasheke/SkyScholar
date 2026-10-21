@@ -92,4 +92,29 @@ assert result['result']['courses'] + result['result']['pages'] + result['result'
 status, rejected = admin.request('/local/skyscholarcontent/run.php', {'course': 'draft-unknown', 'sesskey': sesskey.group(1)})
 assert status == 400 and json.loads(rejected)['success'] is False
 passed('admin importer screen, missing-CSRF denial, GET denial, safe POST retry and unknown-key refusal')
+from pathlib import Path
+import os
+import subprocess
+root = Path(os.environ['RUNNER_TEMP']) / 'moodle-test'
+fixture = json.loads((root / 'content-test-fixture.json').read_text())
+status, page = admin.request('/mod/page/view.php?id=' + str(fixture['assetpageid']))
+assert status == 200 and 'pluginfile.php' in page and '<img' in page
+with admin.opener.open(fixture['asseturl'], timeout=30) as image:
+    assert image.read(8) == b'\x89PNG\r\n\x1a\n'
+passed('native Page view renders and serves the attached original illustration')
+radio_url = '/local/skyscholarcontent/radio.php?courseid=' + str(fixture['radiocourse'])
+status, denied = first.request(radio_url)
+assert 'id="ssc-radio-lab"' not in denied
+radio_env = os.environ | {'SKYSCHOLAR_TEST_MOODLE': str(root)}
+subprocess.run(['php8.3', 'tests/course_content_radio_fixture.php', '--open'], env=radio_env, check=True)
+try:
+    status, lab = first.request(radio_url)
+    assert status == 200 and 'id="ssc-radio-lab"' in lab and 'Record practice locally' in lab
+    status, denied = second.request(radio_url)
+    assert 'id="ssc-radio-lab"' not in denied
+    status, denied = first.request('/local/skyscholarcontent/radio.php?courseid=' + str(fixture['othercourse']))
+    assert 'id="ssc-radio-lab"' not in denied
+finally:
+    subprocess.run(['php8.3', 'tests/course_content_radio_fixture.php', '--close'], env=radio_env, check=True)
+passed('radio lab denies hidden, unenrolled and wrong-course requests; enrolled access works after explicit test visibility')
 print('ALL HTTP ACCEPTANCE CHECKS PASSED', flush=True)

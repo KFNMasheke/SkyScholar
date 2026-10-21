@@ -1,0 +1,223 @@
+{
+  "slug": "radiotelephony-practice",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Prepare a station and a disciplined communication habit",
+      "lesson": "Radiotelephony is a shared safety communication system. This course provides English ICAO-style rehearsal with South African source references; actual privileges, equipment, local procedures and examination requirements must be confirmed through the current SACAA/approved training process. The browser laboratory is a simulation and never transmits radio signals or grants a clearance.\n\nBefore a message, know who you need to contact, your identity, relevant position/state and the information or request. Prepare the message, listen to the channel and use deliberate, intelligible speech. Avoid rushing to sound experienced. Equipment setup, microphone technique and checks must follow the specific equipment and approved procedure.\n\nListening is an active task. Identify whom a message addresses and distinguish a restriction, an instruction, an acknowledgement and information. A message to a similar callsign is not automatically yours. If you have not understood the critical content, resolve it through the appropriate clarification rather than guessing. A simulator recording lets you review pacing and content without using a real frequency.",
+      "example": "In the fictional lab, Dune Tower addresses Zulu Sierra Alpha Bravo Charlie. A message to a different training callsign is not adopted merely because part of the name sounds similar. The learner first identifies the addressee and the instruction.",
+      "task": "Create a pre-message card with station, full training callsign, position/state, request and a listening/clarification reminder.",
+      "model_answer": "The card supplies enough context to prepare a concise message and explicitly checks addressee and understanding. It does not invent a real frequency or assume permission to transmit. The learner uses record/playback to inspect intelligibility and compares the content with the scenario.",
+      "diagram": [
+        "Prepare message",
+        "Listen / identify addressee",
+        "Speak deliberately",
+        "Verify understanding"
+      ],
+      "checks": [
+        {
+          "prompt": "Does the browser lab transmit radio signals?",
+          "answer": "No. It is a local communication rehearsal."
+        },
+        {
+          "prompt": "Should a similar-callsign message be assumed yours?",
+          "answer": "No. Resolve identity and ambiguity before acting."
+        }
+      ],
+      "reading": [
+        "SACAA AIC 005/2018: general radiotelephony procedures; current approved radio training syllabus"
+      ]
+    },
+    {
+      "title": "02 · Spell identities with the phonetic alphabet",
+      "lesson": "The phonetic alphabet gives letters distinguishable spoken forms. Practise the complete sequence: Alfa, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliett, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu. Learn recognition as well as production; knowing the list in order is not enough when letters arrive unpredictably.\n\nWork in short, variable groups before combining a complete identifier. Listen once, write the letters, check them and repeat the difficult combinations. Preserve the order and avoid substituting ordinary words that happen to begin with the same letter. In standard spelling, Alfa and Juliett use the internationally specified forms.\n\nA correct alphabet recital does not make an incorrect identity correct. Associate the spoken letters with the actual scenario token and check the addressee. Do not abbreviate a callsign merely for convenience; actual abbreviation rules and initiation depend on the applicable procedure. The lab uses full training identifiers to keep identity clear.",
+      "example": "The token ZS-ABC is rehearsed as Zulu Sierra Alfa Bravo Charlie. The dash is a written separator, not another phonetic letter. A letter substitution changes the identity, even when the rest of the message is polished.",
+      "task": "Spell ZS-KLM, ABC and JQX in a random order, record them and ask a partner to reconstruct the written tokens.",
+      "model_answer": "Expected groups include Zulu Sierra Kilo Lima Mike; Alfa Bravo Charlie; and Juliett Quebec X-ray. Compare the reconstructed letters, not only the speaker's confidence. Note any order or substitution error and repeat those groups with varied spacing and order.",
+      "diagram": [
+        "Written identifier",
+        "Phonetic letters",
+        "Listener reconstruction",
+        "Identity check"
+      ],
+      "checks": [
+        {
+          "prompt": "What is the standard spelling for the A word?",
+          "answer": "Alfa."
+        },
+        {
+          "prompt": "Why practise random groups?",
+          "answer": "Real recognition requires identifying letters without relying on the alphabet’s sequence."
+        }
+      ],
+      "reading": [
+        "SACAA AIC 005/2018: spelling alphabet; ICAO-style alphabet reference"
+      ]
+    },
+    {
+      "title": "03 · Speak numbers, references and time without ambiguity",
+      "lesson": "Digits and references carry meaning together. An altitude, a height, a pressure setting and a channel are not interchangeable numbers. Before speaking or reading back a value, identify what it refers to and the units or reference required by the applicable procedure. Never supply an omitted critical reference from your own assumption.\n\nPractise individual digit recognition with aviation pronunciation, including tree, fower, fife and niner, while using the current local manual for the treatment of particular values. Decimal, level, pressure and time expressions follow their applicable conventions; do not transfer a convention from a different context without checking it. Written shorthand and spoken phraseology are related but not identical.\n\nUse a two-column practice sheet: heard/spoken value and interpreted meaning. If the value is copied correctly but assigned the wrong reference, the communication has still failed. The laboratory's synthetic numeric prompts are spelling/listening exercises, not a source of current operational frequencies, altitudes or pressure settings.",
+      "example": "A fictional pressure-setting drill uses QNH 1018. The learner rehearses the digits and the QNH label, then distinguishes that pressure setting from an altitude. A separate numeric token is not silently interpreted as a clearance.",
+      "task": "Prepare five fictional values, each with its type/reference. Have a partner read them; write both the value and its meaning before checking.",
+      "model_answer": "The sheet distinguishes number accuracy from interpretation. Errors include a wrong digit, an omitted reference or treating information as an instruction. Correct the item using the applicable manual and repeat with changed values; do not simply memorise one fixed phrase.",
+      "diagram": [
+        "Identify quantity",
+        "Speak / hear digits",
+        "Retain reference",
+        "Verify interpreted meaning"
+      ],
+      "checks": [
+        {
+          "prompt": "Is the right number with the wrong reference acceptable?",
+          "answer": "No. Meaning depends on both."
+        },
+        {
+          "prompt": "Does a lab numeric prompt provide operational information?",
+          "answer": "No. Values are synthetic practice tokens."
+        }
+      ],
+      "reading": [
+        "SACAA AIC 005/2018: transmission of numbers; current local procedures for levels/pressure/time"
+      ]
+    },
+    {
+      "title": "04 · Structure an initial call and a clear request",
+      "lesson": "A structured message helps the recipient establish identity and context. In rehearsal, organise the station being called, your full callsign, the relevant position or state and the request. Actual content and sequence depend on the service and local procedure, so use the approved training framework rather than treating one mnemonic as universal phraseology.\n\nMake the request specific enough to understand without adding irrelevant narrative. Prepare unfamiliar place names and important numbers. If a controller or station asks for additional information, answer the requested item clearly and retain identity as required. Do not convert a request into an assertion of permission.\n\nPractise listening to the reply before rehearsing the next line. A scripted dialogue is useful for learning structure, but a fixed memorised sequence can hide a failure to understand a changed restriction. The lab varies fictional instructions and asks you to identify the critical elements. A good response reflects the actual message received, not the reply you expected.",
+      "example": "A fictional initial contact asks Dune Tower for information while stating Zulu Sierra Alfa Bravo Charlie and a defined training position. The model response is a communication example, not a real request to operate or enter airspace.",
+      "task": "Write two initial-call rehearsals with different fictional positions and requests. Mark identity, state and request, then shorten unnecessary wording.",
+      "model_answer": "Both messages retain the addressed station and full training identity, give the relevant state and ask a specific question. They avoid invented operational permission, excessive storytelling and a memorised next line that ignores the station's actual reply.",
+      "diagram": [
+        "Addressed station",
+        "Full identity",
+        "Relevant state",
+        "Specific request"
+      ],
+      "checks": [
+        {
+          "prompt": "Does making a request establish permission?",
+          "answer": "No. Request and authorisation are different."
+        },
+        {
+          "prompt": "What should change when the reply changes?",
+          "answer": "The response must address the actual instruction/information, not a fixed script."
+        }
+      ],
+      "reading": [
+        "SACAA AIC 005/2018: establishment of communication; approved local radio training examples"
+      ]
+    },
+    {
+      "title": "05 · Close the readback and hearback loop",
+      "lesson": "A readback gives the sender a chance to detect a misunderstanding. Identify the safety-critical instruction, values, restrictions and your identity. The applicable procedure determines what must be read back. An acknowledgement that a message was received is not automatically a readback of a clearance or restriction.\n\nThe sender's hearback is the other half of the loop. If the repeated content is wrong or incomplete, the discrepancy must be corrected. In practice, compare every critical element with the original rather than judging the confidence or speed of the voice. ROGER means received; WILCO indicates understanding and compliance, but neither should be used to replace a required specific readback.\n\nThe lab provides a critical-element checklist and a model response. Its text matching only highlights selected elements. It does not assess all phraseology, pronunciation, timing, context or safe decision-making, so it cannot award a radiotelephony pass. Review the complete exchange and, where possible, have a competent instructor assess the recording.",
+      "example": "In a fictional scenario, the instruction is to remain outside a named boundary and report at a stated point. The learner repeats the restriction and report point with the correct identity rather than answering only ROGER. A response implying entry would contradict the restriction.",
+      "task": "Rehearse three lab readbacks. For each, list the critical items before speaking and compare your recording with the received message.",
+      "model_answer": "The worksheet retains identity, restriction and all relevant values/references. It identifies omitted or changed items and distinguishes a received-message acknowledgement from a complete required readback. A checklist match is recorded as practice feedback, not an instructor-approved pass.",
+      "diagram": [
+        "Instruction",
+        "Critical readback",
+        "Hearback comparison",
+        "Correction / confirmed understanding"
+      ],
+      "checks": [
+        {
+          "prompt": "Does ROGER replace a required specific readback?",
+          "answer": "No. It acknowledges receipt."
+        },
+        {
+          "prompt": "Can the lab’s token matching certify a radio response?",
+          "answer": "No. It is limited practice feedback, not a competence assessment."
+        }
+      ],
+      "reading": [
+        "SACAA AIC 005/2018: standard words/phrases and readback; instructor guidance"
+      ]
+    },
+    {
+      "title": "06 · Handle uncertainty, corrections and similar callsigns",
+      "lesson": "An unclear transmission is a reason to clarify, not an invitation to fill a gap. Identify the part you did not understand and request repetition or confirmation using the applicable phraseology. When you make an error in your own transmission, correct it explicitly so the listener can replace the wrong item rather than retaining two competing versions.\n\nBe precise about standard words. SAY AGAIN requests repetition; CONFIRM seeks verification; CORRECTION introduces a correction. Do not use confident delivery to disguise uncertainty. If an instruction cannot be complied with, communicate that fact through the appropriate procedure rather than giving a misleading acknowledgement.\n\nSimilar identities and expectation can produce a persuasive but wrong exchange. Practise a scenario where the instruction is for another callsign, where one number changes and where a restriction is not as expected. Review what you actually heard and what you assumed. A polished script should never outrank the received message.",
+      "example": "The fictional lab gives an instruction to Zulu Sierra Alfa Bravo Delta while your token ends Charlie. The exercise asks you to recognise that it is not addressed to you, rather than perform a readback under the wrong identity.",
+      "task": "Create a three-row error log: missed number, incorrect self-transmitted value and similar callsign. Give the appropriate clarification/correction objective for each.",
+      "model_answer": "The log distinguishes repetition of missed content, explicit correction of your own error and identity clarification. It records the original/incorrect/corrected items separately and avoids presenting guessed content as understood. Local phraseology remains subject to current manual and instructor review.",
+      "diagram": [
+        "Detect uncertainty",
+        "Identify the affected item",
+        "Request / make correction",
+        "Recheck identity and meaning"
+      ],
+      "checks": [
+        {
+          "prompt": "What is the risk in guessing a missing number?",
+          "answer": "A plausible guess can create an incorrect shared understanding."
+        },
+        {
+          "prompt": "What should happen after an error in your own transmission?",
+          "answer": "Make an explicit correction using the applicable procedure."
+        }
+      ],
+      "reading": [
+        "SACAA AIC 005/2018: repetition, correction and standard words/phrases"
+      ]
+    },
+    {
+      "title": "07 · Rehearse urgency and distress as fictional message planning",
+      "lesson": "Distress and urgency communications have priority and specific procedures. The terms MAYDAY and PAN PAN identify different categories; learn their meaning and the current applicable message structure from the official manual and an instructor. In this course, practise only fictional planning and browser playback. Do not use real radio equipment or a live frequency for an exercise.\n\nA useful emergency information plan keeps identity, the nature of the problem, intentions, position and other relevant information understandable. The exact sequence and required details depend on the situation and procedure. Do not invent a physical aircraft response from a communication exercise. For RPAS, distinguish an aircraft-system problem from the wider risk to people and other airspace users, and follow the applicable approved operational contingency.\n\nMaintain the distinction between saying words and making an appropriate decision. The lab can help rehearse recalling information under a simple prompt, but it cannot assess whether an actual event is correctly classified or managed. Avoid dramatics and focus on intelligibility, facts and the information needed by those who can assist.",
+      "example": "A fictional tabletop prompt describes a serious problem and supplies an identity, position and intention. The learner builds a message from those facts, marks it TRAINING ONLY and checks the category/structure against the official reference with an instructor.",
+      "task": "Complete a fictional emergency information card with identity, nature, intention, position/reference and relevant assistance information. State what remains to be verified by an instructor.",
+      "model_answer": "The card is factual and clearly simulated, does not invent a real location/frequency or aircraft procedure, and identifies the classification/phraseology for competent review. It separates communication planning from operational emergency actions and from a real competence assessment.",
+      "diagram": [
+        "Fictional problem",
+        "Correct category / procedure",
+        "Essential factual information",
+        "Instructor review"
+      ],
+      "checks": [
+        {
+          "prompt": "Does rehearsing an emergency message authorise live transmissions?",
+          "answer": "No. This is a fictional browser/tabletop exercise."
+        },
+        {
+          "prompt": "Does text matching evaluate emergency management competence?",
+          "answer": "No. Context, judgement and practical assessment require competent instruction."
+        }
+      ],
+      "reading": [
+        "SACAA AIC 005/2018: distress and urgency procedures; approved RPAS/operator contingency procedures"
+      ]
+    },
+    {
+      "title": "08 · Complete an integrated communication session and debrief",
+      "lesson": "Combine preparation, listening, identity, number handling, readback and clarification in a short fictional scenario. Begin with a brief that defines the training callsign, station, role and information available. Use the browser voice as an optional prompt and your own recording for review; synthesised speech is not a model of a particular controller, accent or examination standard.\n\nRecord-and-playback is deliberately self-review. Listen for omitted restrictions, changed values, identity errors, unnecessary words and unclear pacing. A partner can reconstruct the message to test whether the intended information survived. The lab does not send recordings to a server or use automated speech recognition. Your browser and device control microphone permission and the recording remains a temporary local session object.\n\nFinish with an error log and targeted next session. Repeat changed scenarios rather than one memorised response. Mark unresolved phraseology and local procedural questions for instructor review. A complete session portfolio demonstrates practice effort and corrected understanding; it does not confer a radio operator certificate or licence privilege.",
+      "example": "A session contains initial contact, a changed restriction, one missed value and a final readback. The learner identifies the change, asks for clarification and compares the corrected exchange with the model instead of treating an earlier expected reply as valid.",
+      "task": "Complete six different lab scenarios, recording at least two. Build an error log, corrected responses and a plan for an instructor-reviewed session.",
+      "model_answer": "The portfolio shows scenario variety, checks the full message rather than token count alone and identifies concrete corrections. It records microphone/voice limitations and does not label the rehearsal a licensing pass. The next session targets remaining identity, number, restriction or pacing gaps.",
+      "diagram": [
+        "Brief / listen",
+        "Respond / record",
+        "Compare full meaning",
+        "Correct / next session"
+      ],
+      "checks": [
+        {
+          "prompt": "Does the lab upload your voice recording?",
+          "answer": "No. The implemented recorder keeps a temporary object in your browser session."
+        },
+        {
+          "prompt": "What is the outcome of the capstone?",
+          "answer": "A self-study practice portfolio for review, not a radio certificate."
+        }
+      ],
+      "reading": [
+        "SACAA AIC 005/2018; current approved local practical radiotelephony assessment criteria"
+      ]
+    }
+  ],
+  "capstone": "Complete a radio practice portfolio: phonetic reconstruction sheet, number/reference sheet, two initial calls, six varied lab responses, two record/playback reviews, one fictional emergency information card and a corrected error log. Obtain competent review before treating it as evidence of operational proficiency.",
+  "rubric": [
+    "Identity is retained and similar callsigns are noticed",
+    "Numbers retain their quantity/reference",
+    "Restrictions and required readback items are preserved",
+    "Uncertainty is clarified rather than guessed",
+    "Recordings and self-assessment are honestly limited"
+  ]
+}

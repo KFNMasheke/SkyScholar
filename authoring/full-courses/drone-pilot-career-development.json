@@ -1,0 +1,119 @@
+{
+  "slug": "drone-pilot-career-development",
+  "status": "authored-review-pending",
+  "level": "Foundational self-study",
+  "units": [
+    {
+      "title": "01 · Select a role using evidence of its work",
+      "lesson": "Drone-related careers include piloting, data capture, processing, inspection interpretation, GIS, maintenance coordination and project delivery. A job title can combine several of these. Start with the actual tasks, outputs and accountability of the role rather than assuming a pilot credential covers the entire service.\n\nBuild a role-to-evidence matrix. For each requirement, identify a credential, work sample, supervised observation or other verifiable evidence that would demonstrate it. Separate mandatory authorisations from preferred tools. A useful gap statement describes what is missing and how you will demonstrate improvement.\n\nChoose a focused initial direction. A broad list of interests is not yet a development plan. Compare the work you want to do with the prerequisites, supervised practice and local requirements needed to perform it. Use current employer and authority information when making real decisions; the fictional exercises here do not guarantee employment or authorisation.",
+      "example": "An inspection support role may require clear evidence handling and customer reporting as well as capture familiarity. A processing sample with documented quality checks can demonstrate different competence from a flight-hour log.",
+      "task": "Choose one fictional role and map five requirements to evidence, marking any requirement that needs an external credential or supervised assessment.",
+      "model_answer": "The matrix distinguishes operational privileges, technical outputs, communication and quality assurance. Each entry names evidence and a gap-closing action. Mandatory approvals are treated as gates; a portfolio item is not used as a substitute for a required credential.",
+      "diagram": [
+        "Role tasks",
+        "Required evidence",
+        "Skill gap",
+        "Focused development"
+      ],
+      "checks": [
+        {
+          "prompt": "Does one credential demonstrate every job task?",
+          "answer": "No. Match evidence to the actual responsibility."
+        },
+        {
+          "prompt": "How should mandatory authorisations be treated?",
+          "answer": "As requirements to verify, not preferences to average into a score."
+        }
+      ],
+      "reading": [
+        "Current employer role description; applicable authority training/licensing information"
+      ]
+    },
+    {
+      "title": "02 · Build a portfolio that can be verified",
+      "lesson": "A useful case study explains the problem, your role, method, output, validation and limitations. State whether work was a client engagement, supervised exercise or simulation. The reader should be able to distinguish what you personally did from the team's contribution.\n\nProtect confidentiality and permissions. Redact or replace sensitive locations, names and data where needed, and do not publish client material merely because you created it. A synthetic dataset can demonstrate a method without exposing a real project. Keep original evidence privately where the applicable agreements permit.\n\nChoose fewer strong case studies over many unexplained images. A result becomes credible when you show how it was checked and what it cannot establish. Include an accessible summary and a technical appendix suited to the role. Do not invent client outcomes, revenue improvements or accuracy claims to make a case study look more impressive.",
+      "example": "A mapping case study labels a synthetic dataset and reports checkpoint calculations with units and limitations. It demonstrates the validation method without pretending the exercise was a paid survey. Horizontal and vertical measurement evidence remain distinguished.",
+      "task": "Outline a case study for a fictional project with sections for role, method, evidence, result and limitations. State what can be shared.",
+      "model_answer": "The outline names the work as fictional, identifies the learner's contribution, includes reproducible checks and avoids invented business outcomes. Shared material is synthetic or appropriately authorised; a technical appendix supports rather than contradicts the summary.",
+      "diagram": [
+        "Problem / role",
+        "Method",
+        "Validation evidence",
+        "Honest case study"
+      ],
+      "checks": [
+        {
+          "prompt": "Should simulated work be described as a client engagement?",
+          "answer": "No. Label its provenance accurately."
+        },
+        {
+          "prompt": "What makes a technical result credible?",
+          "answer": "Traceable methods, appropriate checks and visible limitations."
+        }
+      ],
+      "reading": [
+        "Project confidentiality/permission requirements; original portfolio rubric"
+      ]
+    },
+    {
+      "title": "03 · Communicate fit in applications and interviews",
+      "lesson": "An application connects relevant evidence to a specific role. Use the employer's actual responsibilities to choose examples, then explain the problem, your action and the observed result. Avoid copying the job description into a claim you cannot support.\n\nPrepare interview stories that include tradeoffs, collaboration and correction of errors. Technical work often depends on recognising uncertainty and escalating appropriately. A clear account of a limitation can demonstrate judgement more effectively than claiming every project succeeded perfectly.\n\nMaintain an accurate credential and availability record. Separate completed qualifications from courses in progress and experience from familiarity. When discussing equipment or software, describe what you have actually done with it. Tailored communication is not permission to omit a mandatory condition or misrepresent work authorisation.",
+      "example": "For a role emphasising client handover, a candidate explains how they organised deliverables and documented limitations. They do not lead with an unrelated list of aircraft specifications or claim specialist interpretation they did not provide.",
+      "task": "Draft a short application paragraph and a three-minute interview story for a fictional support-and-capture role, using only evidence you can substantiate.",
+      "model_answer": "The paragraph links two relevant skills to specific evidence. The story identifies the context, personal action, collaboration, result and one limitation or learning point. Credentials and work provenance are accurately labelled; unsupported metrics are omitted.",
+      "diagram": [
+        "Role requirement",
+        "Relevant example",
+        "Personal contribution",
+        "Verifiable result"
+      ],
+      "checks": [
+        {
+          "prompt": "Can familiarity be presented as extensive production experience?",
+          "answer": "No. Describe the actual depth and context."
+        },
+        {
+          "prompt": "Why discuss a project limitation?",
+          "answer": "It can show judgement, transparency and appropriate professional boundaries."
+        }
+      ],
+      "reading": [
+        "Current employer requirements; personal evidence register"
+      ]
+    },
+    {
+      "title": "04 · Run a sustainable development and feedback cycle",
+      "lesson": "A development plan needs a target capability, practice activity, feedback source and evidence of progress. Course completion is one input, not the final measure of competence. Where practical assessment or a formal approval is required, schedule it through the appropriate provider rather than relying on self-assessment alone.\n\nUse a manageable review cycle. Record what you attempted, what the evidence showed and what to change. If a chosen resource does not address the gap, replace or supplement it. Allocate time for reflection, documentation and recovery; accumulating study hours without effective feedback can reinforce mistakes.\n\nEvaluate opportunities against your actual objectives, eligibility, costs and available time. No certificate guarantees a role or income. A strong next-step decision explains the expected skill gain and how you will verify it. The capstone closes this course with an evidence-based ninety-day plan rather than a promise of qualification.",
+      "example": "A learner wants to improve coordinate-reference reasoning. Their plan combines official reading, a synthetic GIS task, a peer review and a corrected explanation, instead of simply adding several unrelated certificates.",
+      "task": "Build a ninety-day plan with three capability targets, evidence milestones, feedback owners and review dates.",
+      "model_answer": "Each target is specific enough to test, such as producing a documented checkpoint report from synthetic data. Milestones include an attempt, feedback and revision. Mandatory practical or licensing assessments are explicitly external. The plan is realistic about time and does not treat course attendance as proof of competence.",
+      "diagram": [
+        "Target capability",
+        "Deliberate practice",
+        "External feedback",
+        "Evidence / revise plan"
+      ],
+      "checks": [
+        {
+          "prompt": "Is course completion identical to demonstrated competence?",
+          "answer": "No. Appropriate performance evidence and assessment are still needed."
+        },
+        {
+          "prompt": "What should a development review change?",
+          "answer": "The next practice/resource based on the evidence of the actual gap."
+        }
+      ],
+      "reading": [
+        "Relevant official training information and role-specific assessment criteria"
+      ]
+    }
+  ],
+  "capstone": "Produce a career evidence pack: role matrix, two accurately labelled case-study outlines, a tailored application, an interview story and a ninety-day development plan. Include a credential-status register and sharing permissions.",
+  "rubric": [
+    "Role selection is evidence-based",
+    "Portfolio provenance is clear",
+    "Claims are supportable",
+    "External assessment needs are recognised",
+    "The development cycle includes feedback and revision"
+  ]
+}
