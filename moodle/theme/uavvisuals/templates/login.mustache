@@ -1,0 +1,23 @@
+{{! SPDX-License-Identifier: GPL-3.0-or-later }}
+{{> theme_boost/head }}
+<body {{{bodyattributes}}}>
+{{> core/local/toast/wrapper }}
+<div id="page-wrapper">
+    {{{output.standard_top_of_body_html}}}
+    <div id="page" class="container-fluid uav-login-page">
+        <div id="page-content" class="uav-login-grid">
+            <aside class="uav-login-story" aria-label="{{brandname}}" style="--uav-login-image:url('{{imageurl}}')">
+                <img class="uav-login-logo" src="{{logourl}}" alt="UAV Visuals" width="240" height="108">
+                <div class="uav-login-intro"><p class="uav-eyebrow">{{loginlabel}}</p><h1>{{loginheading}}</h1><p>{{logindescription}}</p></div>
+                <a class="uav-return-link" href="{{uavurl}}">{{uavlabel}} <span aria-hidden="true">↗</span></a>
+            </aside>
+            <div id="region-main-box" class="uav-login-main"><div id="region-main" class="h-100"><div class="login-wrapper"><div class="login-container">{{{output.main_content}}}</div></div></div></div>
+        </div>
+    </div>
+    {{> theme_boost/footer }}
+</div>
+</body></html>
+{{#js}}
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() { M.util.js_complete('theme_boost/loader'); });
+{{/js}}

@@ -38,6 +38,11 @@ jobs:
           python3 -c 'import json,subprocess,os; assert subprocess.check_output(["git","-C",os.environ["RUNNER_TEMP"]+"/moodle-core","rev-parse","HEAD"],text=True).strip()==json.load(open("moodle.lock.json"))["commit"]'
           cp -a "$RUNNER_TEMP/moodle-core" "$RUNNER_TEMP/moodle-test"
           cp -a moodle/local/skyscholar "$RUNNER_TEMP/moodle-test/local/"
+          cp -a moodle/theme/uavvisuals "$RUNNER_TEMP/moodle-test/theme/"
+      - name: Compile UAV Visuals theme and render native templates
+        env:
+          SKYSCHOLAR_TEST_MOODLE: ${{ runner.temp }}/moodle-core
+        run: php8.3 tests/theme_compile.php
       - name: Install disposable Moodle and exercise real quizzes
         env:
           SKYSCHOLAR_TEST_MOODLE: ${{ runner.temp }}/moodle-test

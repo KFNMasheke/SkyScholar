@@ -34,6 +34,9 @@ def build(core: Path, output: Path):
     for path in sorted((REPO / 'moodle/local/skyscholar').rglob('*')):
         if path.is_file() and 'tests' not in path.parts:
             entries['application/local/skyscholar/' + path.relative_to(REPO / 'moodle/local/skyscholar').as_posix()] = path
+    for path in sorted((REPO / 'moodle/theme/uavvisuals').rglob('*')):
+        if path.is_file() and 'tests' not in path.parts:
+            entries['application/theme/uavvisuals/' + path.relative_to(REPO / 'moodle/theme/uavvisuals').as_posix()] = path
     entries['application/.htaccess'] = REPO / 'deployment/apache.htaccess'
     for folder in ('deployment', 'docs', 'scripts'):
         for path in sorted((REPO / folder).rglob('*')):
