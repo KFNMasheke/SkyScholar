@@ -18,6 +18,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if (isset($this->page->theme->settings->showhero) && !$this->page->theme->settings->showhero) {
             return $header;
         }
+        if ($this->page->pagelayout === 'frontpage') {
+            return $header . $this->render_from_template('theme_uavvisuals/frontpage',
+                \theme_uavvisuals_frontpage_context($this->page, $this));
+        }
         return $header . $this->render_from_template('theme_uavvisuals/learning_hero',
             \theme_uavvisuals_brand_context($this->page, $this));
     }

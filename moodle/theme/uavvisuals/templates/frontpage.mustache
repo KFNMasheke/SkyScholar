@@ -1,0 +1,40 @@
+{{! SPDX-License-Identifier: GPL-3.0-or-later }}
+<div class="uav-academy">
+    <div class="uav-announcement"><span aria-hidden="true">✦</span> {{announcement}}</div>
+    <section class="uav-academy-hero" aria-labelledby="uav-academy-title">
+        <div class="uav-academy-copy">
+            <p class="uav-eyebrow">{{brandname}}</p>
+            <h2 id="uav-academy-title">{{herotitle}} <span>{{heroaccent}}</span></h2>
+            <p class="uav-academy-description">{{herobody}}</p>
+            <form class="uav-course-search" action="{{searchurl}}" method="get" role="search">
+                <label class="sr-only" for="uav-course-search">{{searchlabel}}</label>
+                <input id="uav-course-search" type="search" name="search" placeholder="{{searchplaceholder}}" required maxlength="255">
+                <button type="submit" class="btn btn-primary">{{searchbutton}} <span aria-hidden="true">↗</span></button>
+            </form>
+            <p class="uav-academy-note"><span aria-hidden="true">✓</span> {{heronote}}</p>
+        </div>
+        <div class="uav-academy-visual">
+            <div class="uav-orbit" aria-hidden="true"></div>
+            <img class="uav-academy-photo" src="{{imageurl}}" alt="" width="900" height="1000" fetchpriority="high">
+            <div class="uav-flight-mark" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="52" stroke="currentColor" stroke-width="1"/><circle cx="60" cy="60" r="36" stroke="currentColor" stroke-dasharray="3 5"/><path d="M60 23v74M23 60h74M60 34l-8 34 8-5 8 5z" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="uav-free-card"><span class="uav-free-icon" aria-hidden="true">↗</span><div><strong>{{freebadge}}</strong><span>{{brandname}}</span></div></div>
+        </div>
+    </section>
+    <section class="uav-feature-section" aria-labelledby="uav-features-title">
+        <div class="uav-section-heading"><p class="uav-eyebrow">{{approachlabel}}</p><h2 id="uav-features-title">{{approachtitle}}</h2></div>
+        <div class="uav-feature-grid">{{#features}}<article class="uav-feature-card"><span class="uav-feature-number" aria-hidden="true">{{number}}</span><h3>{{title}}</h3><p>{{body}}</p></article>{{/features}}</div>
+    </section>
+    <section class="uav-catalogue" aria-labelledby="uav-catalogue-title">
+        <div class="uav-section-heading uav-heading-row"><div><p class="uav-eyebrow">{{catalogueeyebrow}}</p><h2 id="uav-catalogue-title">{{cataloguetitle}}</h2><p>{{cataloguebody}}</p></div><a class="btn btn-secondary" href="{{coursesurl}}">{{courseslabel}} <span aria-hidden="true">↗</span></a></div>
+        {{#hascourses}}<div class="uav-course-grid">{{#courses}}<article class="uav-catalogue-card"><a class="uav-catalogue-image" href="{{url}}" tabindex="-1" aria-hidden="true"><img src="{{image}}" alt="" width="700" height="420" loading="lazy"></a><div class="uav-catalogue-content"><span class="uav-course-category">{{category}}</span><h3><a href="{{url}}">{{name}}</a></h3><a class="uav-text-link" href="{{url}}">{{opencourse}}<span class="sr-only">: {{name}}</span> <span aria-hidden="true">↗</span></a></div></article>{{/courses}}</div>{{/hascourses}}
+        {{^hascourses}}<div class="uav-catalogue-empty"><span aria-hidden="true">✦</span><p>{{emptycourses}}</p></div>{{/hascourses}}
+    </section>
+    {{#hascategories}}<section class="uav-categories" aria-labelledby="uav-categories-title"><div class="uav-section-heading"><p class="uav-eyebrow">{{categoryeyebrow}}</p><h2 id="uav-categories-title">{{categorytitle}}</h2></div><div class="uav-category-grid">{{#categories}}<a href="{{url}}"><span aria-hidden="true">✧</span><strong>{{name}}</strong><span aria-hidden="true">↗</span></a>{{/categories}}</div></section>{{/hascategories}}
+    <section class="uav-academy-about" aria-labelledby="uav-about-title">
+        <div class="uav-about-visual"><img src="{{imageurl}}" alt="" width="800" height="900" loading="lazy"><span aria-hidden="true">A CLEARER<br>PERSPECTIVE.</span></div>
+        <div class="uav-about-copy"><p class="uav-eyebrow">{{aboutlabel}}</p><h2 id="uav-about-title">{{abouttitle}}</h2><p>{{aboutbody}}</p><ul><li>{{aboutpointone}}</li><li>{{aboutpointtwo}}</li><li>{{aboutpointthree}}</li></ul><a class="btn btn-primary" href="{{coursesurl}}">{{courseslabel}} <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="uav-faq" aria-labelledby="uav-faq-title"><div class="uav-section-heading"><p class="uav-eyebrow">{{brandname}}</p><h2 id="uav-faq-title">{{faqtitle}}</h2></div><details><summary>{{faqone}}</summary><p>{{faqoneanswer}}</p></details><details><summary>{{faqtwo}}</summary><p>{{faqtwoanswer}}</p></details><details><summary>{{faqthree}}</summary><p>{{faqthreeanswer}}</p></details></section>
+    <section class="uav-academy-cta"><span aria-hidden="true">✦</span><div><h2>{{ctaheading}}</h2><p>{{ctabody}}</p></div><a class="btn btn-primary" href="{{coursesurl}}">{{ctalabel}} <span aria-hidden="true">↗</span></a></section>
+    <div class="uav-academy-links"><div><strong>{{brandname}}</strong><p>{{footerbody}}</p></div><nav aria-label="{{footerlearning}}"><strong>{{footerlearning}}</strong><a href="{{coursesurl}}">{{courseslabel}}</a><a href="{{dashboardurl}}">{{dashboardlink}}</a><a href="{{loginurl}}">{{loginlink}}</a></nav><nav aria-label="{{footerbrand}}"><strong>{{footerbrand}}</strong><a href="{{uavurl}}">{{uavlabel}} <span aria-hidden="true">↗</span></a></nav></div>
+</div>

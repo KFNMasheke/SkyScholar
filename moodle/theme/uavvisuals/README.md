@@ -1,15 +1,13 @@
-# UAV Visuals · SkyScholar theme
+# UAV Visuals · SkyScholar theme 1.1
 
-A GPL-3.0-or-later Boost child theme for Moodle 4.5. The theme uses the UAV Visuals
-logo and archive photography with self-hosted Manrope and DM Serif Display fonts.
-Font license notices are in `fonts/`. Branding and photography remain owned by
-UAV Visuals; code licensing does not grant third parties trademark rights.
+A native Boost child theme for Moodle 4.5. Its Edly-inspired catalogue layout uses
+UAV Visuals branding, forest and gold accents, bold typography, a split hero,
+native course search, permission-aware course/category grids and an open-access
+learning story. No commercial Edly source/assets are included.
 
-Copy this folder as `theme/uavvisuals`, install through Site administration →
-Notifications, then select it under Appearance → Themes → Theme selector.
-Keep Boost installed. No database, course, question bank or authentication
-configuration is changed by selecting this theme.
+Install this directory as `theme/uavvisuals`, complete Notifications and select it
+in Appearance → Themes → Theme selector. Keep Boost installed. See INSTALL.md for
+installation, upgrade, rollback, licensing and verification limits.
 
-See the repository's `docs/UAV-VISUALS-THEME.md` for setup, acceptance checks and
-rollback. Theme appearance settings are under Appearance → Themes → UAV Visuals.
-The implementation targets Moodle 4.5 only; do not assume Moodle 5.x compatibility.
+Beta until login/course/quiz/mobile acceptance is completed on the target Moodle
+installation. No native authentication, enrolment, quiz or payment logic is replaced.

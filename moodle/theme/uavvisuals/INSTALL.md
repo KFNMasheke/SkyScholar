@@ -2,24 +2,36 @@
 
 ## Visual direction
 
-The theme matches the UAV Visuals redesign: charcoal/forest navigation, warm
-ivory learning surfaces, muted gold details, Manrope UI type and italic DM Serif
-Display for editorial welcome headings. It includes the original UAV Visuals
-logo and Johannesburg Botanical Gardens aerial image. Typography, borders,
-spacing, button hover/focus states, course cards, navigation drawers, tables,
-forms and modal surfaces follow the same design language.
+Release 1.1 adapts the Edly learning-catalogue reference into UAV Visuals’ identity:
+a white header, pale botanical hero, bold Manrope headings, forest buttons, gold
+accents, soft feature panels and spacious image-led course cards. The supplied
+logo, aerial photograph and licensed local fonts remain UAV Visuals assets. No
+Edly source code, commercial theme files, illustrations or promotional copy are
+bundled.
 
-A split login page frames Moodle’s own authentication form. Site home, dashboard
-and My courses gain an optional branded welcome panel. Course, administration,
-quiz and secure exam layouts retain native Boost structure. Existing question
-feedback colours, timer warnings, flags and grading states remain native. No
-custom JavaScript, billing, authentication or data-storage layer is added.
+Site home adds course search, four learning features, up to six visible course
+cards, up to eight visible top-level categories, an about panel, native HTML FAQ
+controls and a final invitation to explore the catalogue. Courses and categories
+come from Moodle’s permission-aware category API, with hidden items excluded.
+Course links lead to native enrolment/access checks. An empty catalogue explains
+that courses are being prepared. No sample courses, student counts, ratings,
+certification claims or simulated progress are shown. Course search is Moodle’s
+GET search form and works without custom JavaScript.
+
+Dashboard and My courses retain a compact welcome panel. The split login page
+retains Moodle’s authentication form. Course, administration, quiz and secure exam
+layouts retain Boost structure, question feedback colours and timer warnings.
+The native main-content region and all configured frontpage activities/blocks
+remain below the new landing sections. Administrators can remove duplicate native
+course lists in **Site home settings → Front page items**, while retaining news or
+activities they want. The show-welcome setting disables the landing page as well
+as the dashboard welcome panel.
 
 ## Install the theme ZIP on the existing Moodle 4.5 site
 
 1. Keep Boost installed. Back up code, database and private data together.
 2. Go to **Site administration → Plugins → Install plugins**. Upload
-   `SkyScholar-UAV-Visuals-Theme-v1.0.0.zip` and follow the plugin checks and
+   `SkyScholar-UAV-Visuals-Theme-v1.1.0.zip` and follow the plugin checks and
    installation screens. The archive contains one `uavvisuals` theme directory.
 3. If Moodle cannot write to its theme directory, extract locally and upload the
    **uavvisuals folder** into `public_html/skyscholar/theme/` using konsoleH.
@@ -42,7 +54,7 @@ This release targets Moodle 4.5; Moodle 5.x compatibility is not claimed.
 
 - Test signed-out login, password reset, identity providers, MFA and error states
   used on this site. The form remains Moodle’s own output.
-- Check dashboard, My courses, course page, course index and block drawers, search
+- Check dashboard, My courses, homepage search results, category links, course cards, course page, course index and block drawers, search
   and the administrator edit switch at desktop and mobile widths.
 - Open a practice quiz and timed mock. Check answer controls, question navigation,
   flags, timer urgency, feedback, review and finish/submit confirmation.
@@ -64,8 +76,8 @@ Do not delete the selected theme directory to force a fallback.
 
 Run `tests/theme_compile.php` with `SKYSCHOLAR_TEST_MOODLE` pointing at the pinned
 Moodle 4.5 source. It compiles the real Boost SCSS and child styles using Moodle’s
-bundled SCSS engine, renders both Mustache templates with Moodle’s bundled
-engine, checks escaping and verifies retention of native login-form markup.
+bundled SCSS engine, renders all three Mustache templates with Moodle’s bundled
+engine, checks welcome/course/category escaping, empty and populated catalogue states, search controls, FAQ markup and retention of native login-form markup.
 Minimal URL/path shims let that check run without a database; it is not a full
 Moodle installation or browser integration test. PHP syntax and ZIP contents
 are checked separately. The full deployment builder now includes the theme,

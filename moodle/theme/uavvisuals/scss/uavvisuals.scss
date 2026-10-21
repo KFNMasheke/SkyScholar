@@ -171,3 +171,135 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+// Edly-inspired learning catalogue, expressed in UAV Visuals' own identity.
+:root { --uav-paper: #f7faf8; --uav-white: #fff; --uav-line: #dce6df; }
+.navbar.fixed-top { background: #fff !important; border-bottom-color: #e3ebe5; box-shadow: 0 3px 20px rgba(24, 53, 37, .04); }
+.navbar .navbar-brand, .navbar .navbar-brand:hover, .navbar .nav-link, .navbar .dropdown-toggle,
+.navbar .editmode-switch-form, .navbar .editmode-switch-form label, .navbar .usermenu .login,
+.navbar .usermenu .login a, .navbar .popover-region-toggle { color: #213a2e; }
+.navbar .navbar-brand img.logo { background: #1c3327; padding: 6px 10px; border-radius: 5px; }
+.navbar .moremenu .nav-link:hover, .navbar .moremenu .nav-link:focus, .navbar .moremenu .nav-link.active { color: #213a2e; background: #edf5ef; }
+.navbar .moremenu .nav-link.active { border-bottom-color: #406c51; }
+.navbar .btn { border-color: #abbfaf; }
+.btn { border-radius: 6px; }
+.btn-primary { box-shadow: 0 8px 22px rgba(36, 61, 49, .12); }
+.pagelayout-frontpage #page.drawers .main-inner { max-width: 1440px; border: 0; padding: 0; margin: 0 auto; background: #fff; }
+.pagelayout-frontpage #page-header { padding: 1.3rem 2rem 0; margin-bottom: 0; }
+.pagelayout-frontpage #region-main { padding: 2rem; }
+.pagelayout-frontpage #page-content { margin: 0; }
+.uav-academy { background: #fff; overflow: hidden; }
+.uav-academy h2 { font-size: clamp(1.9rem, 3.3vw, 3.2rem); font-weight: 800; line-height: 1.16; letter-spacing: -.045em; }
+.uav-academy p { line-height: 1.8; }
+.uav-academy a { text-decoration: none; }
+.uav-academy .uav-eyebrow { font: 700 .72rem/1.6 "UAV Manrope", Arial, sans-serif; color: #406c51; letter-spacing: .12em; }
+.uav-announcement { background: #274c3b; color: #fff; text-align: center; padding: 12px 20px; font-size: .8rem; }
+.uav-announcement span { color: #e5d6a8; margin-inline-end: 8px; }
+.uav-academy-hero { position: relative; display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; gap: 3rem; padding: 5.5rem 5%; background: radial-gradient(ellipse at 78% 45%, #d8e8d9 0, #f5f8ef 47%, #faf9f4 80%); }
+.uav-academy-copy { position: relative; z-index: 1; }
+.uav-academy-hero h2 { font-size: clamp(2.6rem, 4.5vw, 4.7rem); line-height: 1.1; max-width: 760px; margin: 1rem 0 1.5rem; }
+.uav-academy-hero h2 > span { color: #436b50; display: block; }
+.uav-academy-description { color: #5c6c61; max-width: 560px; font-size: .98rem; }
+.uav-course-search { display: flex; background: #fff; border: 1px solid #d5e0d6; padding: 7px; border-radius: 7px; box-shadow: 0 15px 35px rgba(36, 61, 49, .07); margin-top: 2rem; gap: 8px; }
+.uav-course-search input { border: 0; background: #fff; color: #213a2e; padding: 12px; flex: 1; width: 0; min-width: 0; border-radius: 3px; }
+.uav-course-search input:focus-visible { outline: 2px solid #8a621c; outline-offset: 0; }
+.uav-course-search .btn { flex-shrink: 0; padding: .8rem 1.1rem; }
+.uav-academy-note { font-size: .72rem; color: #5c6c61; margin-top: 1.3rem; }
+.uav-academy-note span { color: #406c51; margin-inline-end: 5px; }
+.uav-academy-visual { min-width: 0; position: relative; padding: 1rem 1.5rem 1rem 1rem; }
+.uav-academy-photo { width: 100%; height: 470px; object-fit: cover; border-radius: 48% 48% 13% 13%; position: relative; border: 10px solid #fff; transform: rotate(3deg); box-shadow: 0 25px 65px rgba(36, 61, 49, .16); }
+.uav-orbit { position: absolute; inset: 7% -4% 1% 1%; border: 1px dashed #99b29d; border-radius: 50%; transform: rotate(-20deg); }
+.uav-flight-mark { position: absolute; right: -8px; top: 5px; color: #446b50; width: 105px; height: 105px; background: #f7f3e6; border-radius: 50%; padding: 8px; }
+.uav-free-card { position: absolute; bottom: 7%; left: -20px; display: flex; gap: 12px; align-items: center; padding: 18px 24px; background: #fff; border-radius: 9px; box-shadow: 0 12px 40px rgba(36, 61, 49, .13); transform: rotate(-3deg); }
+.uav-free-card strong { font-size: .95rem; display: block; }
+.uav-free-card div > span { font-size: .65rem; color: #627265; }
+.uav-free-icon { background: #e5eddf; border-radius: 50%; font-size: 1.8rem; color: #406c51; width: 46px; height: 46px; text-align: center; }
+.uav-feature-section, .uav-catalogue, .uav-categories, .uav-faq { padding: 5rem 5%; }
+.uav-section-heading { max-width: 740px; margin: 0 auto 2.5rem; text-align: center; }
+.uav-section-heading > p, .uav-section-heading > div > p { color: #5c6c61; font-size: .9rem; }
+.uav-feature-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.uav-feature-card { background: #f7f9f4; border: 1px solid #e5ece2; padding: 2rem 1.4rem; border-radius: 9px; }
+.uav-feature-card:nth-child(2) { background: #fbf7ee; border-color: #f0e6d3; }
+.uav-feature-card:nth-child(3) { background: #eff6f5; border-color: #dfece8; }
+.uav-feature-card:nth-child(4) { background: #f7f3f9; border-color: #e9e1ed; }
+.uav-feature-number { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 16px 16px 16px 3px; background: #fff; border: 1px solid #dbe6d8; color: #406c51; font-size: 1.05rem; font-weight: 800; margin-bottom: 1.6rem; }
+.uav-feature-card h3 { font-weight: 800; font-size: 1.05rem; margin-bottom: 1rem; }
+.uav-feature-card p { font-size: .83rem; color: #5c6c61; margin-bottom: 0; }
+.uav-catalogue { background: #f6f9f7; }
+.uav-heading-row { display: flex; max-width: none; justify-content: space-between; align-items: end; gap: 2rem; text-align: start; }
+.uav-heading-row > div { max-width: 660px; }
+.uav-heading-row .btn { flex-shrink: 0; margin-bottom: 1rem; }
+.uav-course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.uav-catalogue-card { border: 1px solid #e0e8e1; border-radius: 9px; overflow: hidden; background: #fff; box-shadow: 0 8px 24px rgba(36, 61, 49, .035); }
+.uav-catalogue-image { display: block; overflow: hidden; }
+.uav-catalogue-image img { width: 100%; height: 210px; object-fit: cover; transition: transform .3s; }
+.uav-catalogue-card:hover .uav-catalogue-image img { transform: scale(1.035); }
+.uav-catalogue-content { padding: 1.5rem; }
+.uav-course-category { color: #406c51; font-size: .7rem; font-weight: 700; display: block; margin-bottom: .8rem; }
+.uav-catalogue-content h3 { font-size: 1.2rem; font-weight: 800; line-height: 1.45; margin-bottom: 1.3rem; }
+.uav-catalogue-content h3 a { color: #213a2e; }
+.uav-text-link { display: flex; justify-content: space-between; border-top: 1px solid #e4ebe5; padding-top: 1rem; font-size: .78rem; font-weight: 700; }
+.uav-catalogue-empty { padding: 2rem; background: #fff; border: 1px dashed #bacdbd; border-radius: 8px; text-align: center; color: #5c6c61; }
+.uav-catalogue-empty > span { font-size: 2rem; color: #406c51; }
+.uav-category-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.uav-category-grid a { display: flex; align-items: center; gap: 14px; border: 1px solid #dce6df; padding: 22px 18px; border-radius: 7px; color: #213a2e; transition: background-color .2s; }
+.uav-category-grid a:hover { background: #edf5ef; }
+.uav-category-grid strong { flex: 1; font-size: .9rem; overflow-wrap: anywhere; }
+.uav-category-grid a > span:first-child { color: #6e855d; font-size: 1.6rem; }
+.uav-academy-about { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5rem; padding: 5rem 7%; background: #faf8f1; }
+.uav-about-visual { position: relative; padding: 0 2rem 2rem 0; }
+.uav-about-visual img { width: 100%; height: 420px; object-fit: cover; border-radius: 9px 90px 9px 9px; }
+.uav-about-visual > span { position: absolute; bottom: 0; right: 0; background: #dcd0a4; color: #243d31; padding: 25px; font-size: .95rem; font-weight: 800; line-height: 1.5; border-radius: 6px; }
+.uav-about-copy > p:not(.uav-eyebrow) { color: #5c6c61; font-size: .9rem; margin-top: 1.4rem; }
+.uav-about-copy ul { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+.uav-about-copy li { position: relative; padding-inline-start: 27px; margin-bottom: 13px; font-size: .85rem; }
+.uav-about-copy li::before { content: '✓'; position: absolute; inset-inline-start: 0; color: #406c51; }
+.uav-faq { max-width: 1000px; margin: auto; }
+.uav-faq details { border: 1px solid #dce6df; border-radius: 7px; padding: 20px 24px; margin-top: 12px; }
+.uav-faq summary { cursor: pointer; font-weight: 700; font-size: .95rem; }
+.uav-faq details p { color: #5c6c61; font-size: .88rem; margin: 1rem 0 0; }
+.uav-academy-cta { margin: 0 5% 5rem; display: flex; align-items: center; gap: 28px; border-radius: 10px; background: #e5eddf; padding: 3rem; }
+.uav-academy-cta > span { font-size: 4rem; color: #7a8e69; }
+.uav-academy-cta > div { flex: 1; }
+.uav-academy-cta h2 { font-size: clamp(1.6rem, 2.8vw, 2.7rem); }
+.uav-academy-cta p { color: #52624f; font-size: .85rem; margin-bottom: 0; }
+.uav-academy-links { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; background: #213a2e; color: #fff; padding: 3.5rem 5%; }
+.uav-academy-links p { max-width: 360px; font-size: .82rem; color: #cfdbd0; margin-top: 1rem; }
+.uav-academy-links nav { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; font-size: .8rem; }
+.uav-academy-links nav strong { margin-bottom: 8px; color: #e1d5ae; }
+.uav-academy-links a { color: #eef4eb; }
+.uav-academy-links a:hover { color: #e1d5ae; text-decoration: underline; }
+.uav-learning-hero { color: #213a2e; background: #edf4ea; }
+.uav-hero-copy h2 { color: #213a2e; font-family: "UAV Manrope", Arial, sans-serif; font-style: normal; font-weight: 800; }
+.uav-hero-copy .uav-eyebrow, .uav-hero-body, .uav-hero-detail { color: #4d6854; }
+.uav-hero-image::after { background: linear-gradient(90deg, #edf4ea, transparent 35%); }
+@media (max-width: 1100px) {
+    .uav-academy-hero { gap: 1.5rem; padding-block: 4rem; }
+    .uav-academy-photo { height: 400px; }
+    .uav-course-search { flex-wrap: wrap; }
+    .uav-course-search input { width: auto; flex-basis: 100%; }
+    .uav-course-search button { width: 100%; }
+    .uav-feature-grid, .uav-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .uav-academy-about { gap: 2.5rem; }
+    .uav-academy-cta { padding: 2rem; }
+}
+@media (max-width: 767px) {
+    .uav-academy-hero { grid-template-columns: 1fr; padding: 2.5rem 6%; }
+    .uav-academy-hero h2 { font-size: clamp(2.4rem, 8vw, 3.6rem); }
+    .uav-academy-visual { max-width: 440px; margin: auto; width: 100%; }
+    .uav-academy-photo { height: 350px; }
+    .uav-free-card { left: 0; padding: 14px 18px; }
+    .uav-feature-section, .uav-catalogue, .uav-categories, .uav-faq { padding: 3rem 6%; }
+    .uav-feature-grid, .uav-course-grid, .uav-category-grid { grid-template-columns: 1fr; }
+    .uav-section-heading { margin-bottom: 1.8rem; }
+    .uav-heading-row { display: block; }
+    .uav-academy-about { grid-template-columns: 1fr; padding: 3rem 6%; }
+    .uav-about-visual img { height: 300px; }
+    .uav-academy-cta { flex-direction: column; align-items: flex-start; margin-bottom: 3rem; }
+    .uav-academy-cta > span { display: none; }
+    .uav-academy-links { grid-template-columns: 1fr; gap: 2rem; }
+    .pagelayout-frontpage #page-header { padding-inline: 1rem; }
+    .pagelayout-frontpage #region-main { padding: 1rem; }
+    .uav-hero-image::after { background: linear-gradient(0deg, #edf4ea, transparent 45%); }
+}
+.uav-login-intro h1 { font-family: "UAV Manrope", Arial, sans-serif; font-style: normal; font-weight: 800; letter-spacing: -.05em; }

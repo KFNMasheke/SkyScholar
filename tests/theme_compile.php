@@ -46,12 +46,15 @@ $engine = new Mustache_Engine(['partials' => [
     'theme_boost/footer' => '<footer>Native footer</footer>',
     'core/local/toast/wrapper' => '<div id="toast-wrapper"></div>',
 ]]);
-$context = ['brandname' => 'SkyScholar', 'herotitle' => '<script>bad()</script>',
+$strings = [];
+require($repo . '/moodle/theme/uavvisuals/lang/en/theme_uavvisuals.php');
+$context = $string + ['brandname' => 'SkyScholar', 'herotitle' => '<script>bad()</script>',
     'herobody' => 'Test body', 'coursesurl' => 'https://example.test/skyscholar/course/index.php',
     'courseslabel' => 'Explore courses', 'imageurl' => 'https://example.test/photo.webp',
     'output' => ['main_content' => '<form id="login"><input name="logintoken" value="native-test-token"></form>'],
     'bodyattributes' => 'class="pagelayout-login"'];
-foreach (['learning_hero', 'login'] as $name) {
+$context['herotitle'] = '<script>bad()</script>';
+foreach (['learning_hero', 'login', 'frontpage'] as $name) {
     $template = file_get_contents($repo . '/moodle/theme/uavvisuals/templates/' . $name . '.mustache');
     $rendered = $engine->render($template, $context);
     if (str_contains($rendered, '<script>bad()')) { throw new RuntimeException('Unescaped setting in ' . $name); }
@@ -60,3 +63,44 @@ foreach (['learning_hero', 'login'] as $name) {
     }
 }
 echo "PASS Mustache render, escaped welcome text and unchanged native login form output.\n";
+
+$context['hascourses'] = true;
+$context['hascategories'] = true;
+$context['searchurl'] = 'https://example.test/skyscholar/course/search.php';
+$context['features'] = [['number' => '01', 'title' => 'Open access', 'body' => 'Free practice']];
+$context['courses'] = [['name' => '<img src=x onerror=bad()>', 'category' => 'Air law', 'url' => '/course/view.php?id=2', 'image' => '/photo.jpg']];
+$context['categories'] = [['name' => 'Air law & rules', 'url' => '/course/index.php?categoryid=2']];
+$frontpage = $engine->render(file_get_contents($repo . '/moodle/theme/uavvisuals/templates/frontpage.mustache'), $context);
+foreach (['name="search"', 'method="get"', 'course/search.php', '<details>', '&lt;img', 'Air law &amp; rules'] as $needle) {
+    if (!str_contains($frontpage, $needle)) { throw new RuntimeException('Missing catalogue behaviour: ' . $needle); }
+}
+if (str_contains($frontpage, '<img src=x onerror=bad()>')) { throw new RuntimeException('Unescaped course name.'); }
+$previewpath = getenv('SKYSCHOLAR_THEME_PREVIEW_OUTPUT');
+if ($previewpath) {
+    $preview = $context;
+    $preview['herotitle'] = $string['herotitledefault'];
+    $preview['herobody'] = $string['herobodydefault'];
+    $preview['brandname'] = $string['brandname'];
+    $preview['hascourses'] = false;
+    $preview['hascategories'] = false;
+    $preview['courses'] = [];
+    $preview['categories'] = [];
+    $preview['features'] = [];
+    foreach (['access', 'pace', 'practice', 'progress'] as $i => $name) {
+        $preview['features'][] = ['number' => '0' . ($i + 1), 'title' => $string['feature' . $name], 'body' => $string['feature' . $name . 'body']];
+    }
+    $preview['imageurl'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($repo . '/moodle/theme/uavvisuals/pix/hero.jpg'));
+    foreach (['coursesurl' => '/course/index.php', 'searchurl' => '/course/search.php', 'loginurl' => '/login/index.php', 'dashboardurl' => '/my/'] as $key => $path) {
+        $preview[$key] = 'https://uavvisuals.co.za/skyscholar' . $path;
+    }
+    $preview['uavurl'] = 'https://uavvisuals.co.za/';
+    $preview['uavlabel'] = $string['backtouav'];
+    $previewcss = $css;
+    foreach (['manrope.ttf', 'manrope-bold.ttf', 'serif.ttf'] as $font) {
+        $previewcss = str_replace('https://example.test/skyscholar/theme/uavvisuals/fonts/' . $font,
+            'data:font/ttf;base64,' . base64_encode(file_get_contents($repo . '/moodle/theme/uavvisuals/fonts/' . $font)), $previewcss);
+    }
+    $markup = $engine->render(file_get_contents($repo . '/moodle/theme/uavvisuals/templates/frontpage.mustache'), $preview);
+    file_put_contents($previewpath, '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SkyScholar theme design preview</title><style>' . $previewcss . '</style><body><header style="padding:18px 5%;background:white;display:flex;align-items:center;justify-content:space-between"><strong>SkyScholar / UAV Visuals</strong><a href="https://uavvisuals.co.za/skyscholar/login/index.php" class="btn btn-primary">Sign in</a></header><main>' . $markup . '</main></body></html>');
+}
+echo "PASS Catalogue populated/empty rendering, escaped course/category names, native course search and FAQ controls.\n";
