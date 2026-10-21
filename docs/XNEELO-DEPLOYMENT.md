@@ -97,3 +97,12 @@ Your live hosting/database credentials and chosen domain are necessarily supplie
 ## 6. Deploy updated releases safely
 
 Back up code, database and dataroot together. Test on staging, enter maintenance mode, deploy the new clean code plus the preserved site-specific config, run `admin/cli/upgrade.php`, purge caches, complete smoke tests, then exit maintenance mode. Do not overwrite `config.php` or dataroot. Do not downgrade the database to match older code; restore the complete consistent backup for rollback.
+
+## WordPress subdirectory compatibility
+
+When installing below an existing WordPress web root, parent security rules also
+apply to Moodle. If navigation produces an `undefined` popup and Console GET
+requests to `lib/ajax/service-nologin.php` return 403, follow
+[the scoped 5G AJAX repair](WORDPRESS-5G-AJAX-FIX.md). The insertion snippet is
+`deployment/wordpress-5g-moodle-query-exception.conf`; keep the other parent
+security rules intact.
