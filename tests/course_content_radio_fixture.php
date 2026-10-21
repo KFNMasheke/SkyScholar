@@ -19,10 +19,10 @@ if ($open) {
     $category->show();
     $manual = enrol_get_plugin('manual');
     $instances = array_filter(enrol_get_instances($course->id, false), fn($x) => $x->enrol === 'manual');
-    $instanceid = $instances ? reset($instances)->id : $manual->add_instance($course);
+    $instance = $instances ? reset($instances) : $DB->get_record('enrol', ['id' => $manual->add_instance($course)], '*', MUST_EXIST);
     $student = $DB->get_field('user', 'id', ['username' => 'testlearner1'], MUST_EXIST);
     $role = $DB->get_field('role', 'id', ['shortname' => 'student'], MUST_EXIST);
-    $manual->enrol_user($instanceid, $student, $role);
+    $manual->enrol_user($instance, $student, $role);
 }
 update_course((object)['id' => $course->id, 'visible' => $open ? 1 : 0]);
 set_coursemodule_visible($cm->id, $open ? 1 : 0);
