@@ -23,6 +23,7 @@ jobs:
       - name: Validate original course drafts and review export
         run: |
           python3 -m unittest discover -s tests -p 'test_authoring.py' -v
+          python3 -m unittest discover -s tests -p 'test_concurrency.py' -v
           python3 scripts/review_content.py
           python3 scripts/validate_curricula.py
           python3 scripts/build_course_content.py
